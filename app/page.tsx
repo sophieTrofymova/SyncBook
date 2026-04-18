@@ -14,7 +14,7 @@ export default function Home() {
               className="flex items-center rounded-[44px] border border-white/70 px-6 py-4 md:px-8"
               style={embossedPaperStyle}
             >
-              <div className="mr-8 md:mr-12">
+              <div className="mr-8 md:mr-12 pr-15">
                 <img src="/Group 1.svg" alt="Logo" className="h-[46px] w-auto" />
               </div>
 
@@ -43,12 +43,28 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="relative z-10 grid min-h-[760px] items-center gap-8 px-8 pb-0 pt-14 md:px-12 lg:grid-cols-[0.9fr_1.1fr] xl:px-12">
-          <div className="max-w-[610px] pt-10">
-            <h1 className="text-[58px] font-medium leading-[1.06] tracking-[-0.055em] text-[#232634] md:text-[72px] xl:text-[76px]">
+        <section className="relative z-10 min-h-[760px] overflow-hidden px-8 pb-0 pt-14 md:px-12 xl:px-12">
+          <div className="absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center">
+            <img
+              src="/Hero.png"
+              alt="Hero"
+              className="relative h-[722px] w-full max-w-[943px]
+                [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [mask-composite:intersect]
+                [-webkit-mask-composite:destination-in]"
+            />
+          </div>
+
+          <div className="relative z-20 max-w-[760px] pt-16">
+            <h1 className="text-[58px] font-medium leading-[1.06] tracking-[-0.055em] text-[#232634] md:text-[61px] xl:text-[63px]">
               Engineering{" "}
-              <span className="inline-flex translate-y-[-3px] text-[#4B74FF]">
-                <ArrowUpRight className="h-[0.86em] w-[0.86em] stroke-[2.2]" />
+              <span className="inline-flex translate-y-[-3px]">
+                <img
+                  src="/Arrow.png"
+                  alt="Arrow"
+                  className="h-[0.66em] w-[0.86em]"
+                />
               </span>{" "}
               Efficiency
               <br />
@@ -61,44 +77,51 @@ export default function Home() {
               strong engineering foundations.
             </p>
 
-            <div className="mt-16 flex w-full max-w-[420px] items-center rounded-full bg-white/72 p-3 shadow-[0_18px_40px_rgba(120,128,150,0.16)] ring-1 ring-white/80 backdrop-blur">
-              <button className="flex-1 rounded-full px-8 py-5 text-center text-[19px] font-medium tracking-[-0.02em] text-[#2a2e3c] transition-all duration-300 hover:text-[#11131a]">
+            <div
+              className="mt-16 flex w-full max-w-[420px] items-center rounded-full p-3 ring-1 ring-white/80"
+              style={embossedPaperStyle}
+            >
+              <button className="flex-1 rounded-full px-8 py-5 text-center text-[21px] font-medium tracking-[-0.02em] text-[#2a2e3c] font-sans transition-all duration-300 hover:text-[#11131a]">
                 Start automation
               </button>
 
               <button
                 aria-label="Start automation"
-                className="flex h-[78px] w-[78px] items-center justify-center rounded-full bg-[#4B74FF] text-white shadow-[0_20px_40px_rgba(75,116,255,0.42),0_0_0_10px_rgba(75,116,255,0.08)] transition-all duration-300 hover:translate-y-[-1px] hover:shadow-[0_26px_50px_rgba(75,116,255,0.52),0_0_0_14px_rgba(75,116,255,0.10)]"
+                className="flex h-[78px] w-[78px] items-center justify-center rounded-full transition-all duration-300 hover:translate-y-[-4px] hover:scale-[1.04] active:translate-y-[0px] active:scale-[0.98]"
+                style={{
+                  background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+                  boxShadow: `
+                    inset 0 1px 0 rgba(255,255,255,0.35),
+                    0 10px 20px rgba(75,116,255,0.35),
+                    0 20px 40px rgba(75,116,255,0.25)
+                  `,
+                }}
               >
-                <SquaresIcon />
+                <img src="/Vector.png" alt="Arrow" className="h-[28px] w-[28px]" />
               </button>
             </div>
           </div>
-
-          <div className="relative flex min-h-[680px] items-center justify-center">
-            <img
-              src="/Hero.png"
-              alt="Hero"
-              className="relative h-[722px] w-full max-w-[943px]
-                [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
-                [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
-                [mask-composite:intersect]
-                [-webkit-mask-composite:destination-in]"
-            />
-          </div>
         </section>
 
-        <section className="relative z-20 mt-2 bg-[#4B74FF] px-10 py-7 text-white md:px-12">
+        <section className="relative z-20 mt-2 bg-[#4B74FF] px-10 py-8 text-white md:px-12">
           <div className="mx-auto flex max-w-[1700px] flex-wrap items-center justify-between gap-8 text-white/95">
-            <div className="text-[16px] font-normal tracking-[-0.02em]">
+            
+            {/* Левый текст */}
+            <div className="text-[18px] font-medium tracking-[-0.02em] font-sans">
               Powered by world-class technologies
             </div>
 
-            <div className="flex flex-wrap items-center gap-10 text-[26px] font-medium tracking-[-0.04em] md:gap-14">
-              <span className="font-serif text-[40px] lowercase">veilo</span>
-              <span className="text-[22px]">Raiffeisen Bank</span>
-              <span className="text-[22px]">occollo</span>
-              <span className="text-[24px] tracking-[0.02em]">NUKI</span>
+            {/* Иконки */}
+            <div className="flex flex-wrap items-center gap-20 md:gap-24 pr-20">
+              
+              <img src="/Tech1.png" alt="Tech1" className="h-[34px] w-auto opacity-90 transition-opacity duration-300 hover:opacity-100" />
+              
+              <img src="/Tech2.png" alt="Tech2" className="h-[34px] w-auto opacity-90 transition-opacity duration-300 hover:opacity-100" />
+              
+              <img src="/Tech3.png" alt="Tech3" className="h-[34px] w-auto opacity-90 transition-opacity duration-300 hover:opacity-100" />
+              
+              <img src="/Tech4.png" alt="Tech4" className="h-[34px] w-auto opacity-90 transition-opacity duration-300 hover:opacity-100" />
+
             </div>
           </div>
         </section>
@@ -110,16 +133,6 @@ export default function Home() {
   );
 }
 
-function SquaresIcon() {
-  return (
-    <div className="grid grid-cols-2 gap-[5px]">
-      <span className="h-3.5 w-3.5 rounded-[4px] border-[2.5px] border-white/85" />
-      <span className="h-3.5 w-3.5 rounded-[4px] border-[2.5px] border-white/85" />
-      <span className="h-3.5 w-3.5 rounded-[4px] border-[2.5px] border-white/85" />
-      <span className="h-3.5 w-3.5 rounded-[4px] border-[2.5px] border-white/85" />
-    </div>
-  );
-}
 
 function BackgroundDecor() {
   return (
