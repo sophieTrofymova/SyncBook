@@ -102,6 +102,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ServicesSection />
       </div>
     </main>
   );
@@ -156,5 +158,91 @@ const embossedPaperActiveStyle = {
     inset 0 1px 0 rgba(255,255,255,0.9),
     0 8px 20px rgba(120,128,158,0.10),
     0 2px 6px rgba(255,255,255,0.45)
+  `,
+};
+const services = [
+  {
+    title: "Custom Software Development",
+    description:
+      "We create software that suits your business, not the other way around. From CRM to complex ERP systems.",
+    image: "/service-gear.png",
+    alt: "Custom software development",
+  },
+  {
+    title: "Fast workflow Automation",
+    description:
+      "We identify bottlenecks in your processes and implement AI solutions that save up to 40% of your employees' time.",
+    image: "/service-rocket.png",
+    alt: "Workflow automation",
+  },
+  {
+    title: "Digital Transformation",
+    description:
+      "We transition your business to digital smoothly, updating legacy systems to modern standards.",
+    image: "/service-chart.png",
+    alt: "Digital transformation",
+  },
+];
+
+function ServicesSection() {
+  return (
+    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-24 pt-20 md:px-12 xl:px-12">
+      <div className="mx-auto max-w-[1700px]">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div>
+            <p className="text-[18px] font-medium uppercase tracking-[-0.03em] text-[#4B74FF]">
+              FROM CHAOS TO CODE
+            </p>
+
+            <h2 className="mt-3 text-[44px] font-medium leading-[1.02] tracking-[-0.05em] text-[#232634] md:text-[56px]">
+              Our services
+            </h2>
+          </div>
+
+          <button
+            className="inline-flex h-[68px] items-center justify-center rounded-full border border-[#cfd3dd] bg-[#f1f2f6] px-9 text-[22px] font-medium tracking-[-0.03em] text-[#2c3140] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_10px_24px_rgba(72,82,110,0.08)] transition-all duration-300 hover:translate-y-[-1px] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_14px_30px_rgba(72,82,110,0.12)]"
+            type="button"
+          >
+            See all services
+          </button>
+        </div>
+
+        <div className="mt-14 mx-auto w-fit">
+          <div className="grid grid-cols-3 gap-x-[98px]">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="group h-[464px] w-[373px] rounded-[36px] border border-white/70 bg-[#efeff3] p-8 flex flex-col items-start"
+                style={serviceCardStyle}
+              >
+                <div className="flex justify-start">
+                  <img
+                    src={service.image}
+                    alt={service.alt}
+                    className="h-[159px] w-[159px] object-contain"
+                  />
+                </div>
+
+                <h3 className="mt-8 max-w-[260px] text-[28px] font-medium leading-[1.1] tracking-[-0.04em] text-[#2a2e3c]">
+                  {service.title}
+                </h3>
+
+                <p className="mt-10 max-w-[300px] text-[16px] leading-[1.5] text-[#7b8191]">
+                  {service.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const serviceCardStyle = {
+  boxShadow: `
+    inset 0 1px 0 rgba(255,255,255,0.95),
+    0 10px 30px rgba(31, 38, 58, 0.06),
+    0 22px 40px rgba(56, 63, 88, 0.08)
   `,
 };
