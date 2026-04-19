@@ -1,5 +1,5 @@
-import { embossedPaperStyle } from "@/lib/ui-styles";
-
+//import { embossedPaperStyle } from "@/lib/ui-styles";
+import { ctaPanelStyle } from "@/lib/ui-styles";
 export function HeroSection() {
   return (
     <section className="relative z-10 min-h-[760px] overflow-hidden px-8 pb-0 pt-14 md:px-12 xl:px-12">
@@ -34,7 +34,7 @@ export function HeroSection() {
 
         <div
           className="mt-16 flex w-full max-w-[420px] items-center rounded-full p-3 ring-1 ring-white/80"
-          style={embossedPaperStyle}
+          style={ctaPanelStyle}
         >
           <button className="flex-1 rounded-full px-8 py-5 text-center text-[21px] font-medium tracking-[-0.02em] text-[#2a2e3c] font-sans transition-all duration-300 hover:text-[#11131a]">
             Start automation
@@ -45,10 +45,17 @@ export function HeroSection() {
             className="flex h-[78px] w-[78px] items-center justify-center rounded-full transition-all duration-300 hover:translate-y-[-4px] hover:scale-[1.04] active:translate-y-[0px] active:scale-[0.98]"
             style={{
               background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
-              boxShadow: `
+              /*boxShadow: `
                 inset 0 1px 0 rgba(255,255,255,0.35),
                 0 10px 20px rgba(75,116,255,0.35),
                 0 20px 40px rgba(75,116,255,0.25)
+              `,
+              */
+             boxShadow: `
+                inset 0 1px 0 rgba(255,255,255,0.35),
+                0 12px 24px rgba(75,116,255,0.34),
+                0 28px 48px rgba(75,116,255,0.22),
+                0 0 0 8px rgba(75,116,255,0.06)
               `,
             }}
           >

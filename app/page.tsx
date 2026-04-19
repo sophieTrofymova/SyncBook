@@ -11,6 +11,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { VisualizeYourGrowth } from "@/components/sections/visualize_your_growth";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { ContactSection } from "@/components/sections/contact-section";
+import { Footer } from "@/components/sections/footer-section";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <VisualizeYourGrowth />
         <TestimonialsSection/>
         <ContactSection />
+        <Footer />
       </div>
     </main>
   );
