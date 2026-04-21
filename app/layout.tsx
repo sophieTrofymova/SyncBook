@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/language-context";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={albertSans.variable}>
-      <body>{children}</body>
+      <body> 
+        <LanguageProvider>{children}</LanguageProvider>
+        </body>
     </html>
   );
 }

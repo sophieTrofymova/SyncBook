@@ -1,11 +1,14 @@
-import { techLogos } from "@/data/home";
+import { getHomeData } from "@/data/home";
+import { useLanguage } from "@/lib/language-context";
 
 export function TechStrip() {
+  const { t } = useLanguage();
+  const { techLogos } = getHomeData(t); 
   return (
     <section className="relative z-20 mt-2 bg-[#4B74FF] px-10 py-8 text-white md:px-12">
       <div className="mx-auto flex max-w-[1700px] flex-wrap items-center justify-between gap-8 text-white/95">
         <div className="font-sans text-[18px] font-medium tracking-[-0.02em]">
-          Powered by world-class technologies
+          {t.techStrip.title}
         </div>
 
         <div className="flex flex-wrap items-center gap-20 pr-20 md:gap-24">

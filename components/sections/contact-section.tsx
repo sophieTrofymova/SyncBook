@@ -1,4 +1,6 @@
+import { useLanguage } from "@/lib/language-context";
 export function ContactSection() {
+  const { t } = useLanguage();
   return (
     <section className="relative z-10 bg-[#f4f4f7] px-8 pb-28 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1700px]">
@@ -10,15 +12,15 @@ export function ContactSection() {
             {/* Левая часть */}
             <div className="relative">
                 <p className="text-[18px] uppercase tracking-[-0.02em] text-white/70">
-                    LET’S CREATE TOGETHER MIRACLES
+                    {t.contact.eyebrow}
                 </p>
 
                 <h2 className="mt-4 text-[52px] font-medium leading-[1.08] tracking-[-0.05em] text-white">
-                    Have a project in mind?
+                     {t.contact.title}
                 </h2>
 
                 <div className="mt-14">
-                    <MailBoxAnimation />
+                     <MailBoxAnimation mailboxAlt={t.contact.mailboxAlt} />
                 </div>
             </div>
             
@@ -53,11 +55,11 @@ export function ContactSection() {
               {/* Name */}
               <div>
                 <label className="text-[18px] text-white/90">
-                  User name
+                  {t.contact.nameLabel}
                 </label>
                 <input
                   type="text"
-                  placeholder="Your name"
+                  placeholder={t.contact.namePlaceholder}
                   className="mt-3 h-[70px] w-full rounded-[20px] border border-white/40 bg-transparent px-6 text-[18px] text-white placeholder-white/60 outline-none backdrop-blur"
                 />
               </div>
@@ -65,11 +67,11 @@ export function ContactSection() {
               {/* Email */}
               <div>
                 <label className="text-[18px] text-white/90">
-                  Email
+                 {t.contact.emailLabel}
                 </label>
                 <input
                   type="email"
-                  placeholder="Your email"
+                  placeholder={t.contact.emailPlaceholder}
                   className="mt-3 h-[70px] w-full rounded-[20px] border border-white/40 bg-transparent px-6 text-[18px] text-white placeholder-white/60 outline-none backdrop-blur"
                 />
               </div>
@@ -77,10 +79,10 @@ export function ContactSection() {
               {/* Description */}
               <div>
                 <label className="text-[18px] text-white/90">
-                  Description
+                  {t.contact.descriptionLabel}
                 </label>
                 <textarea
-                  placeholder="Tell us a bit about your idea..."
+                  placeholder={t.contact.descriptionPlaceholder}
                   className="mt-3 h-[140px] w-full resize-none rounded-[24px] border border-white/40 bg-transparent px-6 py-5 text-[18px] text-white placeholder-white/60 outline-none backdrop-blur"
                 />
               </div>
@@ -89,7 +91,7 @@ export function ContactSection() {
               <button
                 className="mt-6 flex h-[84px] items-center justify-between rounded-full bg-white/90 pl-10 pr-3 text-[20px] font-medium tracking-[-0.02em] text-[#4B74FF] shadow-[0_20px_40px_rgba(0,0,0,0.25)] transition-all duration-300 hover:translate-y-[-2px]"
               >
-                <span>Send and start the process</span>
+                <span>{t.contact.button}</span>
 
                 <span className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-[#e9ecf5] text-[28px]">
                   →
@@ -104,7 +106,7 @@ export function ContactSection() {
   );
 }
 
-function MailBoxAnimation() {
+function MailBoxAnimation({ mailboxAlt }: { mailboxAlt: string }) {
   const letters = Array.from({ length: 6 });
 
   return (

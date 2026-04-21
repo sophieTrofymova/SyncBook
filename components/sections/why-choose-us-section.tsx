@@ -1,7 +1,10 @@
-import { steps } from "@/data/home";
+//import { steps } from "@/data/home";
 import { blueBlockStyle, stepCardStyle } from "@/lib/ui-styles";
-
+import { getHomeData } from "@/data/home";
+import { useLanguage } from "@/lib/language-context";
 export function WhyChooseUsSection() {
+  const { t } = useLanguage();
+  const { steps } = getHomeData(t);
   return (
     <section className="relative z-10 bg-[#f4f4f7] px-8 pb-32 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
@@ -12,16 +15,16 @@ export function WhyChooseUsSection() {
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
               <p className="text-[16px] uppercase tracking-[-0.02em] text-white/65">
-                WE ARE READY TO HELP
+                 {t.whyChooseUs.eyebrow}
               </p>
 
               <h2 className="mt-2 text-[34px] font-medium tracking-[-0.04em] text-white md:text-[42px]">
-                Why choose us?
+                 {t.whyChooseUs.title}
               </h2>
             </div>
 
             <button className="flex items-center gap-0 rounded-full bg-white/92 py-2 pl-9 pr-2 text-[16px] font-medium text-[#2a2e3c] shadow-[0_10px_24px_rgba(0,0,0,0.14)]">
-              <span className="px-2 text-[#2f63ff]">Discuss my project</span>
+              <span className="px-2 text-[#2f63ff]">{t.whyChooseUs.cta}</span>
               <span className="ml-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#2f63ff] shadow-[0_6px_16px_rgba(0,0,0,0.12)]">
                 💬
               </span>
