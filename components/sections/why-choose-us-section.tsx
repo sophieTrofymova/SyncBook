@@ -23,12 +23,42 @@ export function WhyChooseUsSection() {
               </h2>
             </div>
 
-            <button className="flex items-center gap-0 rounded-full bg-white/92 py-2 pl-9 pr-2 text-[16px] font-medium text-[#2a2e3c] shadow-[0_10px_24px_rgba(0,0,0,0.14)]">
-              <span className="px-2 text-[#2f63ff]">{t.whyChooseUs.cta}</span>
-              <span className="ml-4 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#2f63ff] shadow-[0_6px_16px_rgba(0,0,0,0.12)]">
-                💬
-              </span>
-            </button>
+            <button
+                className="
+                  group flex items-center gap-0 rounded-full
+                  bg-white/92 py-2 pl-9 pr-2
+                  text-[16px] font-medium text-[#2a2e3c]
+
+                  shadow-[0_10px_24px_rgba(0,0,0,0.14)]
+                  transition-all duration-300 ease-out
+
+                  hover:bg-transparent
+                  hover:text-white
+                  hover:shadow-none
+                  hover:ring-1 hover:ring-white/60
+                "
+              >
+                <span className="px-2 transition-colors duration-300 group-hover:text-white">
+                  {t.whyChooseUs.cta}
+                </span>
+
+                <span
+                  className="
+                    ml-4 flex h-12 w-12 items-center justify-center rounded-full
+                    bg-white text-[#2f63ff]
+
+                    shadow-[0_6px_16px_rgba(0,0,0,0.12)]
+                    transition-all duration-300 ease-out
+
+                    group-hover:bg-transparent
+                    group-hover:text-white
+                    group-hover:shadow-none
+                    group-hover:ring-1 group-hover:ring-white/60
+                  "
+                >
+                  💬
+                </span>
+          </button>
           </div>
 
           <div className="mt-12 flex flex-col gap-6">

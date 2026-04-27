@@ -40,28 +40,57 @@ export function HeroSection() {
           {t.hero.description}
         </p>
 
-        <div
-          className="mt-16 flex w-full max-w-[420px] items-center rounded-full p-3 ring-1 ring-white/80"
-          style={ctaPanelStyle}
+       <div
+          className="
+            group mt-16 flex w-full max-w-[420px] items-center rounded-full p-3
+            bg-white/80 ring-1 ring-white/80
+            shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_12px_28px_rgba(41,49,72,0.12),0_24px_48px_rgba(41,49,72,0.08)]
+            transition-all duration-300 ease-out
+            hover:translate-y-[1px]
+            hover:shadow-[inset_0_4px_10px_rgba(70,80,110,0.14),inset_0_-1px_1px_rgba(255,255,255,0.85),0_6px_14px_rgba(41,49,72,0.08)]
+          "
         >
-          <button className="flex-1 rounded-full px-8 py-5 text-center text-[21px] font-medium tracking-[-0.02em] text-[#2a2e3c] font-sans transition-all duration-300 hover:text-[#11131a]">
+          {/* ТЕКСТ КНОПКИ */}
+          <button
+            className="
+              flex-1 rounded-full px-8 py-5 text-center text-[21px]
+              font-medium tracking-[-0.02em] text-[#2a2e3c]
+              transition-all duration-300 ease-out
+              group-hover:text-[#11131a]
+            "
+          >
             {t.hero.cta}
           </button>
 
+          {/* СИНЯЯ КНОПКА */}
           <button
             aria-label={t.hero.cta}
-            className="flex h-[78px] w-[78px] items-center justify-center rounded-full transition-all duration-300 hover:translate-y-[-4px] hover:scale-[1.04] active:translate-y-[0px] active:scale-[0.98]"
+            className="
+              flex h-[78px] w-[78px] items-center justify-center rounded-full
+              transition-all duration-300 ease-out
+              group-hover:translate-y-[2px]
+              group-hover:scale-[0.96]
+              active:scale-[0.92]
+            "
             style={{
               background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
               boxShadow: `
-                inset 0 1px 0 rgba(255,255,255,0.35),
-                0 12px 24px rgba(75,116,255,0.34),
-                0 28px 48px rgba(75,116,255,0.22),
+                inset 0 2px 6px rgba(255,255,255,0.22),
+                inset 0 -8px 14px rgba(23,61,178,0.28),
+                0 10px 22px rgba(75,116,255,0.28),
                 0 0 0 8px rgba(75,116,255,0.06)
               `,
             }}
           >
-            <img src="/Vector.png" alt={t.hero.arrowAlt} className="h-[28px] w-[28px]" />
+            <img
+              src="/Vector.png"
+              alt={t.hero.arrowAlt}
+              className="
+                h-[28px] w-[28px]
+                transition-transform duration-300 ease-out
+                group-hover:scale-[0.92]
+              "
+            />
           </button>
         </div>
       </div>

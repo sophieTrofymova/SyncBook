@@ -75,9 +75,23 @@ export function ServicesSection() {
             </h2>
           </div>
 
-          <button className="rounded-full border border-[#d8dce8] px-8 py-5 text-[18px] font-medium tracking-[-0.02em] text-[#2a2e3c] transition-all duration-300 hover:bg-white/70">
+          <button
+            className="
+              flex h-[64px] w-[220px] items-center justify-center
+              rounded-full border border-[#d8dce8]
+
+              text-[20px] font-medium tracking-[-0.02em]
+              text-[#2a2e3c]
+
+              transition-all duration-300 ease-out
+
+              hover:text-[#4B74FF]
+              hover:border-[#4B74FF]
+              hover:shadow-[0_0_0_4px_rgba(75,116,255,0.08)]
+            "
+          >
             {t.services.actionText}
-          </button>
+        </button>
         </div>
 
         <div className="mt-16">
