@@ -20,7 +20,7 @@ export function TestimonialCard({ item, ratingSuffix }: TestimonialCardProps) {
     <article
       className={`
         flex shrink-0 flex-col rounded-[44px] border border-white/70
-        bg-[#f4f4f7] px-8 pt-8 transition-all duration-500
+        px-8 pt-8 transition-all duration-500
         ${
           isCenter
             ? "h-[470px] w-[500px] -translate-y-5 opacity-100"

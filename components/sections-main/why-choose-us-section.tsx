@@ -8,7 +8,7 @@ export function WhyChooseUsSection() {
   const { steps } = getHomeData(t);
 
   return (
-    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-32 pt-10 md:px-12 xl:px-12">
+    <section className="relative z-10 px-8 pb-32 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
         <div
           className="rounded-[44px] px-10 py-10 md:px-12 md:py-10"

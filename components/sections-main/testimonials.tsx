@@ -30,13 +30,12 @@ function TestimonialArrowButton({
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="
+      className=" embossed-pill-button
         flex h-[78px] w-[78px] items-center justify-center rounded-full
         transition-all duration-300
-        hover:-translate-y-[2px] hover:scale-[1.03]
+        hover:-translate-y-[-2px] hover:scale-[0.98]
         active:scale-[0.98]
       "
-      style={embossedPillStyle}
     >
       <img
         src={direction === "left" ? "/arrowLeft.png" : "/arrowRight.png"}
@@ -80,7 +79,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="relative z-10 overflow-hidden bg-[#f4f4f7] px-8 pb-28 pt-20 md:px-12 xl:px-12">
+    <section className="relative z-10 overflow-hidden px-8 pb-28 pt-20 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1780px] ">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-[760px]">

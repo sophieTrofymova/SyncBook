@@ -6,6 +6,7 @@ type TranslationSchema = (typeof translations)[Language];
 
 export function getHomeData(t: TranslationSchema) {
   return {
+    
     navItems: [
       t.nav.services,
       t.nav.about,
@@ -46,6 +47,13 @@ export function getHomeData(t: TranslationSchema) {
       { src: "/Tech2.png", alt: "Tech2" },
       { src: "/Tech3.png", alt: "Tech3" },
       { src: "/Tech4.png", alt: "Tech4" },
+    ],
+
+    techResults: [
+      { src: "/AboutUs/result1.png", alt: "Tech1" },
+      { src: "/AboutUs/result2.png", alt: "Tech2" },
+      { src: "/AboutUs/result3.png", alt: "Tech3" },
+      { src: "/AboutUs/result4.png", alt: "Tech4" },
     ],
 
     services: [

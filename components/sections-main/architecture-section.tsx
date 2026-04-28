@@ -1,11 +1,11 @@
 import { useLanguage } from "@/lib/language-context";
 import { embossedCardStyle } from "@/lib/ui-styles";
 
- export function ArchitectureSection() {
+export function ArchitectureSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-28 pt-10 md:px-12 xl:px-12">
+    <section className="relative z-10 px-8 pb-28 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1700px]">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="text-[18px] font-medium uppercase tracking-[-0.03em] text-[#4B74FF]">
@@ -24,7 +24,10 @@ import { embossedCardStyle } from "@/lib/ui-styles";
             <img
               src="/architecture-illustration.png"
               alt={t.architecture.imageAlt}
-              className="h-auto w-full max-w-[628px] object-contain"
+              className="h-auto w-full max-w-[628px] object-contain [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+            [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+            [mask-composite:intersect]
+            [-webkit-mask-composite:destination-in]"
             />
           </div>
 
@@ -35,7 +38,7 @@ import { embossedCardStyle } from "@/lib/ui-styles";
 
             <div
               className="mt-12 flex min-h-[162px] w-full max-w-[646px] items-center justify-between rounded-[32px] border border-white/70 bg-[#efeff3] px-8 py-7 md:px-10"
-               style={embossedCardStyle}
+              style={embossedCardStyle}
             >
               <StatItem value="40%" label={t.architecture.stat1} />
               <StatItem value="3x" label={t.architecture.stat2} />

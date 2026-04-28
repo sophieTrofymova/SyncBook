@@ -3,7 +3,7 @@ import { useLanguage } from "@/lib/language-context";
 export function VisualizeYourGrowth() {
   const { t } = useLanguage();
   return (
-    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-28 pt-16 md:px-12 xl:px-12">
+    <section className="relative z-10 px-8 pb-28 pt-16 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1700px]">
         <div className="mx-auto max-w-[760px] text-center">
           <p className="text-[18px] font-medium uppercase tracking-[-0.03em] text-[#4B74FF]">

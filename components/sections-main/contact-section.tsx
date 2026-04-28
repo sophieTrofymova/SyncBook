@@ -16,7 +16,7 @@ export function ContactSection() {
     "mt-3 h-[70px] w-full rounded-[20px] border bg-transparent px-6 text-[18px] text-white outline-none backdrop-blur transition-all duration-300 placeholder:text-white/55 focus:placeholder:text-transparent";
 
   return (
-    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-28 pt-10 md:px-12 xl:px-12">
+    <section className="relative z-10 px-8 pb-28 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1700px]">
         <div className="relative overflow-hidden rounded-[48px] bg-gradient-to-br from-[#305cf0] via-[#4B74FF] to-[#3D63E8] px-16 py-16">
           <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">

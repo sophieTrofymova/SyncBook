@@ -1,6 +1,4 @@
 "use client";
-import { embossedPillStyle } from "@/lib/ui-styles";
-import { ctaPanelStyle } from "@/lib/ui-styles";
 import { useLanguage } from "@/lib/language-context";
 
 export function HeroSection() {

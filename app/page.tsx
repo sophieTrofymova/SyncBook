@@ -1,17 +1,17 @@
 "use client";
 
 import "./globals.css";
-import { ArchitectureSection } from "@/components/sections/architecture-section";
-import { HeroSection } from "@/components/sections/hero-section";
-import { OurPortfolioSection } from "@/components/sections/our-portfolio-section";
-import { ServicesSection } from "@/components/sections/services-section";
-import { TechStrip } from "@/components/sections/tech-strip";
-import { WhyChooseUsSection } from "@/components/sections/why-choose-us-section";
+import { ArchitectureSection } from "@/components/sections-main/architecture-section";
+import { HeroSection } from "@/components/sections-main/hero-section";
+import { OurPortfolioSection } from "@/components/sections-main/our-portfolio-section";
+import { ServicesSection } from "@/components/sections-main/services-section";
+import { TechStrip } from "@/components/sections-main/tech-strip";
+import { WhyChooseUsSection } from "@/components/sections-main/why-choose-us-section";
 import { SiteHeader } from "@/components/layout/site-header";
-import { VisualizeYourGrowth } from "@/components/sections/visualize_your_growth";
-import { TestimonialsSection } from "@/components/sections/testimonials";
-import { ContactSection } from "@/components/sections/contact-section";
-import { Footer } from "@/components/sections/footer-section";
+import { VisualizeYourGrowth } from "@/components/sections-main/visualize_your_growth";
+import { TestimonialsSection } from "@/components/sections-main/testimonials";
+import { ContactSection } from "@/components/sections-main/contact-section";
+import { Footer } from "@/components/layout/footer-section";
 
 export default function Home() {
   return (

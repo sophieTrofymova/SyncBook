@@ -14,7 +14,7 @@ export function ServiceCard({ item }: ServiceCardProps) {
     <article
       className="
         group flex h-[468px] w-[392px] shrink-0 flex-col
-        rounded-[34px] border border-white/70 bg-[#f4f4f7]
+        rounded-[34px] border border-white/70
         px-8 pb-8 pt-7
       "
       style={embossedCardStyle}

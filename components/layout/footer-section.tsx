@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
@@ -25,7 +26,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#f4f4f7] px-8 pb-10 pt-20 md:px-12">
+    <footer className="px-8 pb-10 pt-20 md:px-12">
       <div className="mx-auto max-w-[1400px]">
         <div
           className="flex items-center justify-center rounded-[36px] py-10"

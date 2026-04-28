@@ -68,7 +68,7 @@ export function HorizontalCardCarousel<T>({
   };
 
   return (
-    <section className="relative z-10 bg-[#f4f4f7] px-8 pb-24 pt-20 md:px-12 xl:px-12">
+    <section className="relative z-10 px-8 pb-24 pt-20 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1700px]">
         <SectionHeader eyebrow={eyebrow} title={title} actionText={actionText} />
 
