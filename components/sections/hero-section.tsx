@@ -1,6 +1,5 @@
 "use client";
-
-// import { embossedPaperStyle } from "@/lib/ui-styles";
+import { embossedPillStyle } from "@/lib/ui-styles";
 import { ctaPanelStyle } from "@/lib/ui-styles";
 import { useLanguage } from "@/lib/language-context";
 
@@ -43,12 +42,11 @@ export function HeroSection() {
        <div
           className="
             group mt-16 flex w-full max-w-[420px] items-center rounded-full p-3
-            bg-white/80 ring-1 ring-white/80
-            shadow-[inset_0_1px_1px_rgba(255,255,255,0.9),0_12px_28px_rgba(41,49,72,0.12),0_24px_48px_rgba(41,49,72,0.08)]
             transition-all duration-300 ease-out
             hover:translate-y-[1px]
             hover:shadow-[inset_0_4px_10px_rgba(70,80,110,0.14),inset_0_-1px_1px_rgba(255,255,255,0.85),0_6px_14px_rgba(41,49,72,0.08)]
           "
+          style={embossedPillStyle}
         >
           {/* ТЕКСТ КНОПКИ */}
           <button

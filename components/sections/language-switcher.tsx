@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRef } from "react"; // Для задержки при наведении
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import type { Language } from "@/lib/i18n";
@@ -14,12 +15,22 @@ export function LanguageSwitcher() {
   const [open, setOpen] = useState(false);
 
   const active = languages.find((l) => l.code === language) ?? languages[0];
+  const closeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   return (
     <div
       className="relative mt-[22px] flex items-center"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => {
+        if (closeTimeout.current) {
+          clearTimeout(closeTimeout.current);
+        }
+        setOpen(true);
+      }}
+      onMouseLeave={() => {
+        closeTimeout.current = setTimeout(() => {
+          setOpen(false);
+        }, 200); // 👈 задержка в мс
+      }}
     >
       <button
         type="button"
@@ -45,10 +56,9 @@ export function LanguageSwitcher() {
         className={`
           absolute left-0 top-[58px] z-50 flex flex-col items-center gap-4
           transition-all duration-200
-          ${
-            open
-              ? "translate-y-0 opacity-100"
-              : "pointer-events-none -translate-y-1 opacity-0"
+          ${open
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-1 opacity-0"
           }
         `}
       >

@@ -1,22 +1,3 @@
-/*export const embossedPaperStyle = {
-  background: `
-    linear-gradient(
-      to bottom,
-      rgba(239,239,243,0.96) 20%,
-      rgba(239,239,243,0.92) 40%,
-      rgba(239,239,243,0.94) 100%
-    )
-  `,
-  boxShadow: `
-    inset 0 1px 0 rgba(255,255,255,0.7),
-    0 -12px 6px rgba(255,255,255,0.8),
-    0 20px 24px rgba(0, 0, 0, 0.12),
-    0 34px 40px rgba(18, 20, 27, 0.1)
-  `,
-  backdropFilter: "blur(24px)",
-  WebkitBackdropFilter: "blur(24px)",
-};
-*/
 export const embossedPaperStyle = {
   background: `
     linear-gradient(
@@ -33,26 +14,7 @@ export const embossedPaperStyle = {
   backdropFilter: "blur(24px)",
   WebkitBackdropFilter: "blur(24px)",
 };
-/*
-export const embossedPaperCardStyle = {
-  background: `#f5f6fa",
-    linear-gradient(
-      to bottom,
-      rgba(239,239,243,0.96) 20%,
-      rgba(239,239,243,0.92) 40%,
-      rgba(239,239,243,0.94) 100%
-    )
-  `,
-  boxShadow: `
-    inset 0 1px 0 rgba(255,255,255,0.7),
-    0 -12px 6px rgba(255,255,255,0.8),
-    0 15px 20px rgba(0, 0, 0, 0.12),
-    0 22px 25px rgba(2, 7, 24, 0.1)
-  `,
-  backdropFilter: "blur(24px)",
-  WebkitBackdropFilter: "blur(24px)",
-};
-*/
+
 export const embossedPaperCardStyle = {
   background: "#f5f6fa",
   boxShadow: `
@@ -132,3 +94,27 @@ export const testimonialArrowStyle = {
   backdropFilter: "blur(24px)",
   WebkitBackdropFilter: "blur(24px)",
 };
+
+//////////////////////////////////////////////////////////////
+
+export const embossedCardStyle = {
+  boxShadow: `
+    -10px -10px 14px rgba(255,255,255,1),
+    -18px -18px 32px rgba(255,255,255,0.7),
+
+     10px  10px 14px rgb(203, 203, 211),
+     18px  18px 36px rgba(210,214,230,0.6)
+  `,
+};
+
+export const embossedPillStyle = {
+  boxShadow: `
+    -7px -7px 7px rgba(255,255,255,1),
+    6px -12px 12px rgba(255, 255, 255, 0.6),
+
+     7px  7px 7px rgb(203, 203, 211),
+     -6px 12px 10px rgba(219,219,227,0.6)
+  `,
+};
+
+//////////////////////////////////////////////////////////////

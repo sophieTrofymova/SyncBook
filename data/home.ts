@@ -86,6 +86,8 @@ import { translations, type Language } from "@/lib/i18n";
 
 type TranslationSchema = (typeof translations)[Language];
 
+// t - это объект перевода, один из языков объекта translation
+
 export function getHomeData(t: TranslationSchema) {
   return {
     navItems: [
