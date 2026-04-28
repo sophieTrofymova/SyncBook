@@ -97,12 +97,14 @@ export const testimonialArrowStyle = {
 
 //////////////////////////////////////////////////////////////
 
+// Эффект выпуклости
+
 export const embossedCardStyle = {
   boxShadow: `
     -10px -10px 14px rgba(255,255,255,1),
     -18px -18px 32px rgba(255,255,255,0.7),
 
-     10px  10px 14px rgb(203, 203, 211),
+     10px  10px 14px rgb(191, 191, 200),
      18px  18px 36px rgba(210,214,230,0.6)
   `,
 };
@@ -114,6 +116,15 @@ export const embossedPillStyle = {
 
      7px  7px 7px rgb(203, 203, 211),
      -6px 12px 10px rgba(219,219,227,0.6)
+  `,
+};
+
+// Эффект вдавлености для hover 
+
+export const embossedPillPressedStyle = {
+  boxShadow: `
+    inset -4px -4px 6px rgba(255,255,255,0.9),
+    inset 4px 4px 8px rgba(180,185,200,0.6)
   `,
 };
 

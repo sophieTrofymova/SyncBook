@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
+import { useEffect, useRef, useState } from "react";
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -137,34 +137,76 @@ export function ContactSection() {
   );
 }
 
+
 function MailBoxAnimation({ mailboxAlt }: { mailboxAlt: string }) {
-  const letters = Array.from({ length: 6 });
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const resetTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [animationKey, setAnimationKey] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (resetTimeoutRef.current) {
+            clearTimeout(resetTimeoutRef.current);
+            resetTimeoutRef.current = null;
+          }
+
+          setIsVisible(true);
+        } else {
+          resetTimeoutRef.current = setTimeout(() => {
+            setIsVisible(false);
+            setAnimationKey((prev) => prev + 1);
+          }, 1000);
+        }
+      },
+      {
+        threshold: 1,
+      }
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+
+      if (resetTimeoutRef.current) {
+        clearTimeout(resetTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <div className="relative h-[620px] w-[720px] overflow-hidden">
+    <div
+      ref={wrapperRef}
+      className="relative h-[620px] w-[720px] overflow-hidden"
+    >
       <div className="absolute inset-0 z-30">
-        {letters.map((_, index) => (
+        {isVisible && (
           <img
-            key={index}
+            key={animationKey}
             src="/Letter.png"
             alt=""
             aria-hidden="true"
             className="absolute left-1/2 top-0 z-30 w-[250px] object-contain"
             style={{
               animationName: "mailFly",
-              animationDuration: "3.6s",
-              animationTimingFunction: "linear",
-              animationIterationCount: "infinite",
-              animationDelay: `${index * 0.55}s`,
-              animationFillMode: "both",
+              animationDuration: "2.2s",
+              animationTimingFunction: "ease-out",
+              animationIterationCount: 1,
+              animationFillMode: "forwards",
             }}
           />
-        ))}
+        )}
       </div>
 
       <img
         src="/MailBox.png"
-        alt="Mailbox"
+        alt={mailboxAlt}
         className="relative z-20 h-auto w-[720px] object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
       />
 

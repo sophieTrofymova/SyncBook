@@ -1,30 +1,57 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { testimonialArrowStyle } from "@/lib/ui-styles";
+import { useState } from "react";
+import { TestimonialCard } from "@/components/cards/testimonial-card";
+import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
+import { embossedPillStyle } from "@/lib/ui-styles";
 
-const testimonialImages = [
-  "/Testimonial1.png",
-  "/Testimonial2.png",
-  "/Testimonial3.png",
-  "/Testimonial1.png",
-  "/Testimonial2.png",
-];
+type TestimonialItem = {
+  name: string;
+  role: string;
+  text: string;
+  image: string;
+  rating: string;
+};
 
-const testimonialRatings = ["4,5", "4,9", "4,6", "4,8", "5,0"];
+type TestimonialPosition = "left" | "center" | "right" | "hidden";
+
+function TestimonialArrowButton({
+  direction,
+  label,
+  onClick,
+}: {
+  direction: "left" | "right";
+  label: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onClick}
+      className="
+        flex h-[78px] w-[78px] items-center justify-center rounded-full
+        transition-all duration-300
+        hover:-translate-y-[2px] hover:scale-[1.03]
+        active:scale-[0.98]
+      "
+      style={embossedPillStyle}
+    >
+      <img
+        src={direction === "left" ? "/arrowLeft.png" : "/arrowRight.png"}
+        alt={label}
+        className="h-[28px] w-[28px]"
+      />
+    </button>
+  );
+}
 
 export function TestimonialsSection() {
   const { t } = useLanguage();
-  const [activeIndex, setActiveIndex] = useState(1);
+  const { testimonials } = getHomeData(t);
 
-  const testimonials = useMemo(() => {
-    return t.testimonials.items.map((item, index) => ({
-      ...item,
-      image: testimonialImages[index % testimonialImages.length],
-      rating: testimonialRatings[index % testimonialRatings.length],
-    }));
-  }, [t]);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const total = testimonials.length;
 
@@ -34,21 +61,27 @@ export function TestimonialsSection() {
     return index;
   };
 
-  const prevIndex = getWrappedIndex(activeIndex - 1);
-  const nextIndex = getWrappedIndex(activeIndex + 1);
+  const getPosition = (index: number): TestimonialPosition => {
+    const diff = index - activeIndex;
 
-  const visibleCards = [
-    { ...testimonials[prevIndex], position: "left" as const },
-    { ...testimonials[activeIndex], position: "center" as const },
-    { ...testimonials[nextIndex], position: "right" as const },
-  ];
+    if (diff === 0) return "center";
+    if (diff === -1 || diff === total - 1) return "left";
+    if (diff === 1 || diff === -(total - 1)) return "right";
 
-  const goPrev = () => setActiveIndex((prev) => getWrappedIndex(prev - 1));
-  const goNext = () => setActiveIndex((prev) => getWrappedIndex(prev + 1));
+    return "hidden";
+  };
+
+  const goPrev = () => {
+    setActiveIndex((prev) => getWrappedIndex(prev - 1));
+  };
+
+  const goNext = () => {
+    setActiveIndex((prev) => getWrappedIndex(prev + 1));
+  };
 
   return (
     <section className="relative z-10 overflow-hidden bg-[#f4f4f7] px-8 pb-28 pt-20 md:px-12 xl:px-12">
-      <div className="mx-auto max-w-[1780px]">
+      <div className="mx-auto max-w-[1780px] ">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-[760px]">
             <p className="text-[22px] font-medium uppercase tracking-[-0.03em] text-[#4B74FF]">
@@ -63,151 +96,49 @@ export function TestimonialsSection() {
           </div>
 
           <div className="hidden items-center gap-5 pt-4 lg:flex">
-            <button
-              type="button"
-              aria-label={t.testimonials.prevAlt}
+            <TestimonialArrowButton
+              direction="left"
+              label={t.testimonials.prevAlt}
               onClick={goPrev}
-              className="flex h-[78px] w-[78px] items-center justify-center rounded-full transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.03] active:scale-[0.98]"
-              style={{
-                ...testimonialArrowStyle,
-                boxShadow: `
-                  inset 0 1px 0 rgba(255,255,255,0.96),
-                  0 10px 22px rgba(111,119,146,0.07)
-                `,
-              }}
-            >
-              <img
-                src="/arrowLeft.png"
-                alt={t.testimonials.prevAlt}
-                className="h-[28px] w-[28px]"
-              />
-            </button>
+            />
 
-            <button
-              type="button"
-              aria-label={t.testimonials.nextAlt}
+            <TestimonialArrowButton
+              direction="right"
+              label={t.testimonials.nextAlt}
               onClick={goNext}
-              className="flex h-[78px] w-[78px] items-center justify-center rounded-full transition-all duration-300 hover:translate-y-[-2px] hover:scale-[1.03] active:scale-[0.98]"
-              style={{
-                ...testimonialArrowStyle,
-                boxShadow: `
-                  inset 0 1px 0 rgba(255,255,255,0.96),
-                  0 10px 22px rgba(111,119,146,0.07)
-                `,
-              }}
-            >
-              <img
-                src="/arrowRight.png"
-                alt={t.testimonials.nextAlt}
-                className="h-[28px] w-[28px]"
-              />
-            </button>
+            />
           </div>
         </div>
 
-        <div className="mt-14 flex w-full items-end justify-center gap-8 overflow-visible xl:gap-10">
-          {visibleCards.map((item) => {
-            const isCenter = item.position === "center";
-            const isLeft = item.position === "left";
+        <div className="relative mt-14 h-[640px] w-full overflow-hidden">
+          {testimonials.map((item: TestimonialItem, index: number) => {
+            const position = getPosition(index);
 
             return (
-              <article
-                  key={`${item.name}-${item.position}`}
-                  className={`
-                    flex shrink-0 flex-col rounded-[44px] px-8 pt-8 transition-all duration-500
-                    ${
-                      isCenter
-                        ? "h-[470px] w-[500px] -translate-y-5 opacity-100"
-                        : "h-[410px] w-[410px] translate-y-6 opacity-85"
-                    }
-                    ${isLeft ? "saturate-50" : isCenter ? "saturate-100" : "saturate-75"}
-                  `}
-                  style={{
-                    background: "rgba(239, 240, 245, 0.88)",
-                    border: "1px solid rgba(255,255,255,0.75)",
-                    boxShadow: `
-                      inset 0 1px 0 rgba(255,255,255,0.94),
-                      0 12px 24px rgba(108,116,145,0.05),
-                      0 26px 48px rgba(108,116,145,0.07)
-                    `,
-                    backdropFilter: "blur(8px)",
+              <div
+                key={item.name}
+                className={`
+                  absolute left-1/2 bottom-20 transition-all duration-1800
+                  ease-[cubic-bezier(0.22,1,0.36,1)]
+                  ${
+                    position === "center"
+                      ? "z-20 -translate-x-1/2 opacity-100"
+                      : position === "left"
+                      ? "z-10 -translate-x-[170%] opacity-85"
+                      : position === "right"
+                      ? "z-10 translate-x-[70%] opacity-85"
+                      : "pointer-events-none z-0 translate-x-[160%] opacity-0"
+                  }
+                `}
+              >
+                <TestimonialCard
+                  item={{
+                    ...item,
+                    position: position === "hidden" ? "right" : position,
                   }}
-                >
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={`
-                        flex shrink-0 items-center justify-center rounded-full bg-white/96
-                        shadow-[0_8px_20px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.96)]
-                        ring-1 ring-white/90
-                        ${isCenter ? "h-[74px] w-[74px]" : "h-[66px] w-[66px]"}
-                      `}
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className={`
-                          rounded-full object-cover
-                          ${isCenter ? "h-[100px] w-[100px]" : "h-[80px] w-[80px]"}
-                        `}
-                      />
-                    </div>
-
-                    <div>
-                      <h3
-                        className={`font-medium leading-none tracking-[-0.04em] ${
-                          isCenter
-                            ? "text-[28px] text-[#232634]"
-                            : "text-[24px] text-[#666c7c]"
-                        }`}
-                      >
-                        {item.name}
-                      </h3>
-
-                      <p
-                        className={`mt-4 tracking-[-0.03em] ${
-                          isCenter
-                            ? "text-[17px] text-[#4B74FF]"
-                            : "text-[16px] text-[#96a5eb]"
-                        }`}
-                      >
-                        {item.role}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p
-                    className={`mt-10 tracking-[-0.02em] ${
-                      isCenter
-                        ? "max-w-[360px] text-[16px] leading-[1.6] text-[#6c7180]"
-                        : "max-w-[300px] text-[15px] leading-[1.6] text-[#a0a5b3]"
-                    }`}
-                  >
-                    “{item.text}”
-                  </p>
-
-                  <div className="mt-auto flex items-center gap-3 pb-8">
-                    <span
-                      className={`${
-                        isCenter ? "text-[42px]" : "text-[38px]"
-                      } leading-none text-[#DDAF58]`}
-                    >
-                      ★
-                    </span>
-
-                    <div className="flex items-end gap-1.5">
-                      <span
-                        className={`${
-                          isCenter ? "text-[24px]" : "text-[22px]"
-                        } font-semibold leading-none tracking-[-0.04em] text-[#2d3140]`}
-                      >
-                        {item.rating}
-                      </span>
-                      <span className="text-[18px] leading-none text-[#a0a5b3]">
-                        {t.testimonials.ratingSuffix}
-                      </span>
-                    </div>
-                  </div>
-              </article>
+                  ratingSuffix={t.testimonials.ratingSuffix}
+                />
+              </div>
             );
           })}
         </div>

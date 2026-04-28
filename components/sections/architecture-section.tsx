@@ -1,5 +1,5 @@
-import { embossedPaperCardStyle } from "@/lib/ui-styles";
 import { useLanguage } from "@/lib/language-context";
+import { embossedCardStyle } from "@/lib/ui-styles";
 
  export function ArchitectureSection() {
   const { t } = useLanguage();
@@ -35,7 +35,7 @@ import { useLanguage } from "@/lib/language-context";
 
             <div
               className="mt-12 flex min-h-[162px] w-full max-w-[646px] items-center justify-between rounded-[32px] border border-white/70 bg-[#efeff3] px-8 py-7 md:px-10"
-              style={embossedPaperCardStyle}
+               style={embossedCardStyle}
             >
               <StatItem value="40%" label={t.architecture.stat1} />
               <StatItem value="3x" label={t.architecture.stat2} />

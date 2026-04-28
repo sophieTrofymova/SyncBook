@@ -146,6 +146,29 @@ export const translations = {
     },
 
     homeData: {
+        testimonials: [
+            {
+            image: "/Testimonial1.png",
+            rating: "4,5",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "4,9",
+            },
+            {
+            image: "/Testimonial3.png",
+            rating: "4,6",
+            },
+            {
+            image: "/Testimonial1.png",
+            rating: "4,8",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "5,0",
+            },
+        ],
+
         steps: [
             {
             title: "Deep Discovery & Audit",
@@ -361,6 +384,29 @@ export const translations = {
     },
 
     homeData: {
+        testimonials: [
+            {
+            image: "/Testimonial1.png",
+            rating: "4,5",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "4,9",
+            },
+            {
+            image: "/Testimonial3.png",
+            rating: "4,6",
+            },
+            {
+            image: "/Testimonial1.png",
+            rating: "4,8",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "5,0",
+            },
+        ],
+
         steps: [
         {
             title: "Глубокий аудит и исследование",
@@ -576,6 +622,29 @@ export const translations = {
     },
 
     homeData: {
+        testimonials: [
+            {
+            image: "/Testimonial1.png",
+            rating: "4,5",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "4,9",
+            },
+            {
+            image: "/Testimonial3.png",
+            rating: "4,6",
+            },
+            {
+            image: "/Testimonial1.png",
+            rating: "4,8",
+            },
+            {
+            image: "/Testimonial2.png",
+            rating: "5,0",
+            },
+        ],
+
         steps: [
         {
             title: "Descubrimiento y auditoría profunda",

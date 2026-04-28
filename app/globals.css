@@ -76,19 +76,86 @@ a {
 
 @keyframes mailFly {
   0% {
-    opacity: 0;
-    transform: translateX(-80px) translateY(100px) rotate(-12deg) scale(1.3);
-  }
-  32% {
     opacity: 1;
-    transform: translateX(600px) translateY(175px) rotate(-7deg) scale(1.4);
+    transform: translateX(-100px) translateY(200px) rotate(0deg) scale(1.4);
   }
-  72% {
+
+  28% {
     opacity: 1;
-    transform: translateX(900px) translateY(245px) rotate(-2deg) scale(1.4);
+    transform: translateX(80px) translateY(370px) rotate(-10deg) scale(1.4);
   }
+
+  /* удар об пол */
+  52% {
+    opacity: 1;
+    transform: translateX(100px) translateY(410px) rotate(-22deg) scale(1.46);
+  }
+
+
+  /* финальная позиция */
   100% {
-    opacity: 0;
-    transform: translateX(1200px) translateY(300px) rotate(0deg) scale(1.45);
+    opacity: 1;
+    transform: translateX(100px) translateY(400px) rotate(-22deg) scale(1.45);
   }
+}
+
+/* Анимация смены отзывов */
+
+@keyframes testimonialSlideNext {
+  0% {
+    opacity: 0.75;
+    transform: translateX(180px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes testimonialSlidePrev {
+  0% {
+    opacity: 0.75;
+    transform: translateX(-180px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* hover для кнопок, вдавленость */
+
+.embossed-pill {
+  box-shadow:
+    -7px -7px 7px rgba(255,255,255,1),
+    6px -12px 12px rgba(255,255,255,0.6),
+    7px 7px 7px rgb(203,203,211),
+    -6px 12px 10px rgba(219,219,227,0.6);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.embossed-pill:hover {
+  box-shadow:
+    inset -4px -4px 6px rgba(255,255,255,0.9),
+    inset 4px 4px 8px rgba(180,185,200,0.6);
+}
+
+.embossed-pill:active {
+  transform: scale(0.97);
+}
+
+.embossed-pill-button {
+  box-shadow:
+    -7px -7px 7px rgba(255,255,255,1),
+    6px -12px 12px rgba(255,255,255,0.6),
+    7px 7px 7px rgb(203,203,211),
+    -6px 12px 10px rgba(219,219,227,0.6);
+}
+
+.embossed-pill-button:hover {
+  box-shadow:
+    inset -4px -4px 7px rgba(255,255,255,0.95),
+    inset 5px 5px 10px rgba(180,185,200,0.55);
 }

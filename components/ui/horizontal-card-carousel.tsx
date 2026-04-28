@@ -75,7 +75,7 @@ export function HorizontalCardCarousel<T>({
         <div className="mt-14">
           <div
             ref={scrollRef}
-            className="flex gap-14 overflow-x-auto scroll-smooth pb-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-14 overflow-x-auto scroll-smooth p-10 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             {items.map((item, index) => renderItem(item, index))}
           </div>

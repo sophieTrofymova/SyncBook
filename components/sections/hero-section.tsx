@@ -39,36 +39,33 @@ export function HeroSection() {
           {t.hero.description}
         </p>
 
-       <div
-          className="
+       <button
+          type="button"
+          className=" embossed-pill-button
             group mt-16 flex w-full max-w-[420px] items-center rounded-full p-3
             transition-all duration-300 ease-out
-            hover:translate-y-[1px]
-            hover:shadow-[inset_0_4px_10px_rgba(70,80,110,0.14),inset_0_-1px_1px_rgba(255,255,255,0.85),0_6px_14px_rgba(41,49,72,0.08)]
+            hover:scale-[0.985]
+            active:scale-[0.97]
           "
-          style={embossedPillStyle}
         >
-          {/* ТЕКСТ КНОПКИ */}
-          <button
+          <span
             className="
               flex-1 rounded-full px-8 py-5 text-center text-[21px]
               font-medium tracking-[-0.02em] text-[#2a2e3c]
-              transition-all duration-300 ease-out
+              transition-colors duration-300 ease-out
               group-hover:text-[#11131a]
             "
           >
             {t.hero.cta}
-          </button>
+          </span>
 
-          {/* СИНЯЯ КНОПКА */}
-          <button
-            aria-label={t.hero.cta}
+          <span
             className="
               flex h-[78px] w-[78px] items-center justify-center rounded-full
               transition-all duration-300 ease-out
               group-hover:translate-y-[2px]
-              group-hover:scale-[0.96]
-              active:scale-[0.92]
+              group-hover:scale-[0.94]
+              group-active:scale-[0.9]
             "
             style={{
               background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
@@ -84,14 +81,16 @@ export function HeroSection() {
               src="/Vector.png"
               alt={t.hero.arrowAlt}
               className="
-                h-[28px] w-[28px]
+                h-[35px] w-[35px]
                 transition-transform duration-300 ease-out
-                group-hover:scale-[0.92]
+                group-hover:scale-[0.9]
               "
             />
-          </button>
-        </div>
+          </span>
+        </button>
       </div>
     </section>
   );
 }
+
+

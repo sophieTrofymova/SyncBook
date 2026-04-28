@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Check } from "lucide-react";
-import { FooterCard } from "@/components/cards/footer-card";
 import { useLanguage } from "@/lib/language-context";
+import { embossedCardStyle } from "@/lib/ui-styles"
 
 export function Footer() {
   const { t } = useLanguage();
@@ -29,7 +29,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1400px]">
         <div
           className="flex items-center justify-center rounded-[36px] py-10"
-          style={FooterCard}
+          style={embossedCardStyle}
         >
           <img src="/FooterLogo.png" alt={t.header.logoAlt} className="h-12 w-auto" />
         </div>

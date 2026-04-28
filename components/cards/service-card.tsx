@@ -1,4 +1,4 @@
-import { embossedPaperCardStyle } from "@/lib/ui-styles";
+import { embossedCardStyle } from "@/lib/ui-styles";
 
 type ServiceCardProps = {
   item: {
@@ -12,15 +12,12 @@ type ServiceCardProps = {
 export function ServiceCard({ item }: ServiceCardProps) {
   return (
     <article
-      className="group flex h-[468px] w-[392px] shrink-0 flex-col rounded-[34px] border border-white/70 px-8 pb-8 pt-7"
-      style={{
-        ...embossedPaperCardStyle,
-        boxShadow: `
-          inset 0 1px 0 rgba(255,255,255,0.92),
-          0 12px 24px rgba(100, 108, 140, 0.06),
-          0 24px 48px rgba(100, 108, 140, 0.08)
-        `,
-      }}
+      className="
+        group flex h-[468px] w-[392px] shrink-0 flex-col
+        rounded-[34px] border border-white/70 bg-[#f4f4f7]
+        px-8 pb-8 pt-7
+      "
+      style={embossedCardStyle}
     >
       <div className="flex justify-start">
         <img

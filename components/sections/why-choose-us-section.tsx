@@ -2,9 +2,11 @@
 import { blueBlockStyle, stepCardStyle } from "@/lib/ui-styles";
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
+
 export function WhyChooseUsSection() {
   const { t } = useLanguage();
   const { steps } = getHomeData(t);
+
   return (
     <section className="relative z-10 bg-[#f4f4f7] px-8 pb-32 pt-10 md:px-12 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
@@ -37,6 +39,7 @@ export function WhyChooseUsSection() {
                   hover:shadow-none
                   hover:ring-1 hover:ring-white/60
                 "
+                
               >
                 <span className="px-2 transition-colors duration-300 group-hover:text-white">
                   {t.whyChooseUs.cta}
