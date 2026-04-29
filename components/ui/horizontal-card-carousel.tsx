@@ -68,30 +68,40 @@ export function HorizontalCardCarousel<T>({
   };
 
   return (
-    <section className="relative z-10 px-8 pb-24 pt-20 md:px-12 xl:px-12">
-      <div className="mx-auto max-w-[1700px]">
-        <SectionHeader eyebrow={eyebrow} title={title} actionText={actionText} />
+    <section className="relative z-10 pb-24 pt-20">
+      <div className="px-8 md:px-12 xl:px-12">
+        <div className="mx-auto max-w-[1800px]">
+          <SectionHeader eyebrow={eyebrow} title={title} actionText={actionText} />
+        </div>
+      </div>
 
-        <div className="mt-14">
-          <div
-            ref={scrollRef}
-            className="flex gap-14 overflow-x-auto scroll-smooth p-10 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-          >
-            {items.map((item, index) => renderItem(item, index))}
-          </div>
+      <div className="mt-14">
+        <div
+          ref={scrollRef}
+          className="
+        flex gap-14 overflow-x-auto scroll-smooth
+        px-8 py-10 md:px-12 xl:px-12
+        [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden
+      "
+        >
+          {items.map((item, index) => renderItem(item, index))}
+        </div>
 
-          <div className="mt-6">
-            <input
-              type="range"
-              min={0}
-              max={maxProgress}
-              step={0.1}
-              value={progress}
-              onChange={handleRangeChange}
-              style={{ ["--fill" as string]: `${progress}%` }}
-              className="portfolio-range h-[16px] w-full cursor-pointer appearance-none bg-transparent"
-              aria-label={`${title} scroll progress`}
-            />
+        <div className="px-8 md:px-12 xl:px-12">
+          <div className="mx-auto max-w-[2200px]">
+            <div className="mt-6">
+              <input
+                type="range"
+                min={0}
+                max={maxProgress}
+                step={0.1}
+                value={progress}
+                onChange={handleRangeChange}
+                style={{ ["--fill" as string]: `${progress}%` }}
+                className="portfolio-range h-[16px] w-full cursor-pointer appearance-none bg-transparent"
+                aria-label={`${title} scroll progress`}
+              />
+            </div>
           </div>
         </div>
       </div>

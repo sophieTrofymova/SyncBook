@@ -45,13 +45,13 @@ export function SiteHeader() {
 
                 <span
                   className="
-            pointer-events-none absolute left-1/2 bottom-[-9px]
-            h-[8px] w-[100px] -translate-x-1/2 translate-y-[8px]
-            rounded-t-full rounded-b-none bg-[#4B74FF] opacity-0
-            scale-x-0 origin-center
-            transition-[transform,opacity] duration-300 ease-out
-            group-hover:scale-x-100 group-hover:opacity-100
-          "
+                    pointer-events-none absolute left-1/2 bottom-[-9px]
+                    h-[8px] w-[100px] -translate-x-1/2 translate-y-[8px]
+                    rounded-t-full rounded-b-none bg-[#4B74FF] opacity-0
+                    scale-x-0 origin-center
+                    transition-[transform,opacity] duration-300 ease-out
+                    group-hover:scale-x-100 group-hover:opacity-100
+                  "
                 />
               </Link>
             );
