@@ -1,5 +1,5 @@
 //import { steps } from "@/data/home";
-import { blueBlockStyle, stepCardStyle } from "@/lib/ui-styles";
+import { blueBlockStyle, embossedCardStyleBlue } from "@/lib/ui-styles";
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
 
@@ -64,12 +64,12 @@ export function WhyChooseUsSection() {
           </button>
           </div>
 
-          <div className="mt-12 flex flex-col gap-6">
+          <div className="mt-12 flex flex-col gap-8">
             {steps.map((step) => (
               <div
                 key={step.number}
                 className="grid min-h-[94px] grid-cols-[92px_1fr_520px] items-center rounded-[30px] px-10 py-5"
-                style={stepCardStyle}
+                style={embossedCardStyleBlue}
               >
                 <div className="text-[32px] font-semibold leading-none tracking-[-0.04em] text-white/90">
                   {step.number}

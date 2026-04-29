@@ -17,7 +17,13 @@ export function SiteHeader() {
         style={embossedPillStyle}
       >
         <div className="mr-8 pr-15 md:mr-12">
-          <img src="/Group 1.svg" alt={t.header.logoAlt} className="h-[46px] w-auto" />
+          <Link href="/">
+            <img
+              src="/Group 1.svg"
+              alt={t.header.logoAlt}
+              className="h-[46px] w-auto cursor-pointer"
+            />
+          </Link>
         </div>
 
         <nav className="hidden items-center gap-2 md:flex">
