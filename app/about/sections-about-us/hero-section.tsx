@@ -6,14 +6,14 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 min-h-[880px] overflow-hidden px-8 pt-12 md:px-12 xl:px-14">
+    <section className="relative z-10 min-h-[920px] overflow-hidden px-8 pt-22 md:px-12 xl:px-14">
       <h1 className="relative z-20 mx-auto max-w-[980px] text-center text-[44px] font-medium leading-[1.18] tracking-[-0.04em] text-[#282b37] md:text-[58px]">
         “We Bridge the Gap Between
         <br />
         Complexity and Efficiency”
       </h1>
 
-      <div className="absolute left-1/2 top-[210px] z-10 w-[920px] -translate-x-1/2 md:w-[1050px] xl:w-[1120px]">
+      <div className="absolute left-1/2 top-[210px] z-10 w-[920px] pt-15 -translate-x-1/2 md:w-[1050px] xl:w-[1120px]">
         <img
           src="/AboutUs/hero-about-us.png"
           alt={t.hero.heroAlt}

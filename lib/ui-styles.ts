@@ -128,4 +128,16 @@ export const embossedPillPressedStyle = {
   `,
 };
 
+// Эффект для синего цвета
+
+export const embossedCardStyleBlue = {
+  boxShadow: `
+    -8px -8px 8px rgba(87, 125, 241, 0.9),
+    -18px -18px 22px rgba(63, 105, 230, 0.5),
+
+     8px  8px 8px rgb(37, 74, 184),
+     18px  18px 26px rgba(58, 99, 225,0.5)
+  `,
+};
+
 //////////////////////////////////////////////////////////////

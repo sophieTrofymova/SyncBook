@@ -17,7 +17,13 @@ export function SiteHeader() {
         style={embossedPillStyle}
       >
         <div className="mr-8 pr-15 md:mr-12">
-          <img src="/Group 1.svg" alt={t.header.logoAlt} className="h-[46px] w-auto" />
+          <Link href="/">
+            <img
+              src="/Group 1.svg"
+              alt={t.header.logoAlt}
+              className="h-[46px] w-auto cursor-pointer"
+            />
+          </Link>
         </div>
 
         <nav className="hidden items-center gap-2 md:flex">
@@ -39,13 +45,13 @@ export function SiteHeader() {
 
                 <span
                   className="
-            pointer-events-none absolute left-1/2 bottom-[-9px]
-            h-[8px] w-[100px] -translate-x-1/2 translate-y-[8px]
-            rounded-t-full rounded-b-none bg-[#4B74FF] opacity-0
-            scale-x-0 origin-center
-            transition-[transform,opacity] duration-300 ease-out
-            group-hover:scale-x-100 group-hover:opacity-100
-          "
+                    pointer-events-none absolute left-1/2 bottom-[-9px]
+                    h-[8px] w-[100px] -translate-x-1/2 translate-y-[8px]
+                    rounded-t-full rounded-b-none bg-[#4B74FF] opacity-0
+                    scale-x-0 origin-center
+                    transition-[transform,opacity] duration-300 ease-out
+                    group-hover:scale-x-100 group-hover:opacity-100
+                  "
                 />
               </Link>
             );
