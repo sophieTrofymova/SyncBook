@@ -12,6 +12,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-albert-sans), Arial, Helvetica, sans-serif;
+  overflow-x: clip;
 }
 
 * {
@@ -158,4 +159,17 @@ a {
   box-shadow:
     inset -4px -4px 7px rgba(255,255,255,0.95),
     inset 5px 5px 10px rgba(180,185,200,0.55);
+}
+@keyframes techStripMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-tech-strip {
+  animation: techStripMove 28s linear infinite;
 }

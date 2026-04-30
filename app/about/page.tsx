@@ -13,7 +13,7 @@ import { Footer }              from "@/components/layout/footer-section";
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden text-[#232634]">
-      <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
+      <div className="relative min-h-screen pt-2">
         <SiteHeader />
         <HeroSection />
         <TechStrip />

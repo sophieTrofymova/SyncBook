@@ -1,8 +1,8 @@
 export function AboutStorySection() {
   return (
-    <section className="relative overflow-hidden bg-[#f3f3f7] px-8 py-24 md:px-12 xl:px-14">
+    <section className="relative overflow-hidden bg-[#f3f3f7] py-24">
       <div className="grid min-h-[900px] grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-x-28">
-        <div className="max-w-[650px]">
+        <div className="max-w-[650px] px-8 md:px-12 xl:px-14">
           <p className="mb-5 text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
             FROM CHAOS TO CODE
           </p>
@@ -30,15 +30,15 @@ export function AboutStorySection() {
           />
         </div>
 
-        <div className="-ml-14 mt-4 lg:mt-0">
+        <div>
           <img
             src="/AboutUs/team2.png"
             alt="Team planning automation project"
-            className="h-[400px] w-full max-w-[680px] rounded-tr-[42px] rounded-br-[42px] object-cover"
+            className="h-[400px] w-full rounded-tr-[42px] rounded-br-[42px] object-cover"
           />
         </div>
 
-        <div className="flex items-start pt-28">
+        <div className="flex items-start px-8 pt-28 md:px-12 xl:px-14">
           <p className="max-w-[650px] text-[18px] font-normal leading-[1.38] tracking-[-0.025em] text-[#707582] md:text-[19px]">
             We founded SyncBook to change that. We didn't want to be just
             another software shop. We set out to be architects of efficiency. We
