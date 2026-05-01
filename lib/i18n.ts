@@ -238,6 +238,40 @@ export const translations = {
             },
         ],
         },
+        portfolioPage: {
+        hero: {
+            titleLine1: "We suggest proven",
+            titleAccent: "solutions",
+            titleLine2: "& measurable",
+            titleLine3: "impact.",
+            description:
+            "We don't collect projects; we collect success stories. Each case below is the result of an in-depth audit, engineering design, and automation that freed up people's time for more important tasks.",
+            techTitle: "Powered by world-class technologies",
+            cases: [
+            {
+                number: "01",
+                title: "Dashboard\n“Rozenfeld Agency”",
+                image: "/Portfolio/monitor-1.png",
+            },
+            {
+                number: "02",
+                title: "Travel agency\nwebsite",
+                image: "/Portfolio/monitor-2.png",
+            },
+            {
+                number: "03",
+                title: "Business platform",
+                image: "/Portfolio/monitor-3.png",
+            },
+            ],
+            logos: [
+            { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
+            { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
+            { src: "/Portfolio/occollo.png", alt: "Occollo" },
+            { src: "/Portfolio/nuki.png", alt: "Nuki" },
+            ],
+        },
+        },
   },
 
     ru: {
@@ -476,6 +510,40 @@ export const translations = {
         },
         ],
     },
+    portfolioPage: {
+    hero: {
+        titleLine1: "Мы предлагаем проверенные",
+        titleAccent: "решения",
+        titleLine2: "и измеримый",
+        titleLine3: "результат.",
+        description:
+        "Мы не просто собираем проекты — мы создаём истории успеха. Каждый кейс ниже — результат глубокого аудита, инженерного проектирования и автоматизации, которая освобождает время команды для действительно важных задач.",
+        techTitle: "Основано на технологиях мирового уровня",
+        cases: [
+        {
+            number: "01",
+            title: "Дашборд\n“Rozenfeld Agency”",
+            image: "/Portfolio/monitor-1.png",
+        },
+        {
+            number: "02",
+            title: "Сайт туристического\nагентства",
+            image: "/Portfolio/monitor-2.png",
+        },
+        {
+            number: "03",
+            title: "Бизнес-платформа",
+            image: "/Portfolio/monitor-3.png",
+        },
+        ],
+        logos: [
+        { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
+        { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
+        { src: "/Portfolio/occollo.png", alt: "Occollo" },
+        { src: "/Portfolio/nuki.png", alt: "Nuki" },
+        ],
+    },
+    },
     },
 
     es: {
@@ -713,6 +781,40 @@ export const translations = {
             alt: 'Sitio web para "Okeilo"',
         },
         ],
+    },
+    portfolioPage: {
+    hero: {
+        titleLine1: "Proponemos",
+        titleAccent: "soluciones",
+        titleLine2: "probadas y",
+        titleLine3: "resultados medibles.",
+        description:
+        "No recopilamos proyectos; creamos historias de éxito. Cada caso es el resultado de una auditoría profunda, diseño de ingeniería y automatización que libera tiempo del equipo para tareas realmente importantes.",
+        techTitle: "Basado en tecnologías de primer nivel",
+        cases: [
+        {
+            number: "01",
+            title: "Panel de control\n“Rozenfeld Agency”",
+            image: "/Portfolio/monitor-1.png",
+        },
+        {
+            number: "02",
+            title: "Sitio web de\nagencia de viajes",
+            image: "/Portfolio/monitor-2.png",
+        },
+        {
+            number: "03",
+            title: "Plataforma empresarial",
+            image: "/Portfolio/monitor-3.png",
+        },
+        ],
+        logos: [
+        { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
+        { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
+        { src: "/Portfolio/occollo.png", alt: "Occollo" },
+        { src: "/Portfolio/nuki.png", alt: "Nuki" },
+        ],
+    },
     },
     },
 } as const;
