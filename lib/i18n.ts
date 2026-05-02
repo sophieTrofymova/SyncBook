@@ -526,12 +526,12 @@ export const translations = {
     },
     portfolioPage: {
     hero: {
-        titleLine1: "Предлагаем проверенные",
+        titleLine1: "Создаём проверенные",
         titleAccent: "решения",
-        titleLine2: "и измеримый",
-        titleLine3: "результат.",
+        titleLine2: "и доводим",
+        titleLine3: "их до результата.",
         description:
-        "Мы не просто собираем проекты — мы создаём истории успеха. Каждый кейс ниже стал результатом глубокого аудита, инженерного проектирования и автоматизации, которая освободила время команды для более важных задач.",
+        "Мы не просто собираем проекты — мы создаём истории роста. Каждый кейс ниже — это результат глубокого анализа, продуманной архитектуры и автоматизации, которая освобождает команде время для действительно важных задач.",
         techTitle: "Основано на технологиях мирового уровня",
         cases: [
         {
@@ -552,9 +552,9 @@ export const translations = {
         ],
     },
 
-    allProjects: "Все проекты",
+    allProjects: "Наши проекты",
     projectDescription:
-        "Мы создаём программные решения под ваш бизнес, а не наоборот. От CRM до сложных ERP-систем.",
+        "Мы создаём программные решения под задачи бизнеса: от CRM-систем до сложных ERP-платформ.",
     seeMore: "Подробнее",
     showMore: "Показать ещё",
     settingsAlt: "Настройки",
@@ -810,14 +810,14 @@ export const translations = {
         },
         ],
     },
-    portfolioPage: {
+   portfolioPage: {
     hero: {
-        titleLine1: "Proponemos",
+        titleLine1: "Creamos",
         titleAccent: "soluciones",
-        titleLine2: "probadas e impacto",
-        titleLine3: "medible.",
+        titleLine2: "probadas con",
+        titleLine3: "resultados reales.",
         description:
-        "No recopilamos proyectos; construimos historias de éxito. Cada caso es el resultado de una auditoría profunda, diseño técnico y automatización que liberó tiempo del equipo para tareas más importantes.",
+        "No acumulamos proyectos; construimos historias de crecimiento. Cada caso es el resultado de un análisis profundo, una arquitectura bien pensada y automatización que libera tiempo del equipo para tareas realmente importantes.",
         techTitle: "Basado en tecnologías de primer nivel",
         cases: [
         {
@@ -838,9 +838,9 @@ export const translations = {
         ],
     },
 
-    allProjects: "Todos los proyectos",
+    allProjects: "Nuestros proyectos",
     projectDescription:
-        "Creamos software adaptado a tu negocio, no al revés. Desde CRM hasta sistemas ERP complejos.",
+        "Creamos soluciones de software adaptadas a las necesidades del negocio: desde CRM hasta plataformas ERP complejas.",
     seeMore: "Ver más",
     showMore: "Mostrar más",
     settingsAlt: "Configuración",
