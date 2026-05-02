@@ -264,13 +264,27 @@ export const translations = {
                 image: "/Portfolio/monitor-3.png",
             },
             ],
-            logos: [
-            { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
-            { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
-            { src: "/Portfolio/occollo.png", alt: "Occollo" },
-            { src: "/Portfolio/nuki.png", alt: "Nuki" },
-            ],
         },
+
+        allProjects: "All projects",
+        projectDescription:
+            "We create software that suits your business, not the other way around. From CRM to complex ERP systems.",
+        seeMore: "See more",
+        showMore: "Show more",
+        settingsAlt: "Settings",
+        tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
+        hashtags: ["web design", "real estate", "landing page"],
+        projects: [
+            {
+            title: "Refa group website automation",
+            },
+            {
+            title: "Website and panel for “Kolinsky”",
+            },
+            {
+            title: "Refa group website automation",
+            },
+        ],
         },
   },
 
@@ -512,12 +526,12 @@ export const translations = {
     },
     portfolioPage: {
     hero: {
-        titleLine1: "Мы предлагаем проверенные",
+        titleLine1: "Предлагаем проверенные",
         titleAccent: "решения",
         titleLine2: "и измеримый",
         titleLine3: "результат.",
         description:
-        "Мы не просто собираем проекты — мы создаём истории успеха. Каждый кейс ниже — результат глубокого аудита, инженерного проектирования и автоматизации, которая освобождает время команды для действительно важных задач.",
+        "Мы не просто собираем проекты — мы создаём истории успеха. Каждый кейс ниже стал результатом глубокого аудита, инженерного проектирования и автоматизации, которая освободила время команды для более важных задач.",
         techTitle: "Основано на технологиях мирового уровня",
         cases: [
         {
@@ -527,7 +541,7 @@ export const translations = {
         },
         {
             number: "02",
-            title: "Сайт туристического\nагентства",
+            title: "Сайт\nтуристического агентства",
             image: "/Portfolio/monitor-2.png",
         },
         {
@@ -536,13 +550,27 @@ export const translations = {
             image: "/Portfolio/monitor-3.png",
         },
         ],
-        logos: [
-        { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
-        { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
-        { src: "/Portfolio/occollo.png", alt: "Occollo" },
-        { src: "/Portfolio/nuki.png", alt: "Nuki" },
-        ],
     },
+
+    allProjects: "Все проекты",
+    projectDescription:
+        "Мы создаём программные решения под ваш бизнес, а не наоборот. От CRM до сложных ERP-систем.",
+    seeMore: "Подробнее",
+    showMore: "Показать ещё",
+    settingsAlt: "Настройки",
+    tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
+    hashtags: ["веб-дизайн", "недвижимость", "лендинг"],
+    projects: [
+        {
+        title: "Автоматизация сайта Refa Group",
+        },
+        {
+        title: "Сайт и панель управления для “Kolinsky”",
+        },
+        {
+        title: "Автоматизация сайта Refa Group",
+        },
+    ],
     },
     },
 
@@ -786,15 +814,15 @@ export const translations = {
     hero: {
         titleLine1: "Proponemos",
         titleAccent: "soluciones",
-        titleLine2: "probadas y",
-        titleLine3: "resultados medibles.",
+        titleLine2: "probadas e impacto",
+        titleLine3: "medible.",
         description:
-        "No recopilamos proyectos; creamos historias de éxito. Cada caso es el resultado de una auditoría profunda, diseño de ingeniería y automatización que libera tiempo del equipo para tareas realmente importantes.",
+        "No recopilamos proyectos; construimos historias de éxito. Cada caso es el resultado de una auditoría profunda, diseño técnico y automatización que liberó tiempo del equipo para tareas más importantes.",
         techTitle: "Basado en tecnologías de primer nivel",
         cases: [
         {
             number: "01",
-            title: "Panel de control\n“Rozenfeld Agency”",
+            title: "Dashboard\n“Rozenfeld Agency”",
             image: "/Portfolio/monitor-1.png",
         },
         {
@@ -808,13 +836,27 @@ export const translations = {
             image: "/Portfolio/monitor-3.png",
         },
         ],
-        logos: [
-        { src: "/Portfolio/okeilo.png", alt: "Okeilo" },
-        { src: "/Portfolio/raiffeisen.png", alt: "Raiffeisen Bank" },
-        { src: "/Portfolio/occollo.png", alt: "Occollo" },
-        { src: "/Portfolio/nuki.png", alt: "Nuki" },
-        ],
     },
+
+    allProjects: "Todos los proyectos",
+    projectDescription:
+        "Creamos software adaptado a tu negocio, no al revés. Desde CRM hasta sistemas ERP complejos.",
+    seeMore: "Ver más",
+    showMore: "Mostrar más",
+    settingsAlt: "Configuración",
+    tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
+    hashtags: ["diseño web", "bienes raíces", "landing page"],
+    projects: [
+        {
+        title: "Automatización del sitio Refa Group",
+        },
+        {
+        title: "Sitio web y panel para “Kolinsky”",
+        },
+        {
+        title: "Automatización del sitio Refa Group",
+        },
+    ],
     },
     },
 } as const;
