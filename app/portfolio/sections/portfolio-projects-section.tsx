@@ -29,7 +29,7 @@ export function PortfolioProjectsSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#f8f9fc] px-10 py-24">
+    <section className="bg-[#f2f3f8] px-10 py-24">
 
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-14 flex items-center justify-between">
@@ -79,7 +79,7 @@ export function PortfolioProjectsSection() {
                   </h3>
 
                   <p className="text-[16px] leading-[1.45] text-[#707582]">
-                    {t.portfolioPage.description}
+                    {t.portfolioPage.projectDescription}
                   </p>
                 </div>
 
@@ -117,7 +117,7 @@ export function PortfolioProjectsSection() {
                     }}
                   >
                     <span className="flex-1 text-[14px] font-medium">
-                      {t.common.seeMore}
+                      {t.portfolioPage.seeMore}
                     </span>
 
                     <span className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#4b74ff] text-[22px] text-white shadow-[0_12px_28px_rgba(75,116,255,0.35)] transition-transform group-hover:translate-x-1">
@@ -142,7 +142,7 @@ export function PortfolioProjectsSection() {
               embossedPillStyle.boxShadow;
           }}
         >
-          {t.common.showMore}
+          {t.portfolioPage.showMore}
         </button>
       </div>
     </section>
