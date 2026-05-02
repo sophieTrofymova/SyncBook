@@ -12,7 +12,9 @@ export default function PortfolioPage() {
       <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
         <SiteHeader />
         <PortfolioHeroSection />
-        <TechStrip />
+        <div className="relative left-1/2 z-40 -mt-[8px] w-screen -translate-x-1/2">
+            <TechStrip />
+        </div>  
         <PortfolioProjectsSection />
         <Footer />
       </div>
