@@ -1,14 +1,18 @@
+"use client";
+
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/sections-main/language-switcher";
 import { embossedPillStyle } from "@/lib/ui-styles";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function SiteHeader() {
   const { t } = useLanguage();
   const { navItems } = getHomeData(t);
+  const pathname = usePathname();
 
-  const activeItem = navItems[0];
+  const hrefs = ["/services", "/about", "/portfolio", "/contacts"];
 
   return (
     <header className="relative z-30 flex items-start justify-between px-6 pt-4 md:px-12">
@@ -28,30 +32,34 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-2 md:flex">
           {navItems.map((item, index) => {
-            const hrefs = ["/services", "/about", "/portfolio", "/contacts"];
-            const active = index === 0;
+            const href = hrefs[index];
+
+            const active =
+              pathname === href ||
+              pathname.startsWith(`${href}/`) ||
+              (pathname === "/" && href === "/services");
 
             return (
               <Link
                 key={item}
-                href={hrefs[index]}
-                className={`
+                href={href}
+                className="
                   group relative rounded-full px-7 py-3 text-[18px]
-                  font-medium tracking-[-0.02em] transition-colors duration-300
-                  ${active ? "text-[#4B74FF]" : "text-[#2b2f3d] hover:text-[#1f2330]"}
-                `}
+                  font-medium tracking-[-0.02em] text-[#2b2f3d]
+                "
               >
-                <span className="relative z-10">{item}</span>
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-[#4B74FF]">
+                  {item}
+                </span>
 
                 <span
-                  className="
+                  className={`
                     pointer-events-none absolute left-1/2 bottom-[-9px]
                     h-[8px] w-[100px] -translate-x-1/2 translate-y-[8px]
-                    rounded-t-full rounded-b-none bg-[#4B74FF] opacity-0
-                    scale-x-0 origin-center
-                    transition-[transform,opacity] duration-300 ease-out
-                    group-hover:scale-x-100 group-hover:opacity-100
-                  "
+                    rounded-t-full bg-[#4B74FF]
+                    transition-opacity duration-300
+                    ${active ? "opacity-100" : "opacity-0"}
+                  `}
                 />
               </Link>
             );
