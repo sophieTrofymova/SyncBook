@@ -17,7 +17,7 @@ const engineeringItems = [
 
 export function EngineeringSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f3f3f7] px-8 py-28 md:px-12 xl:px-14">
+    <section className="relative mx-auto max-w-[1800px] overflow-hidden px-8 py-28 md:px-12 xl:px-14">
       <div className="mx-auto grid max-w-[1680px] grid-cols-1 items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative z-20">
           <p className="text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
