@@ -6,6 +6,7 @@ import {
   embossedPillStyle,
   embossedPillPressedStyle,
 } from "@/lib/ui-styles";
+import Link from "next/link";
 
 const projects = [
   {
@@ -104,26 +105,27 @@ export function PortfolioProjectsSection() {
                 </div>
 
                 <div className="absolute bottom-[18px] right-0">
-                  <button
-                    className="group flex w-[165px] items-center rounded-full p-1.5 transition-all duration-300"
+                <Link
+                    href={`/portfolio/project/${index}`}
+                    className="group flex w-[165px] items-center rounded-full p-1.5 transition-all duration-300 hover:scale-[0.98] active:scale-[0.95]"
                     style={{ background: "#f8f9fc", ...embossedPillStyle }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow =
+                    e.currentTarget.style.boxShadow =
                         embossedPillPressedStyle.boxShadow;
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow =
+                    e.currentTarget.style.boxShadow =
                         embossedPillStyle.boxShadow;
                     }}
-                  >
+                >
                     <span className="flex-1 text-[14px] font-medium">
-                      {t.portfolioPage.seeMore}
+                    {t.portfolioPage.seeMore}
                     </span>
 
                     <span className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-[#4b74ff] text-[22px] text-white shadow-[0_12px_28px_rgba(75,116,255,0.35)] transition-transform group-hover:translate-x-1">
-                      →
+                    →
                     </span>
-                  </button>
+                </Link>
                 </div>
               </div>
             </article>

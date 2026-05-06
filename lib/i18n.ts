@@ -285,7 +285,70 @@ export const translations = {
             title: "Refa group website automation",
             },
         ],
+
+        projectDetails: {
+    backAlt: "Back",
+    visitWebsite: "Visit\nWebsite",
+    heroDescription:
+        "We don’t collect projects; we collect success stories. Each case below is the result of an in-depth audit, engineering design, and automation that freed up people’s time for more important tasks.",
+    stat1: "25%",
+    stat1Text: "More conversion than before",
+    stat2: "3000+",
+    stat2Text: "Clients came after rework",
+    ctaText: "Make your",
+    ctaStrong: "project decent",
+    ctaAfter: "already today with us",
+    seeAllServices: "See all services",
+
+    aboutTitle: "ABOUT THE PROJECT",
+    aboutDescription:
+        "A digital beauty platform designed to present services, improve client experience, and create a modern visual identity for the brand.",
+    serviceLabel: "Service",
+    serviceValue: "Website",
+    industryLabel: "Industry",
+    industryValue: "Beauty Salon",
+    publishedLabel: "Published",
+    publishedValue: "January 9th 2025",
+
+    uiKitTitle: "UI KIT",
+    uiKitDescription:
+        "A visual system built around elegant colors, soft typography, and reusable interface elements for a consistent brand experience.",
+
+    typographyTitle: "Montserrat Alternates",
+    adaptiveTitle: "Adaptive versions",
+    adaptiveDescription:
+        "Responsive layouts were prepared for desktop, tablet, and mobile screens to keep the experience clean and accessible across devices.",
+
+    quote:
+        "The interface was designed to feel elegant, clear, and easy to use while keeping the visual identity strong across every touchpoint.",
+    quoteAuthor: "- Richard Price",
+
+    otherEyebrow: "LOOK AT THESE DECENT CASES",
+    otherTitle: "Discover other projects",
+    viewAllCases: "View all cases",
+
+    projects: [
+        {
+        accent: "Refa Group",
+        title: "Case -\nAutomation",
         },
+        {
+        accent: "Kolinsky Website",
+        title: "Case -\nReal Estate",
+        },
+        {
+        accent: "Miraki Website",
+        title: "Case -\nBeauty Salon",
+        },
+    ],
+
+    otherProjects: [
+        'Dashboard for “Rozenfeld Agency”',
+        'Website and panel for “Kolinsky”',
+        'Mobile App for “Occollo”',
+    ],
+    },
+    }
   },
 
     ru: {
@@ -572,6 +635,68 @@ export const translations = {
         },
     ],
     },
+    projectDetails: {
+        backAlt: "Назад",
+        visitWebsite: "Открыть\nсайт",
+        heroDescription:
+            "Мы не просто собираем проекты — мы создаём истории роста. Каждый кейс ниже — это результат глубокого анализа, продуманной архитектуры и автоматизации, которая освобождает команде время для действительно важных задач.",
+        stat1: "25%",
+        stat1Text: "Больше конверсий после редизайна",
+        stat2: "3000+",
+        stat2Text: "Клиентов пришло после обновления",
+        ctaText: "Сделайте свой",
+        ctaStrong: "проект сильнее",
+        ctaAfter: "уже сегодня вместе с нами",
+        seeAllServices: "Все услуги",
+
+        aboutTitle: "О ПРОЕКТЕ",
+        aboutDescription:
+            "Цифровая платформа для beauty-бренда, созданная для презентации услуг, улучшения клиентского опыта и формирования современной визуальной айдентики.",
+        serviceLabel: "Услуга",
+        serviceValue: "Веб-сайт",
+        industryLabel: "Сфера",
+        industryValue: "Салон красоты",
+        publishedLabel: "Запуск",
+        publishedValue: "9 января 2025",
+
+        uiKitTitle: "UI KIT",
+        uiKitDescription:
+            "Визуальная система построена на элегантной палитре, мягкой типографике и переиспользуемых интерфейсных элементах для цельного восприятия бренда.",
+
+        typographyTitle: "Montserrat Alternates",
+        adaptiveTitle: "Адаптивные версии",
+        adaptiveDescription:
+            "Мы подготовили адаптивные макеты для desktop, tablet и mobile, чтобы сайт выглядел аккуратно и удобно на любом устройстве.",
+
+        quote:
+            "Интерфейс был спроектирован так, чтобы быть элегантным, понятным и удобным, сохраняя сильную визуальную айдентику на каждом экране.",
+        quoteAuthor: "- Richard Price",
+
+        otherEyebrow: "ПОСМОТРИТЕ НА ДРУГИЕ КЕЙСЫ",
+        otherTitle: "Другие проекты",
+        viewAllCases: "Все кейсы",
+
+        projects: [
+            {
+            accent: "Miraki Website",
+            title: "Кейс —\nсалон красоты",
+            },
+            {
+            accent: "Kolinsky Website",
+            title: "Кейс —\nнедвижимость",
+            },
+            {
+            accent: "Refa Group",
+            title: "Кейс —\nавтоматизация",
+            },
+        ],
+
+        otherProjects: [
+            "Дашборд для “Rozenfeld Agency”",
+            "Сайт и панель управления для “Kolinsky”",
+            "Мобильное приложение для “Occollo”",
+        ],
+        },
     },
 
     es: {
@@ -858,5 +983,67 @@ export const translations = {
         },
     ],
     },
+    projectDetails: {
+        backAlt: "Volver",
+        visitWebsite: "Visitar\nsitio",
+        heroDescription:
+            "No acumulamos proyectos; construimos historias de crecimiento. Cada caso es el resultado de un análisis profundo, una arquitectura bien pensada y automatización que libera tiempo del equipo para tareas realmente importantes.",
+        stat1: "25%",
+        stat1Text: "Más conversiones después del rediseño",
+        stat2: "3000+",
+        stat2Text: "Clientes llegaron tras la renovación",
+        ctaText: "Haz que tu",
+        ctaStrong: "proyecto destaque",
+        ctaAfter: "desde hoy con nosotros",
+        seeAllServices: "Ver servicios",
+
+        aboutTitle: "SOBRE EL PROYECTO",
+        aboutDescription:
+            "Una plataforma digital para una marca de belleza, diseñada para presentar servicios, mejorar la experiencia del cliente y crear una identidad visual moderna.",
+        serviceLabel: "Servicio",
+        serviceValue: "Sitio web",
+        industryLabel: "Industria",
+        industryValue: "Salón de belleza",
+        publishedLabel: "Publicado",
+        publishedValue: "9 de enero de 2025",
+
+        uiKitTitle: "UI KIT",
+        uiKitDescription:
+            "Un sistema visual basado en colores elegantes, tipografía suave y elementos reutilizables para mantener una experiencia de marca coherente.",
+
+        typographyTitle: "Montserrat Alternates",
+        adaptiveTitle: "Versiones adaptativas",
+        adaptiveDescription:
+            "Preparamos diseños responsive para desktop, tablet y mobile, manteniendo una experiencia clara y cómoda en todos los dispositivos.",
+
+        quote:
+            "La interfaz fue diseñada para sentirse elegante, clara y fácil de usar, manteniendo una identidad visual sólida en cada punto de contacto.",
+        quoteAuthor: "- Richard Price",
+
+        otherEyebrow: "MIRA OTROS CASOS DESTACADOS",
+        otherTitle: "Descubre otros proyectos",
+        viewAllCases: "Ver todos los casos",
+
+        projects: [
+            {
+            accent: "Miraki Website",
+            title: "Caso —\nSalón de belleza",
+            },
+            {
+            accent: "Kolinsky Website",
+            title: "Caso —\nBienes raíces",
+            },
+            {
+            accent: "Refa Group",
+            title: "Caso —\nAutomatización",
+            },
+        ],
+
+        otherProjects: [
+            "Dashboard para “Rozenfeld Agency”",
+            "Sitio web y panel para “Kolinsky”",
+            "Aplicación móvil para “Occollo”",
+        ],
+        },
     },
 } as const;
