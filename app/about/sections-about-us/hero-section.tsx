@@ -6,7 +6,7 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 min-h-[920px] overflow-hidden px-8 pt-22 md:px-12 xl:px-14">
+    <section className="relative z-10 min-h-[920px] mx-auto max-w-[1800px] overflow-hidden px-8 pt-22 md:px-12 xl:px-14">
       <h1 className="relative z-20 mx-auto max-w-[980px] text-center text-[44px] font-medium leading-[1.18] tracking-[-0.04em] text-[#282b37] md:text-[58px]">
         “We Bridge the Gap Between
         <br />

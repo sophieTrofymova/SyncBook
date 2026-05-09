@@ -30,7 +30,7 @@ export function PortfolioProjectsSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-[#f2f3f8] px-10 py-24">
+    <section className=" px-10 py-24">
 
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-14 flex items-center justify-between">

@@ -1,8 +1,8 @@
 export function AboutStorySection() {
   return (
-    <section className="relative overflow-hidden px-8 py-24 md:px-12 xl:px-14">
+    <section className="relative mx-auto max-w-[1800px] overflow-hidden px-8 py-24 md:px-12 xl:px-14">
       <div className="grid min-h-[900px] grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-x-28">
-        <div className="max-w-[650px] px-8 md:px-12 xl:px-14">
+        <div className="max-w-[650px]">
           <p className="mb-5 text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
             FROM CHAOS TO CODE
           </p>
@@ -30,11 +30,11 @@ export function AboutStorySection() {
           />
         </div>
 
-        <div>
+        <div className="flex -ml-14">
           <img
             src="/AboutUs/team2.png"
             alt="Team planning automation project"
-            className="h-[400px] w-full rounded-tr-[42px] rounded-br-[42px] object-cover"
+            className="h-[400px] w-full max-w-[960px] rounded-br-[42px] rounded-tr-[42px] object-cover"
           />
         </div>
 

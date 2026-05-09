@@ -6,7 +6,7 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 min-h-[760px] overflow-hidden px-8 pt-28 md:px-12 xl:px-14">
+    <section className="relative z-10 min-h-[760px] mx-auto max-w-[1800px] overflow-hidden px-8 pt-28 md:px-12 xl:px-14">
       <div className="absolute right-0 top-[110px] z-10 w-[58vw] min-w-[1020px] max-w-[1380px]">
         <img
           src="/Services/hero-services.png"
@@ -25,7 +25,7 @@ export function HeroSection() {
           <span className="text-[#4774ff]">- Discover our services</span>
         </h1>
 
-        <p className="mt-14 max-w-[700px] text-[20px] font-normal leading-[1.35] tracking-[-0.03em] text-[#6f7480] underline decoration-[#4774ff] decoration-[2px] underline-offset-[3px] md:text-[21px]">
+        <p className="mt-14 max-w-[700px] text-[20px] font-normal leading-[1.35] tracking-[-0.03em] text-[#6f7480] decoration-[#4774ff] decoration-[2px] underline-offset-[3px] md:text-[21px]">
           We transform technical complexity into operational advantage.
           <br />
           Explore our core competencies in development and automation

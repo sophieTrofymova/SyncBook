@@ -20,7 +20,7 @@ const architectureItems = [
 
 export function ArchitectureSection() {
   return (
-    <section className="bg-[#f3f3f7] px-8 py-28 md:px-12 xl:px-14">
+    <section className=" px-8 py-28 md:px-12 xl:px-14">
       <div className="mx-auto max-w-[1680px]">
         {/* HEADER */}
         <div className="text-center">

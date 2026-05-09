@@ -25,10 +25,11 @@ export function DifferenceSection() {
           <Link
             href="/services"
             className="
-              mt-10 hidden rounded-full border border-[#b9bcc6] px-12 py-6
-              text-[22px] font-medium tracking-[-0.03em] text-[#282b37]
-              transition-all duration-300 hover:scale-[0.98] hover:border-[#4b74ff]
-              hover:text-[#4b74ff] lg:inline-flex
+              mt-10 rounded-full border border-[#b9bcc6] px-12 py-6
+    text-[22px] font-medium tracking-[-0.03em] text-[#282b37]
+    transition-colors transition-transform duration-300
+    hover:scale-[0.98] hover:border-[#4b74ff] hover:text-[#4b74ff]
+    lg:inline-flex
             "
           >
             See all services

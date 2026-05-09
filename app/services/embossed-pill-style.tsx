@@ -29,7 +29,7 @@ const processItems = [
 
 export function DeliveryFrameworkSection() {
   return (
-    <section className="relative min-h-[880px] overflow-hidden bg-[#f3f3f7] px-8 py-28 md:px-12 xl:px-14">
+    <section className="relative min-h-[980px] overflow-hidden px-8 py-28 md:px-12 xl:px-14">
       <div className="relative z-20 text-center">
         <p className="text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
           WHAT IS THE PROCESS
@@ -46,13 +46,13 @@ export function DeliveryFrameworkSection() {
 
       <svg
         className="absolute left-0 top-[260px] z-10 h-[260px] w-full"
-        viewBox="0 0 1728 260"
+        viewBox="0 0 1728 280"
         fill="none"
         preserveAspectRatio="none"
       >
         <path
           d="M0 0C130 310 420 300 620 205C760 138 825 52 1035 82C1232 110 1305 185 1480 170C1620 158 1685 80 1728 10"
-          stroke="#9fb7ff"
+          stroke="#3E6FFF"
           strokeWidth="4"
           opacity="0.6"
         />
