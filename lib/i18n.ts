@@ -302,7 +302,7 @@ export const translations = {
 
     aboutTitle: "ABOUT THE PROJECT",
     aboutDescription:
-        "A digital beauty platform designed to present services, improve client experience, and create a modern visual identity for the brand.",
+        "Made is an audio range designed to provide optimal performance and comfort for every mode of use. The system utilises a modular setup which allows the speaker and interface unit to be transferred from the MD2 Headband which features on-ear.",
     serviceLabel: "Service",
     serviceValue: "Website",
     industryLabel: "Industry",
