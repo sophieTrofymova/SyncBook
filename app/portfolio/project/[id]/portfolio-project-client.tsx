@@ -7,10 +7,6 @@ import { Footer } from "@/components/layout/footer-section";
 import { BuildTogetherSection } from "@/app/about/sections-about-us/buil-together-section";
 import { embossedPillStyle, embossedCardStyle } from "@/lib/ui-styles";
 
-export function generateStaticParams() {
-  return [{ id: "0" }, { id: "1" }, { id: "2" }];
-}
-
 const projects = [
   {
     heroImage: "/Portfolio/projects/project-1-main.png",
@@ -43,12 +39,13 @@ const projects = [
 
 const otherProjectImages = [
   "/Portfolio/monitor-1.png",
-  "/Portfolio/projects/project-2-main.png",
-  "/Portfolio/projects/project-1-small-2.png",
+  "/Portfolio/projects/3/kolinsky.png",
+  "/Portfolio/projects/3/occollo.png",
 ];
 
 export function PortfolioProjectClient({ id }: { id: number }) {
   const { t } = useLanguage();
+
   const project = projects[id] ?? projects[0];
   const details = t.portfolioPage.projectDetails;
   const projectText = details.projects[id] ?? details.projects[0];
@@ -65,7 +62,11 @@ export function PortfolioProjectClient({ id }: { id: number }) {
             aria-label={details.backAlt}
             className="mb-14 inline-flex text-[42px] leading-none text-[#a8abb4] transition-colors hover:text-[#4b74ff]"
           >
-            ←
+            <img
+              src="/Portfolio/projects/3/Vector.png"
+              alt={details.backAlt}
+              className="h-auto w-full"
+            />
           </Link>
 
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -100,7 +101,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative -mt-2">
               <img
                 src={project.heroImage}
                 alt={projectText.accent}
@@ -109,8 +110,12 @@ export function PortfolioProjectClient({ id }: { id: number }) {
 
               <a
                 href="#"
-                className="absolute bottom-0 left-[-110px] flex h-[120px] w-[120px] items-center justify-center rounded-full whitespace-pre-line text-center text-[16px] font-semibold leading-[1.15] text-[#4b74ff]"
-                style={{ background: "#f2f3f8", ...embossedPillStyle }}
+                className="absolute bottom-[34px] left-[-165px] flex h-[112px] w-[112px] items-center justify-center whitespace-pre-line rounded-full text-center text-[18px] font-semibold leading-[1.15] transition-transform duration-300 hover:scale-[0.96]"
+                style={{
+                  background: "#f2f3f8",
+                  color: "#3E6FFF",
+                  ...embossedPillStyle,
+                }}
               >
                 {details.visitWebsite}
               </a>
@@ -129,7 +134,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
 
             <Link
               href="/services"
-              className="rounded-full border border-white/80 px-16 py-5 text-[17px] font-medium transition-colors hover:bg-white hover:text-[#4b74ff]"
+              className="rounded-full border border-white/70 bg-transparent px-16 py-5 text-[17px] font-medium text-white transition-all duration-300 hover:border-white hover:bg-white hover:!text-[#232634]"
             >
               {details.seeAllServices}
             </Link>
@@ -137,18 +142,24 @@ export function PortfolioProjectClient({ id }: { id: number }) {
         </section>
 
         {/* ABOUT PROJECT */}
-        <section className="px-8 py-28 text-center md:px-12 xl:px-14">
-          <h2 className="text-[32px] font-semibold uppercase tracking-[0.08em] text-[#4b74ff]">
+        <section className="px-8 pb-32 pt-36 text-center md:px-12 xl:px-14">
+          <h2 className="text-[40px] font-semibold uppercase leading-none tracking-[0.08em] text-[#3E6FFF]">
             {details.aboutTitle}
           </h2>
 
-          <p className="mx-auto mt-8 max-w-[760px] text-[13px] leading-[1.65] text-[#282b37]">
+          <p className="mx-auto mt-6 max-w-[760px] text-[15px] leading-[1.55] tracking-[-0.01em] text-[#282b37]">
             {details.aboutDescription}
           </p>
 
           <div
-            className="mx-auto mt-16 grid max-w-[1220px] grid-cols-3 rounded-[28px] px-16 py-8 text-center"
-            style={{ background: "#f2f3f8", ...embossedCardStyle }}
+            className="mx-auto mt-14 grid h-[154px] w-full max-w-[1332px] grid-cols-3 items-center rounded-[28px] px-16 text-center"
+            style={{
+              background: "#f2f3f8",
+              boxShadow: `
+                -8px -8px 18px rgba(255,255,255,0.95),
+                10px 14px 28px rgba(185,190,205,0.45)
+              `,
+            }}
           >
             {[
               [details.serviceLabel, details.serviceValue],
@@ -156,10 +167,12 @@ export function PortfolioProjectClient({ id }: { id: number }) {
               [details.publishedLabel, details.publishedValue],
             ].map(([label, value]) => (
               <div key={label}>
-                <p className="text-[13px] font-semibold tracking-[0.18em] text-[#4b74ff]">
+                <p className="text-[20px] font-bold leading-[20.8px] tracking-[3px] text-[#3E6FFF]">
                   {label}
                 </p>
-                <p className="mt-4 text-[13px] text-[#282b37]">{value}</p>
+                <p className="mt-6 text-[15px] font-normal leading-[24px] text-[#282b37]">
+                  {value}
+                </p>
               </div>
             ))}
           </div>
@@ -167,12 +180,12 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <img
             src={project.aboutImage}
             alt=""
-            className="mx-auto mt-24 h-[650px] w-full max-w-[1220px] rounded-[32px] object-cover"
+            className="mx-auto mt-40 h-[715px] w-full max-w-[1450px] rounded-[32px] object-cover"
           />
         </section>
 
         {/* UI KIT */}
-        <section className="px-8 py-24 text-center md:px-12 xl:px-14">
+        <section className="px-8 py-40 text-center md:px-12 xl:px-14">
           <h2 className="text-[32px] font-medium tracking-[-0.04em]">
             {details.uiKitTitle}
           </h2>
@@ -181,47 +194,89 @@ export function PortfolioProjectClient({ id }: { id: number }) {
             {details.uiKitDescription}
           </p>
 
-          <div className="mx-auto mt-20 grid max-w-[920px] grid-cols-[1fr_1fr_1fr] gap-6">
-            <div className="space-y-6">
-              <div className="flex h-[230px] items-end rounded-[22px] bg-[#1f4a34] p-6 text-white shadow-xl">
-                # EB005B
+          <div className="mx-auto mt-24 grid w-fit grid-cols-[317px_317px_247px] gap-6">
+            {[
+              ["#234D31", "#EB005B", "text-white"],
+              ["#C6C6C6", "#C6C6C6", "text-[#35543D]"],
+            ].map(([bg, text, color]) => (
+              <div
+                key={text}
+                className="rounded-[28px] p-[18px]"
+                style={{ background: "#f2f3f8", ...embossedCardStyle }}
+              >
+                <div
+                  className="flex h-[322px] items-end rounded-[20px] px-8 pb-8"
+                  style={{ backgroundColor: bg }}
+                >
+                  <span
+                    className={`text-[26px] font-normal tracking-[-0.08em] ${color}`}
+                  >
+                    {text}
+                  </span>
+                </div>
               </div>
-              <div className="flex h-[180px] items-end rounded-[22px] bg-white p-6 shadow-xl">
-                # EB005B
+            ))}
+
+            <div
+              className="row-span-2 rounded-[28px] p-[18px]"
+              style={{ background: "#f2f3f8", ...embossedCardStyle }}
+            >
+              <div className="flex h-full min-h-[670px] items-end rounded-[20px] bg-[#338A68] px-8 pb-8">
+                <span className="text-[26px] font-normal tracking-[-0.08em] text-white">
+                  #1B2858
+                </span>
               </div>
             </div>
 
-            <div className="flex h-[230px] items-end rounded-[22px] bg-[#c6c6c6] p-6 shadow-xl">
-              # C6C6C6
-            </div>
-
-            <div className="flex h-[436px] items-end rounded-[22px] bg-[#1b8258] p-6 text-white shadow-xl">
-              # 1B2858
+            <div
+              className="col-span-2 rounded-[28px] p-[18px]"
+              style={{ background: "#f2f3f8", ...embossedCardStyle }}
+            >
+              <div className="flex h-[226px] items-end rounded-[20px] bg-[#F8F8F8] px-8 pb-8">
+                <span className="text-[26px] font-normal tracking-[-0.08em] text-[#35543D]">
+                  #EB005B
+                </span>
+              </div>
             </div>
           </div>
         </section>
 
         {/* TYPOGRAPHY */}
-        <section className="px-8 py-24 md:px-12 xl:px-14">
-          <div className="mx-auto grid max-w-[1220px] grid-cols-[0.9fr_1.1fr] items-start gap-20">
-            <div className="text-[210px] font-bold leading-none text-[#d8d9df]">
+        <section className="px-8 py-40 md:px-12 xl:px-14">
+          <div className="mx-auto grid max-w-[1400px] grid-cols-[520px_760px] items-center gap-24">
+            <div
+              className="text-[300px] font-extrabold leading-none tracking-[-0.04em] text-[#2B2C38]"
+              style={{
+                opacity: 0.1,
+                fontFamily: "Montserrat Alternates, sans-serif",
+              }}
+            >
               Aa
             </div>
 
-            <div className="pt-10">
-              <h2 className="text-[42px] font-semibold">
-                {details.typographyTitle}
+            <div>
+              <h2
+                className="text-[60px] font-semibold leading-none tracking-[0] text-[#262933]"
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
+              >
+                Montserrat Alternates
               </h2>
 
-              <p className="mt-8 text-[15px] leading-[1.6] text-[#707582]">
+              <p
+                className="mt-8 text-[20px] font-normal leading-normal tracking-[0] text-[#262933]/50"
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
+              >
                 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890
                 <br />
-                abcdefghijklmnopqrstuvwxyz ./?=!@&*()
+                abcdefghijklmnopqrstuvwxyz ./-=!|&?1@
               </p>
 
-              <div className="mt-10 flex gap-20 text-[15px]">
-                <span>Regular</span>
-                <span>Medium</span>
+              <div
+                className="mt-12 flex gap-20 text-[18px] text-[#262933]"
+                style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
+              >
+                <span className="font-normal">Regular</span>
+                <span className="font-medium">Medium</span>
                 <span className="font-bold">Bold</span>
                 <span className="font-extrabold">Extrabold</span>
               </div>
@@ -231,11 +286,11 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <img
             src={project.fontImage}
             alt=""
-            className="mx-auto mt-24 h-[620px] w-full max-w-[1220px] rounded-[32px] object-cover"
+            className="mx-auto mt-40 h-[715px] w-full max-w-[1450px] rounded-[32px] object-cover"
           />
         </section>
 
-        {/* ADAPTIVE */}
+        {/* ADAPTIVE — логика main сохранена */}
         <section className="px-8 py-28 text-center md:px-12 xl:px-14">
           <h2 className="text-[34px] font-medium tracking-[-0.04em]">
             {details.adaptiveTitle}
