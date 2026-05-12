@@ -15,9 +15,9 @@ export function SiteHeader() {
   const hrefs = ["/services", "/about", "/portfolio", "/contacts"];
 
   return (
-    <header className="relative z-30 flex items-start justify-between px-6 pt-4 md:px-12">
+    <header className="relative z-30 mx-auto flex max-w-[1800px] items-start justify-between px-6 pt-4 md:px-12">
       <div
-        className="flex items-center rounded-[44px] border border-white/70 px-6 py-4 md:px-8"
+        className="flex rounded-[44px] items-center border border-white/70 px-6 py-4 md:px-8"
         style={embossedPillStyle}
       >
         <div className="mr-8 pr-15 md:mr-12">
@@ -36,8 +36,7 @@ export function SiteHeader() {
 
             const active =
               pathname === href ||
-              pathname.startsWith(`${href}/`) ||
-              (pathname === "/" && href === "/services");
+              pathname.startsWith(`${href}/`);
 
             return (
               <Link

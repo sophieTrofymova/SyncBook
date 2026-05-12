@@ -17,7 +17,7 @@ const workflowItems = [
 
 export function WorkflowSection() {
   return (
-    <section className="bg-[#f3f3f7] px-8 py-24 md:px-12 xl:px-14">
+    <section className=" px-8 py-24 md:px-12 xl:px-14">
       <div
         className="
           relative overflow-hidden rounded-[64px] px-16 py-20

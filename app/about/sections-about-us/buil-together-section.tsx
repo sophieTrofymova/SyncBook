@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function BuildTogetherSection() {
   return (
-    <section className="bg-[#f3f3f7] px-8 py-24 md:px-12 xl:px-14">
+    <section className=" px-8 py-24 md:px-12 xl:px-14">
       <div className="mx-auto grid max-w-[1680px] grid-cols-1 gap-12 rounded-[64px] bg-[#416fff] px-16 py-20 md:px-20 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="text-[25px] font-normal uppercase leading-none tracking-[-0.04em] text-white/55">
