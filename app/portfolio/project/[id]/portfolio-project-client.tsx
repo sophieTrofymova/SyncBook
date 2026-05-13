@@ -290,7 +290,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           />
         </section>
 
-        {/* ADAPTIVE — логика main сохранена */}
+        {/* ADAPTIVE*/}
         <section className="px-8 py-28 text-center md:px-12 xl:px-14">
           <h2 className="text-[34px] font-medium tracking-[-0.04em]">
             {details.adaptiveTitle}
@@ -314,7 +314,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           </div>
 
           <img
-            src={project.adaptive3}
+            src={project.fontImage}
             alt=""
             className="mx-auto mt-24 h-[650px] w-full max-w-[1220px] rounded-[32px] object-cover"
           />
