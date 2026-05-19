@@ -3,23 +3,13 @@
 import { useState } from "react";
 import { useLanguage } from "@/lib/language-context";
 
-const raisedCardShadow = `
-  -8px -8px 16px rgba(255,255,255,0.95),
-  10px 12px 24px rgba(185,190,205,0.45)
-`;
-
-const pressedCardShadow = `
-  inset 4px 4px 10px rgba(185,190,205,0.45),
-  inset -4px -4px 10px rgba(255,255,255,0.95)
-`;
-
 export function PortfolioHeroSection() {
   const { t } = useLanguage();
   const [active, setActive] = useState(0);
   const cases = t.portfolioPage.hero.cases;
 
   return (
-    <section className="relative min-h-[670px] overflow-hidden bg-[#efeff3] px-8 pt-12 md:px-12 xl:px-14">
+    <section className="relative h-[770px] overflow-hidden bg-[#efeff3] px-8 pt-12 md:px-12 xl:px-14">
       <div className="relative z-20 max-w-[500px] pt-20">
         <h1 className="text-[40px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:text-[46px]">
             {t.portfolioPage.hero.titleLine1}
@@ -39,7 +29,7 @@ export function PortfolioHeroSection() {
 
       <div className="absolute bottom-[-95px] right-[-34vw] z-0 h-[440px] w-[95vw] rounded-tl-[440px] bg-[#4B74FF]" />
 
-      <div className="absolute right-[30px] top-[80px] z-10 w-[640px]">
+      <div className="absolute right-[30px] top-[180px] z-10 w-[640px]">
         <img
           src={cases[active].image}
           alt={cases[active].title}

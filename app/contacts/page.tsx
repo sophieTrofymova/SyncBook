@@ -1,15 +1,13 @@
 "use client";
 
-import { SiteHeader } from "@/components/layout/site-header";
 import { ContactSection } from "@/components/sections-main/contact-section";
 import { Footer } from "@/components/layout/footer-section";
-import { embossedCardStyle } from "@/lib/ui-styles";
 
 export default function ContactsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f2f3f8] text-[#232634]">
-      <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
-        <SiteHeader />
+      <div className="relative mx-auto min-h-screen max-w-[1800px]">
+
 
         <section className="px-8 pb-24 pt-16 md:px-12 xl:px-14">
           <div className="grid grid-cols-1 gap-20 lg:grid-cols-[0.9fr_1.1fr]">
@@ -196,7 +194,6 @@ export default function ContactsPage() {
             </section>
         </section>
 
-        <Footer />
       </div>
     </main>
   );

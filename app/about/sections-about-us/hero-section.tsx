@@ -13,11 +13,15 @@ export function HeroSection() {
         Complexity and Efficiency”
       </h1>
 
-      <div className="absolute left-1/2 top-[210px] z-10 w-[920px] pt-15 -translate-x-1/2 md:w-[1050px] xl:w-[1120px]">
+      <div className="absolute left-1/2 top-[160px] z-10 w-[820px] pt-20 -translate-x-1/2 md:w-[1050px] xl:w-[1200px]">
         <img
           src="/AboutUs/hero-about-us.png"
           alt={t.hero.heroAlt}
-          className="h-auto w-full object-contain"
+          className="h-auto w-full object-contain
+          [mask-image:linear-gradient(to_right,transparent,black_10%,black_95%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_95%,transparent)]
+          [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_95%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_90%,transparent)]
+          [mask-composite:intersect]
+          [-webkit-mask-composite:destination-in]"
         />
       </div>
 
@@ -33,7 +37,7 @@ export function HeroSection() {
           <br />
           Explore our core competencies in
           <br />
-          development and automation
+          development and automation.
         </p>
       </div>
 

@@ -7,18 +7,14 @@ import { OurPortfolioSection } from "@/components/sections-main/our-portfolio-se
 import { ServicesSection } from "@/components/sections-main/services-section";
 import { TechStrip } from "@/components/sections-main/tech-strip";
 import { WhyChooseUsSection } from "@/components/sections-main/why-choose-us-section";
-import { SiteHeader } from "@/components/layout/site-header";
 import { VisualizeYourGrowth } from "@/components/sections-main/visualize_your_growth";
 import { TestimonialsSection } from "@/components/sections-main/testimonials";
 import { ContactSection } from "@/components/sections-main/contact-section";
-import { Footer } from "@/components/layout/footer-section";
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden text-[#232634]">
-      <div className="relative mx-auto min-h-screen max-w-[1800px] pt-2">
-
-        <SiteHeader />
+      <div className="relative mx-auto min-h-screen max-w-[1800px]">
         <HeroSection />
         <TechStrip />
         <ServicesSection />
@@ -28,7 +24,6 @@ export default function Home() {
         <VisualizeYourGrowth />
         <TestimonialsSection/>
         <ContactSection />
-        <Footer />
       </div>
     </main>
   );
