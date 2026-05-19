@@ -13,8 +13,8 @@ export function ServicesSection() {
       title={t.services.title}
       actionText={t.services.actionText}
       items={services}
-      renderItem={(item) => (
-        <ServiceCard key={item.title} item={item} />
+      renderItem={(item, index) => (
+        <ServiceCard key={`${item.title}-${index}`} item={item} />
       )}
     />
   );

@@ -3,21 +3,54 @@ import { useLanguage } from "@/lib/language-context";
 
 export function TechStrip() {
   const { t } = useLanguage();
-  const { techLogos } = getHomeData(t); 
+  const { techLogos } = getHomeData(t);
+
   return (
-    <section className="relative left-1/2 w-screen -translate-x-1/2 bg-[#4B74FF] py-8 text-white md:px-12 w-full">
-      <div className="mx-auto flex flex-wrap items-center justify-between gap-8 text-white/95">
-        <div className="font-sans text-[18px] font-medium tracking-[-0.02em]">
+    <section
+      className="
+        relative mt-6 mt-0 mb-16 bg-[#4B74FF]
+        px-5 py-7 text-white
+
+        md:mt-2 md:px-12 md:py-8
+      "
+    >
+      <div
+        className="
+          mx-auto flex max-w-[1700px] flex-col
+          items-center justify-center gap-7 text-white/95
+
+          md:flex-row md:justify-between md:gap-8
+        "
+      >
+        <div
+          className="
+            text-center font-sans text-[13px] font-medium
+            tracking-[-0.02em] text-white/90
+
+            md:text-left md:text-[18px]
+          "
+        >
           {t.techStrip.title}
         </div>
 
-        <div className="flex flex-wrap items-center gap-20 pr-20 md:gap-24">
+        <div
+          className="
+            flex w-full items-center justify-between gap-4
+
+            md:w-auto md:justify-start md:gap-24 md:pr-20
+          "
+        >
           {techLogos.map((logo) => (
             <img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
-              className="h-[34px] w-auto opacity-90 transition-opacity duration-300 hover:opacity-100"
+              className="
+                h-[22px] w-auto object-contain opacity-90
+                transition-opacity duration-300 hover:opacity-100
+
+                md:h-[34px]
+              "
             />
           ))}
         </div>
