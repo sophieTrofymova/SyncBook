@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
-import { LanguageSwitcher } from "@/components/sections-main/language-switcher";
+import { LanguageSwitcher } from "@/components/sections/home/language-switcher";
 import { embossedPillStyle } from "@/lib/ui-styles";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

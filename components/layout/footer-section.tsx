@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
@@ -177,7 +176,7 @@ export function Footer() {
                     onBlur={() => setTouched(true)}
                     placeholder={t.footer.emailPlaceholder}
                     className="
-                      flex-1 bg-transparent px-5 text-[15px] text-[#4B74FF]
+                      flex-1 bg-transparent px-5 text-[13px] text-[#4B74FF]
                       outline-none placeholder:text-[#9aa1b3]
                       focus:placeholder:text-transparent
                     "

@@ -121,7 +121,7 @@ export function HeroSection() {
       {/* MOBILE IMAGE BELOW TITLE/BUTTON */}
       <div
         className="
-          relative z-10 mt-7 w-[720px]
+          relative z-10 md:mt-7 w-[720px]
           -translate-x-[23%] scale-[1.02]
 
           md:hidden

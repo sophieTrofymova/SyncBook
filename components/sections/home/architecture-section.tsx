@@ -20,14 +20,14 @@ export function ArchitectureSection() {
         </div>
 
         <div className="mt-10 grid items-center gap-y-8 md:mt-20 lg:grid-cols-[728px_1fr] lg:gap-x-16 lg:gap-y-12">
-          <div className="flex justify-center overflow-visible lg:justify-start">
+          <div className="mx-auto md:flex md:justify-center overflow-visible lg:justify-start">
             <img
               src="/architecture-illustration.png"
               alt={t.architecture.imageAlt}
               className="
-                relative left-[-34px] h-auto w-[560px] max-w-none object-contain
+                relative h-auto w-full max-w-[560px] max-w-none object-contain
 
-                md:left-0 md:w-full md:max-w-[628px]
+                md:w-full md:max-w-[628px]
 
                 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]
                 [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent),linear-gradient(to_bottom,transparent,black_8%,black_92%,transparent)]
@@ -40,7 +40,7 @@ export function ArchitectureSection() {
             />
           </div>
 
-          <div className="relative left-[-28px] mx-auto max-w-[390px] px-2 text-center md:left-0 md:max-w-[646px] md:px-0 md:text-left">
+          <div className="relative mx-auto max-w-[390px] px-2 text-center md:left-0 md:max-w-[646px] md:px-0 md:text-left">
             <p
               className="
                 mx-auto max-w-[390px] text-center
@@ -57,7 +57,7 @@ export function ArchitectureSection() {
 
             <div
               className="
-                ml-6 mt-10 flex min-h-[431px] w-[280px]
+                relative mx-auto mt-10 flex min-h-[431px] w-[320px]
                 flex-col justify-center gap-[58px]
                 rounded-[28px] border border-white/70 bg-[#efeff3]
                 px-[38px] py-[46px] text-left

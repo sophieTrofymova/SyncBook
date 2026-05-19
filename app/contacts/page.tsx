@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactSection } from "@/components/sections-main/contact-section";
+import { ContactSection } from "@/components/sections/home/contact-section";
 import { Footer } from "@/components/layout/footer-section";
 
 export default function ContactsPage() {

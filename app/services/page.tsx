@@ -1,12 +1,12 @@
 "use client";
 
-import { HeroSection }         from "@/app/services/sections/hero-section";
-import { TechStrip }           from "@/app/about/sections-about-us/tech-strip";
-import { EngineeringSection }  from "@/app/services/sections/engineering-section";
-import { WorkflowSection }     from "@/app/services/sections/workflow-section";
-import { ArchitectureSection } from "@/app/services/sections/embossed-pill-section";
-import { DeliveryFrameworkSection }     from "@/app/services/sections/embossed-pill-style";
-import { ContactSection }      from "@/components/sections-main/contact-section";
+import { HeroSection }         from "@/components/sections/services/hero-section";
+import { TechStrip }           from "@/components/sections/about/tech-strip";
+import { EngineeringSection }  from "@/components/sections/services/engineering-section";
+import { WorkflowSection }     from "@/components/sections/services/workflow-section";
+import { ArchitectureSection } from "@/components/sections/services/embossed-pill-section";
+import { DeliveryFrameworkSection }     from "@/components/sections/services/embossed-pill-style";
+import { ContactSection }      from "@/components/sections/home/contact-section";
 
 export default function Home() {
   return (

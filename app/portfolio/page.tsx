@@ -1,8 +1,8 @@
 "use client";
 
-import { TechStrip } from "@/components/sections-main/tech-strip";
-import { PortfolioHeroSection } from "@/app/portfolio/sections/portfolio-hero-section";
-import { PortfolioProjectsSection } from "@/app/portfolio/sections/portfolio-projects-section";
+import { TechStrip } from "@/components/sections/home/tech-strip";
+import { PortfolioHeroSection } from "@/components/sections/portfolio/portfolio-hero-section";
+import { PortfolioProjectsSection } from "@/components/sections/portfolio/portfolio-projects-section";
 
 export default function PortfolioPage() {
   return (

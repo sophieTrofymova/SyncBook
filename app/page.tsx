@@ -1,15 +1,15 @@
 "use client";
 
 import "./globals.css";
-import { ArchitectureSection } from "@/components/sections-main/architecture-section";
-import { HeroSection } from "@/components/sections-main/hero-section";
-import { OurPortfolioSection } from "@/components/sections-main/our-portfolio-section";
-import { ServicesSection } from "@/components/sections-main/services-section";
-import { TechStrip } from "@/components/sections-main/tech-strip";
-import { WhyChooseUsSection } from "@/components/sections-main/why-choose-us-section";
-import { VisualizeYourGrowth } from "@/components/sections-main/visualize_your_growth";
-import { TestimonialsSection } from "@/components/sections-main/testimonials";
-import { ContactSection } from "@/components/sections-main/contact-section";
+import { ArchitectureSection } from "@/components/sections/home/architecture-section";
+import { HeroSection } from "@/components/sections/home/hero-section";
+import { OurPortfolioSection } from "@/components/sections/home/our-portfolio-section";
+import { ServicesSection } from "@/components/sections/home/services-section";
+import { TechStrip } from "@/components/sections/home/tech-strip";
+import { WhyChooseUsSection } from "@/components/sections/home/why-choose-us-section";
+import { VisualizeYourGrowth } from "@/components/sections/home/visualize_your_growth";
+import { TestimonialsSection } from "@/components/sections/home/testimonials";
+import { ContactSection } from "@/components/sections/home/contact-section";
 
 export default function Home() {
   return (

@@ -1,12 +1,12 @@
 "use client";
 
-import { HeroSection }         from "@/app/about/sections-about-us/hero-section";
-import { TechStrip }           from "@/app/about/sections-about-us/tech-strip";
-import { BuildTogetherSection }from "@/app/about//sections-about-us/buil-together-section";
-import { ValuesSection }       from "@/app/about//sections-about-us/our-values";
-import { AboutStorySection }   from "@/app/about//sections-about-us/team";
-import { PhilosophySection }   from "@/app/about//sections-about-us/philosophy";
-import { DifferenceSection }   from "@/app/about//sections-about-us/difference-section";
+import { HeroSection }         from "@/components/sections/about/hero-section";
+import { TechStrip }           from "@/components/sections/about/tech-strip";
+import { BuildTogetherSection }from "@/components/sections/about/buil-together-section";
+import { ValuesSection }       from "@/components/sections/about/our-values";
+import { AboutStorySection }   from "@/components/sections/about/team";
+import { PhilosophySection }   from "@/components/sections/about/philosophy";
+import { DifferenceSection }   from "@/components/sections/about/difference-section";
 
 export default function Home() {
   return (

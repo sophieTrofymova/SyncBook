@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer-section";
-import { BuildTogetherSection } from "@/app/about/sections-about-us/buil-together-section";
+import { BuildTogetherSection } from "@/components/sections/about/buil-together-section";
 import { embossedPillStyle, embossedCardStyle } from "@/lib/ui-styles";
 
 const projects = [
