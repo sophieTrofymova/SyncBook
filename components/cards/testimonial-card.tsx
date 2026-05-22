@@ -21,7 +21,7 @@ export function TestimonialCard({ item, ratingSuffix }: TestimonialCardProps) {
       className={`
         flex shrink-0 flex-col rounded-[32px] border border-white/70
         px-7 pt-7 transition-all duration-500
-        h-[310px] w-[310px]
+        h-[340px] w-[310px]
         md:rounded-[44px] md:px-8 md:pt-8
         ${
           isCenter

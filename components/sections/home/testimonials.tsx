@@ -107,7 +107,7 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        <div className="relative mt-12 h-[350px] w-full overflow-hidden md:mt-14 md:h-[640px]">
+        <div className="relative mt-12 h-[410px] w-full overflow-hidden md:mt-14 md:h-[640px]">
           {testimonials.map((item: TestimonialItem, index: number) => {
             const position = getPosition(index);
 
@@ -115,7 +115,7 @@ export function TestimonialsSection() {
               <div
                 key={item.name}
                 className={`
-                  absolute left-1/2 transition-all duration-700
+                  absolute pb-10 left-1/2 transition-all duration-700
                   ease-[cubic-bezier(0.22,1,0.36,1)]
                   bottom-0 md:bottom-20
                   ${
