@@ -1,3 +1,5 @@
+"use client";
+
 import { useLanguage } from "@/lib/language-context";
 import { useEffect, useRef, useState } from "react";
 
@@ -16,16 +18,16 @@ export function ContactSection() {
     "mt-2 h-[39px] w-full rounded-[9px] border bg-transparent px-4 text-[11px] text-white outline-none transition-all duration-300 placeholder:text-white/55 focus:placeholder:text-transparent md:mt-3 md:h-[70px] md:rounded-[20px] md:px-6 md:text-[18px]";
 
   return (
-    <section className="relative z-10 px-[6px] pb-8 pt-6 md:px-12 md:pb-28 md:pt-10">
+    <section className="relative z-20 px-[8px] pb-8 pt-6 md:px-12 md:pb-28 md:pt-10">
       <div className="mx-auto max-w-[1700px]">
-        <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-br from-[#305cf0] via-[#4B74FF] to-[#3D63E8] px-[15px] pb-5 pt-14 md:rounded-[48px] md:px-16 md:py-16">
+        <div className="relative overflow-hidden rounded-[30px] bg-gradient-to-br from-[#305cf0] via-[#4B74FF] to-[#3D63E8] px-[25px] pb-5 pt-14 md:rounded-[48px] md:px-16 md:py-16">
           <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="relative flex flex-col items-center text-center lg:items-start lg:text-left">
-              <p className="text-[9px] uppercase tracking-[-0.02em] text-white/45 md:text-[18px] md:text-white/70">
+              <p className="text-[14px] uppercase tracking-[-0.02em] text-white/45 md:text-[18px] md:text-white/70">
                 {t.contact.eyebrow}
               </p>
 
-              <h2 className="mt-2 text-[18px] font-medium leading-[1.08] tracking-[-0.04em] text-white md:mt-4 md:text-[52px]">
+              <h2 className="mt-2 text-[28px] font-medium leading-[1.08] tracking-[-0.04em] text-white md:mt-4 md:text-[52px]">
                 {t.contact.title}
               </h2>
 
@@ -34,9 +36,9 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 md:gap-8">
+            <div className="flex flex-col gap-3 mt-15 md:gap-8">
               <div>
-                <label className="text-[11px] text-white/85 md:text-[18px]">
+                <label className="text-[16px] text-white/85 md:text-[18px]">
                   {t.contact.nameLabel}
                 </label>
                 <input
@@ -49,7 +51,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label className="text-[11px] text-white/85 md:text-[18px]">
+                <label className="text-[16px] text-white/85 md:text-[18px]">
                   {t.contact.emailLabel}
                 </label>
                 <input
@@ -73,7 +75,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label className="text-[11px] text-white/85 md:text-[18px]">
+                <label className="text-[16px] text-white/85 md:text-[18px]">
                   {t.contact.descriptionLabel}
                 </label>
                 <textarea
@@ -98,9 +100,11 @@ export function ContactSection() {
               <button
                 type="button"
                 className="
-                  group mt-3 flex h-[39px] items-center justify-between rounded-full
-                  border border-transparent bg-white/90 pl-8 pr-[4px]
-                  text-[11px] font-medium tracking-[-0.02em] text-[#4B74FF]
+                  group mt-3 flex h-[58px] items-center justify-between rounded-full
+                  border border-transparent bg-white/90 pl-6 pr-[4px]
+
+                  text-[13px] font-semibold tracking-[-0.03em] text-[#4B74FF]
+
                   shadow-[0_12px_30px_rgba(0,0,0,0.22)]
                   transition-all duration-300 ease-out
 
@@ -114,12 +118,15 @@ export function ContactSection() {
                   md:mt-6 md:h-[84px] md:pl-10 md:pr-3 md:text-[20px]
                 "
               >
-                <span>{t.contact.button}</span>
+                <span className="px-3 md:px-0">
+                  {t.contact.button}
+                </span>
 
                 <span
                   className="
-                    flex h-[34px] w-[34px] items-center justify-center rounded-full
-                    bg-[#e9ecf5] text-[24px] leading-none text-[#4B74FF]
+                    flex h-[50px] w-[50px] shrink-0 items-center justify-center rounded-full
+                    bg-[#e9ecf5] text-[26px] leading-none text-[#4B74FF]
+
                     transition-all duration-300 ease-out
 
                     group-hover:bg-transparent
@@ -191,7 +198,7 @@ function MailBoxAnimation({ mailboxAlt }: { mailboxAlt: string }) {
   return (
       <div
         ref={wrapperRef}
-        className="relative h-[260px] w-[270px] overflow-hidden md:h-[620px] md:w-[720px]"
+        className="relative h-[280px] w-[350px] overflow-hidden md:h-[620px] md:w-[720px]"
       >
       <div className="absolute inset-0 z-30">
         {isVisible && (

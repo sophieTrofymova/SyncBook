@@ -6,45 +6,56 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 h-[770px] mx-auto max-w-[1800px] overflow-hidden px-8 pt-28 md:px-12 xl:px-14">
-      <div className="absolute right-0 top-[100px] w-[58vw] min-w-[920px] max-w-[1080px]">
+    <section className="relative z-10 mx-auto h-[850px] max-w-[1800px] overflow-hidden px-5 pt-18 md:h-[770px] md:px-12 md:pt-28 xl:px-14">
+      <div className="absolute left-1/2 top-[390px] z-10 w-[620px] -translate-x-1/2 md:left-auto md:right-0 md:top-[100px] md:w-[58vw] md:min-w-[920px] md:max-w-[1080px] md:translate-x-0">
         <img
           src="/Services/hero-services.png"
           alt={t.hero.heroAlt}
-          className="h-auto w-full object-contain [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
-            [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+          className="
+            h-auto w-full object-contain
+            [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent),linear-gradient(to_bottom,transparent,black_6%,black_94%,transparent)]
+            [-webkit-mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent),linear-gradient(to_bottom,transparent,black_6%,black_94%,transparent)]
             [mask-composite:intersect]
-            [-webkit-mask-composite:destination-in]"
+            [-webkit-mask-composite:destination-in]
+
+            md:[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+            md:[-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+          "
         />
       </div>
 
-      <div className="relative z-20 max-w-[780px]">
-        <h1 className="text-[52px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:text-[60px]">
-          Solutions Engineered for Scale
-          <br />
-          <span className="text-[#4774ff]">- Discover our services</span>
+      <div className="relative z-20 mx-auto flex max-w-[390px] flex-col items-center text-center md:mx-0 md:max-w-[780px] md:items-start md:text-left">
+        <h1 className="text-[32px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:text-[60px]">
+          Solutions Engineered for Scale{" "}
+          <span className="text-[#4774ff] md:block">
+            - Discover our services
+          </span>
         </h1>
 
-        <p className="mt-14 max-w-[700px] text-[20px] font-normal leading-[1.35] tracking-[-0.03em] text-[#6f7480] decoration-[#4774ff] decoration-[2px] underline-offset-[3px] md:text-[21px]">
-          We transform technical complexity into operational advantage.
-          <br />
-          Explore our core competencies in development and automation.
+        <p className="mt-10 max-w-[330px] text-[15px] font-normal leading-[1.25] tracking-[-0.03em] text-[#6f7480] md:mt-14 md:max-w-[700px] md:text-[21px] md:leading-[1.35]">
+          We transform technical complexity into operational advantage. Explore
+          our core competencies in development and automation.
         </p>
 
         <button
           type="button"
           className="
-            embossed-pill-button group mt-36 flex w-full max-w-[430px] items-center rounded-full p-3
+            embossed-pill-button group mt-10 flex w-full max-w-[238px]
+            items-center rounded-full p-2
             transition-all duration-300 ease-out
             hover:scale-[0.985] active:scale-[0.97]
+
+            md:mt-36 md:max-w-[430px] md:p-3
           "
         >
           <span
             className="
-              flex-1 rounded-full px-8 py-5 text-center text-[27px]
+              flex-1 rounded-full px-4 py-3 text-center text-[15px]
               font-medium tracking-[-0.03em] text-[#2a2e3c]
               transition-colors duration-300 ease-out
               group-hover:text-[#11131a]
+
+              md:px-8 md:py-5 md:text-[27px]
             "
           >
             Start exploring
@@ -52,10 +63,12 @@ export function HeroSection() {
 
           <span
             className="
-              flex h-[82px] w-[82px] items-center justify-center rounded-full
+              flex h-[52px] w-[52px] items-center justify-center rounded-full
               transition-all duration-300 ease-out
               group-hover:translate-y-[2px] group-hover:scale-[0.94]
               group-active:scale-[0.9]
+
+              md:h-[82px] md:w-[82px]
             "
             style={{
               background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
@@ -70,7 +83,7 @@ export function HeroSection() {
             <img
               src="/AboutUs/Vector.png"
               alt={t.hero.arrowAlt}
-              className="h-[35px] w-[35px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
+              className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
             />
           </span>
         </button>

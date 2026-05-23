@@ -1,4 +1,5 @@
 import { embossedPillStyle } from "@/lib/ui-styles";
+import { HorizontalCardCarousel } from "@/components/ui/horizontal-card-carousel";
 
 const architectureItems = [
   {
@@ -20,46 +21,60 @@ const architectureItems = [
 
 export function ArchitectureSection() {
   return (
-    <section className=" px-8 py-28 md:px-12 xl:px-14">
-      <div className="mx-auto max-w-[1680px]">
-        {/* HEADER */}
-        <div className="text-center">
-          <p className="text-[24px] uppercase tracking-[-0.04em] text-[#4b74ff]">
-            WE CONDUCT DEEP CREATION
+    <HorizontalCardCarousel
+      eyebrow="WE CONDUCT DEEP CREATION"
+      title="Multi-Layered Architecture for Absolute Scalability"
+      actionText="Explore architecture"
+      items={architectureItems}
+      renderItem={(item) => (
+        <div
+          className="
+            flex min-h-[420px] flex-col rounded-[48px] px-14 py-14
+
+            max-md:min-h-[300px]
+            max-md:rounded-[32px]
+            max-md:px-8
+            max-md:py-8
+          "
+          style={embossedPillStyle}
+        >
+          <img
+            src={item.icon}
+            alt={item.title}
+            className="
+              h-[110px] w-[110px] object-contain
+
+              max-md:h-[92px]
+              max-md:w-[92px]
+            "
+          />
+
+          <h3
+            className="
+              mt-16 whitespace-pre-line text-[30px] font-medium
+              leading-[1.15] tracking-[-0.04em] text-[#282b37]
+
+              max-md:mt-14
+              max-md:text-[20px]
+            "
+          >
+            {item.title}
+          </h3>
+
+          <p
+            className="
+              mt-8 max-w-[300px] text-[18px] leading-[1.35]
+              tracking-[-0.025em] text-[#707582]
+
+              max-md:mt-6
+              max-md:max-w-[200px]
+              max-md:text-[12px]
+            "
+          >
+            {item.text}
           </p>
-
-          <h2 className="mx-auto mt-6 max-w-[900px] text-[52px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:text-[60px]">
-            Multi-Layered Architecture
-            <br />
-            for Absolute Scalability
-          </h2>
         </div>
-
-        {/* CARDS */}
-        <div className="mt-28 grid grid-cols-1 gap-16 md:grid-cols-3">
-          {architectureItems.map((item) => (
-            <div
-              key={item.title}
-              className="flex min-h-[420px] flex-col rounded-[48px] px-14 py-14"
-              style={embossedPillStyle}
-            >
-              <img
-                src={item.icon}
-                alt={item.title}
-                className="h-[110px] w-[110px] object-contain"
-              />
-
-              <h3 className="mt-16 whitespace-pre-line text-[30px] font-medium leading-[1.15] tracking-[-0.04em] text-[#282b37]">
-                {item.title}
-              </h3>
-
-              <p className="mt-8 max-w-[300px] text-[18px] leading-[1.35] tracking-[-0.025em] text-[#707582]">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      )}
+    />
   );
 }

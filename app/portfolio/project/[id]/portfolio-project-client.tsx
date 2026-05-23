@@ -53,12 +53,10 @@ export function PortfolioProjectClient({ id }: { id: number }) {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f2f3f8] text-[#232634]">
       <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
-        <SiteHeader />
-
         {/* HERO */}
         <section className="relative px-8 pb-14 pt-14 md:px-12 xl:px-14">
           <Link
-            href="/portfolio/projects"
+            href="/portfolio"
             aria-label={details.backAlt}
             className="mb-14 inline-flex text-[42px] leading-none text-[#a8abb4] transition-colors hover:text-[#4b74ff]"
           >

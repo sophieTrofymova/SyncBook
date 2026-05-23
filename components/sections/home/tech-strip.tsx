@@ -8,7 +8,7 @@ export function TechStrip() {
   return (
     <section
       className="
-        relative mt-6 mt-0 mb-16 bg-[#4B74FF]
+        relative mt-0 mb-16 bg-[#4B74FF]
         px-5 py-7 text-white
 
         md:mt-2 md:px-12 md:py-8
