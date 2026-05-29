@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer-section";
 import { BuildTogetherSection } from "@/components/sections/about/buil-together-section";
 import { embossedPillStyle, embossedCardStyle } from "@/lib/ui-styles";
+import { OurPortfolioSection } from "@/components/sections/home/our-portfolio-section";
 
 const projects = [
   {
@@ -140,23 +141,57 @@ export function PortfolioProjectClient({ id }: { id: number }) {
         </section>
 
         {/* ABOUT PROJECT */}
-        <section className="px-8 pb-32 pt-36 text-center md:px-12 xl:px-14">
-          <h2 className="text-[40px] font-semibold uppercase leading-none tracking-[0.08em] text-[#3E6FFF]">
+        <section className="px-5 pb-20 pt-30 md:px-12 md:pb-32 md:pt-36 xl:px-14">
+          <h2
+            className="
+            text-left text-[22px] font-semibold uppercase
+            leading-none tracking-[0.02em] text-[#3E6FFF]
+
+            md:text-center md:text-[40px]
+            md:tracking-[0.08em]
+          "
+          >
             {details.aboutTitle}
           </h2>
 
-          <p className="mx-auto mt-6 max-w-[760px] text-[15px] leading-[1.55] tracking-[-0.01em] text-[#282b37]">
+          <p
+            className="
+            mt-6 max-w-[340px]
+            text-left text-[11px]
+            leading-[1.45] tracking-[-0.01em]
+            text-[#282b37]/65
+
+            md:mx-auto md:max-w-[760px]
+            md:text-center md:text-[15px]
+            md:leading-[1.55]
+            md:text-[#282b37]
+          "
+          >
             {details.aboutDescription}
           </p>
 
           <div
-            className="mx-auto mt-14 grid h-[154px] w-full max-w-[1332px] grid-cols-3 items-center rounded-[28px] px-16 text-center"
+            className="
+            mx-auto mt-24
+            flex min-h-[336px] w-full max-w-[307px]
+            flex-col items-center justify-center gap-12
+            rounded-[28px]
+            px-8 py-10
+            text-center
+
+            md:mt-14
+            md:grid md:h-[154px] md:min-h-0
+            md:max-w-[1332px]
+            md:grid-cols-3
+            md:gap-0
+            md:px-16 md:py-0
+          "
             style={{
               background: "#f2f3f8",
               boxShadow: `
-                -8px -8px 18px rgba(255,255,255,0.95),
-                10px 14px 28px rgba(185,190,205,0.45)
-              `,
+              -8px -8px 18px rgba(255,255,255,0.95),
+              10px 14px 28px rgba(185,190,205,0.45)
+            `,
             }}
           >
             {[
@@ -165,10 +200,33 @@ export function PortfolioProjectClient({ id }: { id: number }) {
               [details.publishedLabel, details.publishedValue],
             ].map(([label, value]) => (
               <div key={label}>
-                <p className="text-[20px] font-bold leading-[20.8px] tracking-[3px] text-[#3E6FFF]">
+                <p
+                  className="
+                  text-[17px] font-bold
+                  leading-none tracking-[4px]
+                  text-[#3E6FFF]
+
+                  md:text-[20px]
+                  md:leading-[20.8px]
+                  md:tracking-[3px]
+                "
+                >
                   {label}
                 </p>
-                <p className="mt-6 text-[15px] font-normal leading-[24px] text-[#282b37]">
+
+                <p
+                  className="
+                  mt-4
+                  text-[12px]
+                  font-normal leading-[18px]
+                  text-[#282b37]/75
+
+                  md:mt-6
+                  md:text-[15px]
+                  md:leading-[24px]
+                  md:text-[#282b37]
+                "
+                >
                   {value}
                 </p>
               </div>
@@ -178,61 +236,188 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <img
             src={project.aboutImage}
             alt=""
-            className="mx-auto mt-40 h-[715px] w-full max-w-[1450px] rounded-[32px] object-cover"
+            className="
+            mx-auto mt-24 hidden
+            h-[715px] w-full max-w-[1450px]
+            rounded-[32px]
+            object-cover
+
+            md:block md:mt-40
+          "
           />
         </section>
 
         {/* UI KIT */}
-        <section className="px-8 py-40 text-center md:px-12 xl:px-14">
-          <h2 className="text-[32px] font-medium tracking-[-0.04em]">
+        <section className="px-5 py-15 text-center md:px-12 md:py-40 xl:px-14">
+          <h2
+            className="
+              text-[22px] font-medium
+              tracking-[-0.04em]
+              text-[#282b37]
+
+              md:text-[32px]
+            "
+          >
             {details.uiKitTitle}
           </h2>
 
-          <p className="mx-auto mt-8 max-w-[700px] text-[13px] leading-[1.65]">
+          <p
+            className="
+              mx-auto mt-8
+              max-w-[400px]
+              text-[11px]
+              leading-[1.55]
+              text-[#282b37]/60
+
+              md:max-w-[700px]
+              md:text-[13px]
+              md:leading-[1.65]
+              md:text-[#282b37]
+            "
+          >
             {details.uiKitDescription}
           </p>
 
-          <div className="mx-auto mt-24 grid w-fit grid-cols-[317px_317px_247px] gap-6">
-            {[
-              ["#234D31", "#EB005B", "text-white"],
-              ["#C6C6C6", "#C6C6C6", "text-[#35543D]"],
-            ].map(([bg, text, color]) => (
-              <div
-                key={text}
-                className="rounded-[28px] p-[18px]"
-                style={{ background: "#f2f3f8", ...embossedCardStyle }}
-              >
-                <div
-                  className="flex h-[322px] items-end rounded-[20px] px-8 pb-8"
-                  style={{ backgroundColor: bg }}
-                >
-                  <span
-                    className={`text-[26px] font-normal tracking-[-0.08em] ${color}`}
-                  >
-                    {text}
-                  </span>
-                </div>
-              </div>
-            ))}
+          <div
+            className="
+              mx-auto mt-16
+              flex max-w-[420px]
+              flex-col gap-4
 
+              md:mt-24
+              md:grid
+              md:max-w-fit
+              md:grid-cols-[317px_317px_247px]
+              md:gap-6
+            "
+          >
+            {/* TOP ROW */}
+            <div className="flex gap-4 md:contents">
+              {[
+                ["#234D31", "#EB005B", "text-white"],
+                ["#C6C6C6", "#C6C6C6", "text-[#35543D]"],
+              ].map(([bg, text, color]) => (
+                <div
+                  key={text}
+                  className="
+                    flex-1 rounded-[20px] p-[10px]
+
+                    md:rounded-[28px]
+                    md:p-[18px]
+                  "
+                  style={{
+                    background: "#f2f3f8",
+                    ...embossedCardStyle,
+                  }}
+                >
+                  <div
+                    className="
+                      flex h-[120px]
+                      items-end rounded-[14px]
+                      px-3 pb-3
+
+                      md:h-[322px]
+                      md:rounded-[20px]
+                      md:px-8 md:pb-8
+                    "
+                    style={{ backgroundColor: bg }}
+                  >
+                    <span
+                      className={`
+                        text-[11px]
+                        font-normal tracking-[-0.06em]
+                        ${color}
+
+                        md:text-[26px]
+                        md:tracking-[-0.08em]
+                      `}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* WHITE CARD */}
             <div
-              className="row-span-2 rounded-[28px] p-[18px]"
-              style={{ background: "#f2f3f8", ...embossedCardStyle }}
+              className="
+                rounded-[20px] p-[10px]
+
+                md:col-span-2
+                md:rounded-[28px]
+                md:p-[18px]
+              "
+              style={{
+                background: "#f2f3f8",
+                ...embossedCardStyle,
+              }}
             >
-              <div className="flex h-full min-h-[670px] items-end rounded-[20px] bg-[#338A68] px-8 pb-8">
-                <span className="text-[26px] font-normal tracking-[-0.08em] text-white">
-                  #1B2858
+              <div
+                className="
+                  flex h-[150px]
+                  items-end rounded-[14px]
+                  bg-[#F8F8F8]
+                  px-3 pb-3
+
+                  md:h-[226px]
+                  md:rounded-[20px]
+                  md:px-8 md:pb-8
+                "
+              >
+                <span
+                  className="
+                    text-[11px]
+                    font-normal tracking-[-0.06em]
+                    text-[#35543D]
+
+                    md:text-[26px]
+                    md:tracking-[-0.08em]
+                  "
+                >
+                  #EB005B
                 </span>
               </div>
             </div>
 
+            {/* GREEN CARD */}
             <div
-              className="col-span-2 rounded-[28px] p-[18px]"
-              style={{ background: "#f2f3f8", ...embossedCardStyle }}
+              className="
+                rounded-[20px] p-[10px]
+
+                md:row-span-2
+                md:rounded-[28px]
+                md:p-[18px]
+              "
+              style={{
+                background: "#f2f3f8",
+                ...embossedCardStyle,
+              }}
             >
-              <div className="flex h-[226px] items-end rounded-[20px] bg-[#F8F8F8] px-8 pb-8">
-                <span className="text-[26px] font-normal tracking-[-0.08em] text-[#35543D]">
-                  #EB005B
+              <div
+                className="
+                  flex h-[135px]
+                  items-end rounded-[14px]
+                  bg-[#338A68]
+                  px-3 pb-3
+
+                  md:h-full
+                  md:min-h-[670px]
+                  md:rounded-[20px]
+                  md:px-8 md:pb-8
+                "
+              >
+                <span
+                  className="
+                    text-[11px]
+                    font-normal tracking-[-0.06em]
+                    text-white
+
+                    md:text-[26px]
+                    md:tracking-[-0.08em]
+                  "
+                >
+                  #1B2858
                 </span>
               </div>
             </div>
@@ -240,10 +425,26 @@ export function PortfolioProjectClient({ id }: { id: number }) {
         </section>
 
         {/* TYPOGRAPHY */}
-        <section className="px-8 py-40 md:px-12 xl:px-14">
-          <div className="mx-auto grid max-w-[1400px] grid-cols-[520px_760px] items-center gap-24">
+        <section className="px-5 py-20 md:px-12 md:py-40 xl:px-14">
+          <div
+            className="
+              mx-auto flex max-w-[340px]
+              flex-col items-center text-center
+
+              md:grid md:max-w-[1400px]
+              md:grid-cols-[520px_760px]
+              md:items-center md:gap-24
+              md:text-left
+            "
+          >
             <div
-              className="text-[300px] font-extrabold leading-none tracking-[-0.04em] text-[#2B2C38]"
+              className="
+                text-[145px] font-extrabold
+                leading-none tracking-[-0.04em]
+                text-[#2B2C38]
+
+                md:text-[300px]
+              "
               style={{
                 opacity: 0.1,
                 fontFamily: "Montserrat Alternates, sans-serif",
@@ -252,16 +453,31 @@ export function PortfolioProjectClient({ id }: { id: number }) {
               Aa
             </div>
 
-            <div>
+            <div className="mt-4 md:mt-0">
               <h2
-                className="text-[60px] font-semibold leading-none tracking-[0] text-[#262933]"
+                className="
+                  text-[27px] font-semibold
+                  leading-none tracking-[-0.04em]
+                  text-[#262933]
+
+                  md:text-[60px]
+                  md:tracking-[0]
+                "
                 style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
                 Montserrat Alternates
               </h2>
 
               <p
-                className="mt-8 text-[20px] font-normal leading-normal tracking-[0] text-[#262933]/50"
+                className="
+                  mt-8 text-[10px] font-normal
+                  leading-[1.7] tracking-[0]
+                  text-[#262933]/35
+
+                  md:text-[20px]
+                  md:leading-normal
+                  md:text-[#262933]/50
+                "
                 style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
                 ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890
@@ -270,7 +486,16 @@ export function PortfolioProjectClient({ id }: { id: number }) {
               </p>
 
               <div
-                className="mt-12 flex gap-20 text-[18px] text-[#262933]"
+                className="
+                  mt-7 flex w-full justify-between
+                  gap-0 text-[10px] text-[#262933]/55
+
+                  md:mt-12
+                  md:justify-start
+                  md:gap-20
+                  md:text-[18px]
+                  md:text-[#262933]
+                "
                 style={{ fontFamily: "Montserrat Alternates, sans-serif" }}
               >
                 <span className="font-normal">Regular</span>
@@ -284,7 +509,13 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <img
             src={project.fontImage}
             alt=""
-            className="mx-auto mt-40 h-[715px] w-full max-w-[1450px] rounded-[32px] object-cover"
+            className="
+              mx-auto mt-24 hidden
+              h-[715px] w-full max-w-[1450px]
+              rounded-[32px] object-cover
+
+              md:mt-40 md:block
+            "
           />
         </section>
 
@@ -337,53 +568,8 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           </div>
         </section>
 
-        {/* OTHER PROJECTS */}
-        <section className="px-8 py-28 md:px-12 xl:px-14">
-          <div className="mx-auto max-w-[1220px]">
-            <div className="mb-16 flex items-end justify-between">
-              <div>
-                <p className="mb-4 text-[18px] uppercase tracking-[-0.04em] text-[#4b74ff]">
-                  {details.otherEyebrow}
-                </p>
-                <h2 className="text-[36px] font-medium tracking-[-0.04em]">
-                  {details.otherTitle}
-                </h2>
-              </div>
 
-              <Link
-                href="/portfolio"
-                className="rounded-full border border-[#9da3b3] px-14 py-4 text-[14px]"
-              >
-                {details.viewAllCases}
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-3 gap-14">
-              {details.otherProjects.map((title: string, index: number) => (
-                <div
-                  key={title}
-                  className="rounded-[26px] p-8 text-center"
-                  style={{ background: "#f2f3f8", ...embossedCardStyle }}
-                >
-                  <h3 className="mx-auto min-h-[60px] max-w-[240px] text-[16px] leading-[1.3]">
-                    {title}
-                  </h3>
-
-                  <img
-                    src={otherProjectImages[index]}
-                    alt=""
-                    className="mt-8 h-[220px] w-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-12 h-[8px] rounded-full bg-[#d7d9df]">
-              <div className="h-full w-[32%] rounded-full bg-[#4b74ff]" />
-            </div>
-          </div>
-        </section>
-
+        <OurPortfolioSection />
         <BuildTogetherSection />
         <Footer />
       </div>

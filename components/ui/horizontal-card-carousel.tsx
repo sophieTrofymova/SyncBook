@@ -100,7 +100,7 @@ export function HorizontalCardCarousel<T>({
         ref={scrollRef}
         className="
           mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth
-          pb-10 pt-4
+          pb-10 pt-10
 
           md:mt-14 md:justify-center md:gap-14 md:px-12 md:py-10
           xl:px-12
