@@ -136,16 +136,6 @@ export function Footer() {
                     hover:font-semibold
                   "
                 >
-                </a>
-                <a
-                    href="#"
-                    className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                  >
                   {t.footer.privacy}
                 </a>
               </div>

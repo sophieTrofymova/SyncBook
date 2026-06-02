@@ -12,6 +12,7 @@ export function ServicesSection() {
       eyebrow={t.services.eyebrow}
       title={t.services.title}
       actionText={t.services.actionText}
+      actionHref="/services"
       items={services}
       renderItem={(item) => (
         <ServiceCard key={item.title} item={item} />

@@ -2,6 +2,7 @@
 import { blueBlockStyle, embossedCardStyleBlue } from "@/lib/ui-styles";
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
+import Image from "next/image";
 
 export function WhyChooseUsSection() {
   const { t } = useLanguage();
@@ -26,42 +27,57 @@ export function WhyChooseUsSection() {
             </div>
 
             <button
-                className="
-                  group flex items-center gap-0 rounded-full
-                  bg-white/92 py-2 pl-9 pr-2
-                  text-[16px] font-medium text-[#2a2e3c]
+              onClick={() => {
+                window.location.href = "/contact";
+              }}
+              className="
+                group flex items-center gap-0 rounded-full
+                bg-white/92 py-2 pl-9 pr-2
+                text-[16px] font-medium text-[#2a2e3c]
 
-                  shadow-[0_10px_24px_rgba(0,0,0,0.14)]
+                shadow-[0_10px_24px_rgba(0,0,0,0.14)]
+                transition-all duration-300 ease-out
+
+                hover:bg-transparent
+                hover:text-white
+                hover:shadow-none
+                hover:ring-1 hover:ring-white/60
+              "
+            >
+              <span className="px-2 transition-colors duration-300 group-hover:text-white">
+                {t.whyChooseUs.cta}
+              </span>
+
+              <span
+                className="
+                  relative ml-4 flex h-12 w-12 items-center justify-center rounded-full
+                  bg-white
+
+                  shadow-[0_6px_16px_rgba(0,0,0,0.12)]
                   transition-all duration-300 ease-out
 
-                  hover:bg-transparent
-                  hover:text-white
-                  hover:shadow-none
-                  hover:ring-1 hover:ring-white/60
+                  group-hover:bg-transparent
+                  group-hover:shadow-none
+                  group-hover:ring-1 group-hover:ring-white/60
                 "
-                
               >
-                <span className="px-2 transition-colors duration-300 group-hover:text-white">
-                  {t.whyChooseUs.cta}
-                </span>
+                <Image
+                  src="/messageUs.png"
+                  alt="Message us"
+                  width={24}
+                  height={24}
+                  className="block group-hover:hidden"
+                />
 
-                <span
-                  className="
-                    ml-4 flex h-12 w-12 items-center justify-center rounded-full
-                    bg-white text-[#2f63ff]
-
-                    shadow-[0_6px_16px_rgba(0,0,0,0.12)]
-                    transition-all duration-300 ease-out
-
-                    group-hover:bg-transparent
-                    group-hover:text-white
-                    group-hover:shadow-none
-                    group-hover:ring-1 group-hover:ring-white/60
-                  "
-                >
-                  💬
-                </span>
-          </button>
+                <Image
+                  src="/messageUs-hover.png"
+                  alt="Message us"
+                  width={24}
+                  height={24}
+                  className="hidden group-hover:block"
+                />
+              </span>
+            </button> 
           </div>
 
           <div className="mt-12 flex flex-col gap-8">
