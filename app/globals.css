@@ -197,6 +197,13 @@ a {
   box-shadow:
     inset -4px -4px 7px rgba(255,255,255,0.95),
     inset 5px 5px 10px rgba(180,185,200,0.55);
+}*/
+
+.embossed-pill-button:active {
+  box-shadow:
+    inset -4px -4px 7px rgba(255,255,255,0.95),
+    inset 5px 5px 10px rgba(180,185,200,0.55);
+  transform: scale(0.97);
 }
 
 @keyframes techStripMove {

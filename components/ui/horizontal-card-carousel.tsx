@@ -1,11 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 type HorizontalCardCarouselProps<T> = {
   eyebrow: string;
   title: string;
   actionText: string;
+  actionHref?: string;
   items: T[];
   renderItem: (item: T, index: number) => React.ReactNode;
 };
@@ -14,9 +16,12 @@ export function HorizontalCardCarousel<T>({
   eyebrow,
   title,
   actionText,
+  actionHref,
   items,
   renderItem,
 }: HorizontalCardCarouselProps<T>) {
+  const router = useRouter();
+
   const [canScroll, setCanScroll] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [progress, setProgress] = useState(0);
@@ -28,7 +33,6 @@ export function HorizontalCardCarousel<T>({
     if (!el) return;
 
     const maxScroll = el.scrollWidth - el.clientWidth;
-
     setCanScroll(maxScroll > 1);
 
     if (maxScroll <= 0) {
@@ -87,7 +91,17 @@ export function HorizontalCardCarousel<T>({
             {actionText ? (
               <button
                 type="button"
-                className="mt-6 rounded-full border border-[#c8ccd8] px-9 py-4 text-[12px] font-medium text-[#232634] md:mt-10 md:px-10 md:py-5 md:text-[22px]"
+                onClick={() => {
+                  window.location.href = actionHref || "/services";
+                }}
+                className="
+                  relative z-[9999] mt-6 cursor-pointer rounded-full
+                  border border-[#c8ccd8] px-9 py-4
+                  text-[12px] font-medium text-[#232634]
+                  transition-all duration-300
+                  hover:border-[#4B74FF] hover:text-[#4B74FF]
+                  md:mt-10 md:px-10 md:py-5 md:text-[22px]
+                "
               >
                 {actionText}
               </button>
@@ -101,10 +115,8 @@ export function HorizontalCardCarousel<T>({
         className="
           mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth
           pb-10 pt-10
-
           md:mt-14 md:justify-center md:gap-14 md:px-12 md:py-10
           xl:px-12
-
           [scrollbar-width:none] [-ms-overflow-style:none]
           [&::-webkit-scrollbar]:hidden
         "
@@ -114,18 +126,15 @@ export function HorizontalCardCarousel<T>({
             key={index}
             className="
               flex w-screen min-w-full shrink-0 snap-center justify-center px-8
-
               md:w-auto md:min-w-0 md:px-0
             "
           >
             <div
               className="
                 w-[338px]
-
                 [&>*]:!w-full
                 [&>*]:!min-w-0
                 [&>*]:!max-w-none
-
                 md:w-[380px]
                 md:[&>*]:!w-full
               "
