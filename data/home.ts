@@ -43,17 +43,17 @@ export function getHomeData(t: TranslationSchema) {
     ],
 
     techLogos: [
-      { src: "/Tech1.png", alt: "Tech1" },
-      { src: "/Tech2.png", alt: "Tech2" },
-      { src: "/Tech3.png", alt: "Tech3" },
-      { src: "/Tech4.png", alt: "Tech4" },
+      { src: "/Logos/logoGoogle.svg", alt: "Google" },
+      { src: "/Logos/logoGPT.svg", alt: "OpenAI" },
+      { src: "/Logos/logoReact.svg", alt: "React" },
+      { src: "/Logos/logoAWS.svg", alt: "AWS" },
     ],
 
     techResults: [
-      { src: "/AboutUs/result1.png", alt: "Tech1" },
-      { src: "/AboutUs/result2.png", alt: "Tech2" },
-      { src: "/AboutUs/result3.png", alt: "Tech3" },
-      { src: "/AboutUs/result4.png", alt: "Tech4" },
+      { src: "/AboutUs/Group 58.svg", alt: "Tech1" },
+      { src: "/AboutUs/Group 59.svg", alt: "Tech2" },
+      { src: "/AboutUs/Group 60.svg", alt: "Tech3" },
+      { src: "/AboutUs/Group 61.svg", alt: "Tech4" },
     ],
 
     services: [

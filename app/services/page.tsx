@@ -6,7 +6,7 @@ import { EngineeringSection }  from "@/components/sections/services/engineering-
 import { WorkflowSection }     from "@/components/sections/services/workflow-section";
 import { ArchitectureSection } from "@/components/sections/services/embossed-pill-section";
 import { DeliveryFrameworkSection }     from "@/components/sections/services/embossed-pill-style";
-import { ContactSection }      from "@/components/sections/home/contact-section";
+import { ContactSection }      from "@/components/sections/shared/contact-section";
 
 export default function Home() {
   return (

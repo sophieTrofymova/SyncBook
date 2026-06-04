@@ -2,7 +2,7 @@
 
 import { HeroSection }         from "@/components/sections/about/hero-section";
 import { TechStrip }           from "@/components/sections/about/tech-strip";
-import { BuildTogetherSection }from "@/components/sections/about/buil-together-section";
+import { BuildTogetherSection }from "@/components/sections/shared/buil-together-section";
 import { ValuesSection }       from "@/components/sections/about/our-values";
 import { AboutStorySection }   from "@/components/sections/about/team";
 import { PhilosophySection }   from "@/components/sections/about/philosophy";
