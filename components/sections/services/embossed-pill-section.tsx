@@ -29,7 +29,7 @@ export function ArchitectureSection() {
       renderItem={(item) => (
         <div
           className="
-            flex min-h-[420px] flex-col rounded-[48px] px-14 py-14
+            flex min-h-[490px] flex-col rounded-[48px] px-14 py-14
 
             max-md:min-h-[300px]
             max-md:rounded-[32px]

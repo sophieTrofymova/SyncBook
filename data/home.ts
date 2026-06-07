@@ -96,12 +96,12 @@ export function getHomeData(t: TranslationSchema) {
       },
       {
         title: t.homeData.cases[2].title,
-        image: "/smartphone.png",
+        image: "/Bird.png",
         alt: t.homeData.cases[2].alt,
       },
       {
         title: t.homeData.cases[3].title,
-        image: "/Laptop.png",
+        image: "/iPad.png",
         alt: t.homeData.cases[3].alt,
       },
     ],

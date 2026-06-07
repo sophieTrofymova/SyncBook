@@ -27,7 +27,7 @@ export function WhyChooseUsSection() {
             </div>
 
             <button
-              onClick={() => {
+                onClick={() => {
                 window.location.href = "/contact";
               }}
               className="
@@ -48,36 +48,30 @@ export function WhyChooseUsSection() {
                 {t.whyChooseUs.cta}
               </span>
 
-              <span
-                className="
-                  relative ml-4 flex h-12 w-12 items-center justify-center rounded-full
-                  bg-white
+                <span
+                  className="
+                    ml-4 flex h-12 w-12 items-center justify-center rounded-full
+                    bg-white text-[#2f63ff]
 
-                  shadow-[0_6px_16px_rgba(0,0,0,0.12)]
-                  transition-all duration-300 ease-out
+                    shadow-[0_6px_16px_rgba(0,0,0,0.12)]
+                    transition-all duration-300 ease-out
 
-                  group-hover:bg-transparent
-                  group-hover:shadow-none
-                  group-hover:ring-1 group-hover:ring-white/60
-                "
-              >
-                <Image
-                  src="/messageUs.png"
-                  alt="Message us"
-                  width={24}
-                  height={24}
-                  className="block group-hover:hidden"
-                />
-
-                <Image
-                  src="/messageUs-hover.png"
-                  alt="Message us"
-                  width={24}
-                  height={24}
-                  className="hidden group-hover:block"
-                />
-              </span>
-            </button> 
+                    group-hover:bg-transparent
+                    group-hover:text-white
+                    group-hover:shadow-none
+                    group-hover:ring-1 group-hover:ring-white/60
+                  "
+                >
+                  <Image
+                    src="/messageUs.png"
+                    alt="Message us"
+                    width={24}
+                    height={24}
+                    className="block group-hover:hidden"
+                  />
+                </span>                
+          </button>
+          
           </div>
 
           <div className="mt-12 flex flex-col gap-8">

@@ -11,17 +11,45 @@ export function Footer() {
   const [email, setEmail] = useState("");
   const [touched, setTouched] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
-  const emailError =
-    touched && email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const handleSubscribe = async () => {
+    setEmailError(false);
 
-  const handleSubmit = () => {
-    setTouched(true);
+    const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!valid) return;
+    if (!emailIsValid) {
+      setEmailError(true);
+      return;
+    }
 
-    setSuccess(true);
+    try {
+      setIsSending(true);
+
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.ok) {
+        throw new Error();
+      }
+
+      setSuccess(true);
+      setEmail("");
+    } catch {
+      setEmailError(true);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -52,14 +80,14 @@ export function Footer() {
                   {t.footer.services}
                 </a>
                 <a
-                    href="#"
-                    className="
+                  href="#"
+                  className="
                       transition-all duration-200 ease-out
                       text-[#4b5162]
                       hover:text-[#11131a]
                       hover:font-semibold
                     "
-                  >
+                >
                   {t.footer.about}
                 </a>
               </div>
@@ -70,25 +98,25 @@ export function Footer() {
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
                 <a
-                    href="#"
-                    className="
+                  href="#"
+                  className="
                       transition-all duration-200 ease-out
                       text-[#4b5162]
                       hover:text-[#11131a]
                       hover:font-semibold
                     "
-                  >
+                >
                   {t.footer.portfolio}
                 </a>
                 <a
-                    href="#"
-                    className="
+                  href="#"
+                  className="
                       transition-all duration-200 ease-out
                       text-[#4b5162]
                       hover:text-[#11131a]
                       hover:font-semibold
                     "
-                  >
+                >
                   {t.footer.contacts}
                 </a>
               </div>
@@ -99,25 +127,25 @@ export function Footer() {
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
                 <a
-                    href="#"
-                    className="
+                  href="#"
+                  className="
                       transition-all duration-200 ease-out
                       text-[#4b5162]
                       hover:text-[#11131a]
                       hover:font-semibold
                     "
-                  >
+                >
                   {t.footer.help}
                 </a>
                 <a
-                    href="#"
-                    className="
+                  href="#"
+                  className="
                       transition-all duration-200 ease-out
                       text-[#4b5162]
                       hover:text-[#11131a]
                       hover:font-semibold
                     "
-                  >
+                >
                   {t.footer.faq}
                 </a>
               </div>
@@ -135,6 +163,17 @@ export function Footer() {
                     hover:text-[#11131a]
                     hover:font-semibold
                   "
+                >
+                </a>
+                <a
+                  href="#"
+                  className="
+                      -mt-3
+                      transition-all duration-200 ease-out
+                      text-[#4b5162]
+                      hover:text-[#11131a]
+                      hover:font-semibold
+                    "
                 >
                   {t.footer.privacy}
                 </a>
@@ -166,7 +205,7 @@ export function Footer() {
                     onBlur={() => setTouched(true)}
                     placeholder={t.footer.emailPlaceholder}
                     className="
-                      flex-1 bg-transparent px-5 text-[13px] text-[#4B74FF]
+                      flex-1 bg-transparent pl-5 text-[13px] text-[#4B74FF]
                       outline-none placeholder:text-[#9aa1b3]
                       focus:placeholder:text-transparent
                     "
@@ -174,9 +213,13 @@ export function Footer() {
 
                   <button
                     type="button"
-                    onClick={handleSubmit}
+                    onClick={handleSubscribe}
                     className="
-                      rounded-full bg-[#4B74FF] px-6 py-3 text-[15px] font-medium text-white
+                      shrink min-w-0 max-w-[45%]
+                      rounded-full bg-[#4B74FF]
+                      px-[clamp(12px,3vw,24px)] py-3
+                      text-[clamp(12px,2.8vw,15px)]
+                      font-medium text-white
                       shadow-[0_10px_20px_rgba(75,116,255,0.35)]
                       transition-all duration-300
                       hover:bg-[#252936]
@@ -184,7 +227,7 @@ export function Footer() {
                       active:scale-[0.96]
                     "
                   >
-                    {t.footer.subscribe}
+                    {isSending ? "Sending..." : t.footer.subscribe}
                   </button>
                 </div>
 

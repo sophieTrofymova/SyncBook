@@ -25,7 +25,7 @@ export function WorkflowSection() {
         "
         style={{
           background:
-            "linear-gradient(135deg, #2c61ff 0%, #2d5ef1 60%, #305ad9 100%)",
+            "linear-gradient(135deg, #2c61ff 0%, #1a4fef 60%, #3861dc 100%)",
         }}
       >
         <div

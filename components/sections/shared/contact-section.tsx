@@ -63,7 +63,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative z-20 px-[8px] pb-8 pt-6 md:px-12 md:pb-28 md:pt-10">
+    <section id="contact" className="relative z-20 px-[8px] pb-8 pt-6 md:px-12 md:pb-28 md:pt-10">
       <div className="mx-auto max-w-[1700px]">
         <div
           className="

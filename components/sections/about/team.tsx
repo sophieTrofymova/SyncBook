@@ -26,17 +26,27 @@ export function AboutStorySection() {
           <img
             src="/AboutUs/team1.png"
             alt="Team working together in an office"
-            className="h-[520px] w-full max-w-[960px] rounded-bl-[42px] rounded-tl-[42px] object-cover"
+            className="
+              -ml-[15px] md:ml-0
+              h-[520px] w-full max-w-[960px]
+              rounded-bl-[42px] rounded-tl-[42px]
+              object-cover
+            "
           />
         </div>
 
         <div className="flex -ml-14">
-          <img
-            src="/AboutUs/team2.png"
-            alt="Team planning automation project"
-            className="h-[400px] w-full max-w-[960px] rounded-br-[42px] rounded-tr-[42px] object-cover"
-          />
-        </div>
+        <img
+          src="/AboutUs/team2.png"
+          alt="Team planning automation project"
+          className="
+            translate-x-[15px] md:translate-x-0
+            h-[400px] w-full max-w-[960px]
+            rounded-br-[42px] rounded-tr-[42px]
+            object-cover
+          "
+        />
+      </div>
 
         <div className="flex items-start px-8 pt-28 md:px-12 xl:px-14">
           <p className="max-w-[650px] text-[18px] font-normal leading-[1.38] tracking-[-0.025em] text-[#707582] md:text-[19px]">

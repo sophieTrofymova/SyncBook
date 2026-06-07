@@ -13,7 +13,7 @@ import { ContactSection } from "@/components/sections/shared/contact-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden text-[#232634]">
+    <main id="home" className="min-h-screen overflow-hidden text-[#232634]">
       <div className="relative mx-auto min-h-screen max-w-[1800px]">
         <HeroSection />
         <TechStrip />
