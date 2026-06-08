@@ -1,4 +1,11 @@
+"use client";
+
+import { useLanguage } from "@/lib/language-context";
+
 export function PhilosophySection() {
+  const { t } = useLanguage();
+  const philosophy = t.aboutPage.philosophy;
+
   return (
     <section className="px-3 py-16 md:px-12 md:py-28 xl:px-14">
       <div
@@ -8,7 +15,7 @@ export function PhilosophySection() {
         "
         style={{
           background:
-            "linear-gradient(135deg, #2554fd 0%, #305ef5 60%, #2e5ce5 100%)",
+            "linear-gradient(135deg, #1447ff 0%, #305ef5 60%, #204eda 100%)",
         }}
       >
         <div
@@ -19,37 +26,42 @@ export function PhilosophySection() {
           }}
         />
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1.6fr_0.9fr] lg:items-start">
+        <div className="relative z-10 grid grid-cols-1 items-center lg:grid-cols-2">
+          {/* LEFT */}
           <div>
-            <p className="text-center text-[14px] uppercase tracking-[-0.03em] text-white/60 md:text-left md:text-[22px]">
+            <p className="text-[20px] uppercase tracking-[-0.03em] text-white/70">
               AUTOMATION IS FOR PEOPLE
             </p>
 
-            <h2 className="mt-6 text-center text-[28px] font-medium leading-[1.18] tracking-[-0.04em] text-white md:mt-8 md:text-left md:text-[44px]">
-              The Philosophy:
-              <br className="md:hidden" />
-              {" "}Humans vs. Machines
+            <h2 className="mt-8 text-[46px] font-medium leading-[1.12] tracking-[-0.04em] text-white md:text-[56px]">
+              {philosophy.title}
             </h2>
+
+            <div className="mt-16">
+              <img
+                src="/AboutUs/philosophy.png"
+                alt={philosophy.imageAlt}
+                className="w-full max-w-[820px] object-contain [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [mask-composite:intersect]
+                [-webkit-mask-composite:destination-in]"
+              />
+            </div>
           </div>
 
-          <div className="z-10 mt-15 max-w-[350px] text-[14px] leading-[1.22] tracking-[-0.04em] text-white/70 md:mt-20 md:text-[19px] md:leading-[1.4] md:tracking-[-0.02em] lg:pt-44">
-            <p>
-              There is a common misconception that automation is about replacing humans.
-              We believe the opposite.
+          <div className="max-w-[520px] text-[18px] leading-[1.4] tracking-[-0.02em] text-white/80 md:text-[19px]">
+            <p>{philosophy.paragraph1}</p>
+
+            <p className="mt-6 font-semibold text-white">
+              {philosophy.highlight}
             </p>
 
-            <p className="mt-8 font-semibold text-white md:mt-6">
-              Automation is about liberating humans.
+            <p className="mt-6">
+              {philosophy.paragraph2}
             </p>
 
-            <p className="mt-8 md:mt-6">
-              By delegating the repetitive, the mundane, and the error-prone tasks to
-              intelligent systems, we allow teams to focus on what they do best:
-              strategy, empathy, and innovation.
-            </p>
-
-            <p className="mt-8 md:mt-6">
-              We build the machines, so you can focus on the vision.
+            <p className="mt-6">
+              {philosophy.paragraph3}
             </p>
           </div>
 

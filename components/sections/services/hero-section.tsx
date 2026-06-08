@@ -27,15 +27,14 @@ export function HeroSection() {
 
       <div className="relative z-20 mx-auto flex max-w-[390px] flex-col items-center text-center md:mx-0 md:max-w-[780px] md:items-start md:text-left">
         <h1 className="text-[32px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:text-[60px]">
-          Solutions Engineered for Scale{" "}
+          {t.servicesPage.hero.titleLine1}{" "}
           <span className="text-[#4774ff] md:block">
-            - Discover our services
+            {t.servicesPage.hero.titleAccent}
           </span>
         </h1>
 
         <p className="mt-10 max-w-[330px] text-[15px] font-normal leading-[1.25] tracking-[-0.03em] text-[#6f7480] md:mt-14 md:max-w-[700px] md:text-[21px] md:leading-[1.35]">
-          We transform technical complexity into operational advantage. Explore
-          our core competencies in development and automation.
+          {t.servicesPage.hero.description}
         </p>
 
         <Link
@@ -46,21 +45,20 @@ export function HeroSection() {
               transition-all duration-300 ease-out
               hover:scale-[0.985] active:scale-[0.97]
 
-              md:mt-36 md:max-w-[430px] md:p-3
+            md:mt-36 md:max-w-[430px] md:p-3
+          "
+        >
+          <span
+            className="
+              flex-1 rounded-full px-4 py-3 text-center text-[15px]
+              font-medium tracking-[-0.03em] text-[#2a2e3c]
+              transition-colors duration-300 ease-out
+              group-hover:text-[#11131a]
+              md:px-8 md:py-5 md:text-[27px]
             "
           >
-            <span
-              className="
-                flex-1 rounded-full px-4 py-3 text-center text-[15px]
-                font-medium tracking-[-0.03em] text-[#2a2e3c]
-                transition-colors duration-300 ease-out
-                group-hover:text-[#11131a]
-
-                md:px-8 md:py-5 md:text-[27px]
-              "
-            >
-              Start exploring
-            </span>
+            {t.servicesPage.hero.cta}
+          </span>
 
             <span
               className="

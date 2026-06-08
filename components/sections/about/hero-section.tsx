@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export function HeroSection() {
   const { t } = useLanguage();
+  const hero = t.aboutPage.hero;
 
   return (
     <section className="relative z-10 mx-auto min-h-[740px] max-w-[1800px] overflow-hidden px-5 pt-10 md:min-h-[920px] md:px-12 md:pt-22 xl:px-14">
@@ -18,11 +19,11 @@ export function HeroSection() {
           md:hidden
         "
       >
-        “We Bridge the Gap
+        {hero.mobileTitleLine1}
         <br />
-        Between Complexity and
+        {hero.mobileTitleLine2}
         <br />
-        Efficiency”
+        {hero.mobileTitleLine3}
       </h1>
 
       {/* Desktop title */}
@@ -35,15 +36,15 @@ export function HeroSection() {
           md:block
         "
       >
-        “We Bridge the Gap Between
+        {hero.desktopTitleLine1}
         <br />
-        Complexity and Efficiency”
+        {hero.desktopTitleLine2}
       </h1>
 
       <div className="absolute left-1/2 top-[118px] z-10 w-[600px] -translate-x-1/2 pt-16 md:top-[160px] md:w-[1050px] md:pt-20 xl:w-[1200px]">
         <img
           src="/AboutUs/hero-about-us.png"
-          alt={t.hero.heroAlt}
+          alt={hero.imageAlt}
           className="
             h-auto w-full object-contain
             [mask-image:linear-gradient(to_right,transparent,black_10%,black_95%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_95%,transparent)]
@@ -58,17 +59,17 @@ export function HeroSection() {
       <div className="absolute bottom-[48px] left-0 right-0 z-20 mx-auto flex max-w-[360px] flex-col items-center px-4 md:hidden">
         <div className="flex w-full items-start justify-between gap-6">
           <h2 className="shrink-0 text-[18px] font-normal leading-none tracking-[-0.04em] text-[#4774ff]">
-            -About us
+            {hero.label}
           </h2>
 
           <p className="max-w-[175px] text-[10px] font-normal leading-[1.25] tracking-[-0.02em] text-[#6f7480]">
-            We transform technical complexity
+            {hero.descriptionLine1}
             <br />
-            into operational advantage.
+            {hero.descriptionLine2}
             <br />
-            Explore our core competencies in
+            {hero.descriptionLine3}
             <br />
-            development and automation.
+            {hero.descriptionLine4}
           </p>
         </div>
         <Link
@@ -88,7 +89,7 @@ export function HeroSection() {
               group-hover:text-[#11131a]
             "
           >
-            Meet us
+            {hero.cta}
           </span>
 
           <span
@@ -120,17 +121,17 @@ export function HeroSection() {
       {/* Desktop bottom text */}
       <div className="absolute bottom-[92px] left-8 z-20 hidden max-w-[340px] md:block md:left-12 xl:left-14">
         <h2 className="text-[42px] font-normal leading-none tracking-[-0.04em] text-[#4774ff]">
-          -About us
+          {hero.label}
         </h2>
 
         <p className="text-[19px] font-normal leading-[1.35] tracking-[-0.02em] text-[#6f7480]">
-          We transform technical complexity
+          {hero.descriptionLine1}
           <br />
-          into operational advantage.
+          {hero.descriptionLine2}
           <br />
-          Explore our core competencies in
+          {hero.descriptionLine3}
           <br />
-          development and automation.
+          {hero.descriptionLine4}
         </p>
       </div>
 
@@ -153,7 +154,7 @@ export function HeroSection() {
             group-hover:text-[#11131a]
           "
         >
-          Meet us
+          {hero.cta}
         </span>
 
         <span
