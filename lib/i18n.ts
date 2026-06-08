@@ -138,11 +138,11 @@ export const translations = {
       help: "Help",
       faq: "FAQ",
       terms: "Terms of use",
-      privacy: "Privacy policy",
+      privacy: "Privacy",
       newsletterTitle: "Subscribe to our newsletter!",
       emailPlaceholder: "Enter your email",
       subscribe: "Subscribe",
-      copyright: "© 2025 VolnyPravnik. All rights reserved.",
+      copyright: "© 2025 All rights reserved.",
     },
 
     homeData: {
@@ -712,7 +712,7 @@ export const translations = {
       newsletterTitle: "Подпишитесь на нашу рассылку",
       emailPlaceholder: "Введите ваш email",
       subscribe: "Подписаться",
-      copyright: "© 2025 VolnyPravnik. Все права защищены.",
+      copyright: "© 2025 Все права защищены.",
     },
 
     homeData: {
@@ -1261,7 +1261,7 @@ export const translations = {
       newsletterTitle: "Suscríbete a nuestro boletín",
       emailPlaceholder: "Ingresa tu correo electrónico",
       subscribe: "Suscribirse",
-      copyright: "© 2025 VolnyPravnik. Todos los derechos reservados.",
+      copyright: "© 2025 Todos los derechos reservados.",
     },
 
     homeData: {

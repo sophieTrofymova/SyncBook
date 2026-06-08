@@ -14,11 +14,11 @@ export function ServiceCard({ item }: ServiceCardProps) {
     <article
       className="
         mobile-service-card
-        group flex min-h-[420px] w-[338px] shrink-0 flex-col
+        group flex h-[420px] w-[338px] shrink-0 flex-col
         rounded-[32px] border border-white/70
         px-7 pb-7 pt-7
 
-        md:min-h-[620px] md:w-[452px]
+        md:h-[550px] md:w-[452px]
         md:rounded-[34px] md:px-8 md:pb-8 md:pt-7
       "
       style={embossedCardStyle}
@@ -45,9 +45,9 @@ export function ServiceCard({ item }: ServiceCardProps) {
         tracking-[-0.045em] text-[#2c3140]
         break-words hyphens-auto
 
-        md:mt-7 md:max-w-[390px]
-        md:text-[34px] md:leading-[1.1]
-      "
+          md:mt-7 md:max-w-[360px]
+          md:text-[38px] md:leading-[1.08]
+        "
       >
         {item.title}
       </h3>
@@ -59,8 +59,8 @@ export function ServiceCard({ item }: ServiceCardProps) {
           tracking-[-0.015em] text-[#7f8595]
           break-words hyphens-auto
 
-          md:mt-8 md:max-w-[390px]
-          md:text-[21px] md:leading-[1.45]
+          md:mt-8 md:max-w-[385px]
+          md:text-[23px] md:leading-[1.55]
         "
       >
         {item.description}

@@ -7,11 +7,11 @@ export function PhilosophySection() {
   const philosophy = t.aboutPage.philosophy;
 
   return (
-    <section className="px-8 py-28 md:px-12 xl:px-14">
+    <section className="px-3 py-16 md:px-12 md:py-28 xl:px-14">
       <div
         className="
-          relative overflow-hidden rounded-[64px] px-16 py-20
-          md:px-20 md:py-24
+          relative overflow-hidden rounded-[42px] px-6 py-16
+          md:rounded-[64px] md:px-20 md:py-24
         "
         style={{
           background:
@@ -27,9 +27,10 @@ export function PhilosophySection() {
         />
 
         <div className="relative z-10 grid grid-cols-1 items-center lg:grid-cols-2">
+          {/* LEFT */}
           <div>
             <p className="text-[20px] uppercase tracking-[-0.03em] text-white/70">
-              {philosophy.eyebrow}
+              AUTOMATION IS FOR PEOPLE
             </p>
 
             <h2 className="mt-8 text-[46px] font-medium leading-[1.12] tracking-[-0.04em] text-white md:text-[56px]">
@@ -62,6 +63,22 @@ export function PhilosophySection() {
             <p className="mt-6">
               {philosophy.paragraph3}
             </p>
+          </div>
+
+          <div className="z-0 mt-10 ml-5 lg:-ml-15 lg:col-span-1 lg:-mt-120">
+            <img
+              src="/AboutUs/philosophy.png"
+              alt="Automation concept"
+              className="
+                w-[170%] max-w-none -translate-x-[18%] object-contain
+                md:w-full md:max-w-[920px] md:translate-x-0
+                lg:w-[110%] lg:max-w-none
+                [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+                [mask-composite:intersect]
+                [-webkit-mask-composite:destination-in]
+              "
+            />
           </div>
         </div>
       </div>

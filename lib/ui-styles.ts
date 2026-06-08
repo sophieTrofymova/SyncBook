@@ -38,10 +38,6 @@ export const blueBlockStyle = {
   background: `
     linear-gradient(135deg, #4B74FF 0%, #3D63E8 100%)
   `,
-  boxShadow: `
-    inset 0 1px 0 rgba(255,255,255,0.2),
-    0 30px 60px rgba(60,80,180,0.25)
-  `,
 };
 
 export const stepCardStyle = {

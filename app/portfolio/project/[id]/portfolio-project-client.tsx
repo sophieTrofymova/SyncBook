@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer-section";
-import { BuildTogetherSection } from "@/components/sections/about/buil-together-section";
+import { BuildTogetherSection } from "@/components/sections/shared/buil-together-section";
 import { embossedPillStyle, embossedCardStyle } from "@/lib/ui-styles";
 import { OurPortfolioSection } from "@/components/sections/home/our-portfolio-section";
 
@@ -52,7 +52,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
   const projectText = details.projects[id] ?? details.projects[0];
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f2f3f8] text-[#232634]">
+    <main className="min-h-screen overflow-hidden text-[#232634]">
       <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
         {/* HERO */}
         <section className="relative px-8 pb-14 pt-14 md:px-12 xl:px-14">
@@ -571,7 +571,6 @@ export function PortfolioProjectClient({ id }: { id: number }) {
 
         <OurPortfolioSection />
         <BuildTogetherSection />
-        <Footer />
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
+import Link from "next/link";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -71,9 +72,8 @@ export function HeroSection() {
             {hero.descriptionLine4}
           </p>
         </div>
-
-        <button
-          type="button"
+        <Link
+          href="/home#contact"
           className="
             embossed-pill-button group mt-8 flex w-full max-w-[170px]
             items-center rounded-full p-2
@@ -115,7 +115,7 @@ export function HeroSection() {
               className="h-[18px] w-[18px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
             />
           </span>
-        </button>
+        </Link>
       </div>
 
       {/* Desktop bottom text */}

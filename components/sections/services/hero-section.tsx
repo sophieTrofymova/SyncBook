@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/lib/language-context";
+import Link from "next/link";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -9,7 +10,7 @@ export function HeroSection() {
     <section className="relative z-10 mx-auto h-[850px] max-w-[1800px] overflow-hidden px-5 pt-18 md:h-[770px] md:px-12 md:pt-28 xl:px-14">
       <div className="absolute left-1/2 top-[390px] z-10 w-[620px] -translate-x-1/2 md:left-auto md:right-0 md:top-[100px] md:w-[58vw] md:min-w-[920px] md:max-w-[1080px] md:translate-x-0">
         <img
-          src="/Services/hero-services.png"
+          src="/heroservices.png"
           alt={t.hero.heroAlt}
           className="
             h-auto w-full object-contain
@@ -36,13 +37,13 @@ export function HeroSection() {
           {t.servicesPage.hero.description}
         </p>
 
-        <button
-          type="button"
-          className="
-            embossed-pill-button group mt-10 flex w-full max-w-[238px]
-            items-center rounded-full p-2
-            transition-all duration-300 ease-out
-            hover:scale-[0.985] active:scale-[0.97]
+        <Link
+            href="/#contact"
+            className="
+              embossed-pill-button group mt-10 flex w-full max-w-[230px]
+              items-center rounded-full p-2
+              transition-all duration-300 ease-out
+              hover:scale-[0.985] active:scale-[0.97]
 
             md:mt-36 md:max-w-[430px] md:p-3
           "
@@ -59,32 +60,32 @@ export function HeroSection() {
             {t.servicesPage.hero.cta}
           </span>
 
-          <span
-            className="
-              flex h-[52px] w-[52px] items-center justify-center rounded-full
-              transition-all duration-300 ease-out
-              group-hover:translate-y-[2px] group-hover:scale-[0.94]
-              group-active:scale-[0.9]
+            <span
+              className="
+                flex h-[52px] w-[52px] items-center justify-center rounded-full
+                transition-all duration-300 ease-out
+                group-hover:translate-y-[2px] group-hover:scale-[0.94]
+                group-active:scale-[0.9]
 
-              md:h-[82px] md:w-[82px]
-            "
-            style={{
-              background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
-              boxShadow: `
-                inset 0 2px 6px rgba(255,255,255,0.22),
-                inset 0 -8px 14px rgba(23,61,178,0.28),
-                0 10px 22px rgba(75,116,255,0.28),
-                0 0 0 8px rgba(75,116,255,0.06)
-              `,
-            }}
-          >
-            <img
-              src="/AboutUs/Vector.png"
-              alt={t.hero.arrowAlt}
-              className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
-            />
-          </span>
-        </button>
+                md:h-[82px] md:w-[82px]
+              "
+              style={{
+                background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+                boxShadow: `
+                  inset 0 2px 6px rgba(255,255,255,0.22),
+                  inset 0 -8px 14px rgba(23,61,178,0.28),
+                  0 10px 22px rgba(75,116,255,0.28),
+                  0 0 0 8px rgba(75,116,255,0.06)
+                `,
+              }}
+            >
+              <img
+                src="/AboutUs/Vector.png"
+                alt={t.hero.arrowAlt}
+                className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
+              />
+            </span>
+          </Link>
       </div>
     </section>
   );

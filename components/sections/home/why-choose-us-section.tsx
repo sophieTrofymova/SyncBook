@@ -7,12 +7,12 @@ export function WhyChooseUsSection() {
   const { steps } = getHomeData(t);
 
   return (
-    <section className="relative z-10 px-3 pb-10 pt-8 md:px-12 md:pb-32 md:pt-10 xl:px-12">
+    <section className="relative z-10 bg-[#eef0f6] px-3 pb-10 pt-8 md:px-12 md:pb-32 md:pt-10 xl:px-12">
       <div className="mx-auto max-w-[1400px]">
         <div
           className="
-           rounded-[24px] px-3 pb-5 pt-9
-          md:rounded-[44px] md:px-12 md:py-10
+            rounded-[24px] px-3 pb-5 pt-9
+            md:rounded-[44px] md:px-12 md:py-10
           "
           style={blueBlockStyle}
         >
@@ -89,7 +89,7 @@ export function WhyChooseUsSection() {
             </button>
           </div>
 
-          <div className="mt-9 flex flex-col gap-4 md:mt-12 md:gap-8">
+          <div className="mt-9 mb-9 flex flex-col gap-4 md:mt-12 md:gap-8">
             {steps.map((step) => (
               <div
                   key={step.number}

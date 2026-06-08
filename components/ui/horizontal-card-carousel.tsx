@@ -21,7 +21,6 @@ export function HorizontalCardCarousel<T>({
   renderItem,
 }: HorizontalCardCarouselProps<T>) {
   const router = useRouter();
-
   const [canScroll, setCanScroll] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [progress, setProgress] = useState(0);
@@ -33,6 +32,7 @@ export function HorizontalCardCarousel<T>({
     if (!el) return;
 
     const maxScroll = el.scrollWidth - el.clientWidth;
+
     setCanScroll(maxScroll > 1);
 
     if (maxScroll <= 0) {
@@ -76,7 +76,7 @@ export function HorizontalCardCarousel<T>({
   };
 
   return (
-    <section className="relative z-10 bg-[#eef0f6] pb-20 pt-24 md:pb-24 md:pt-20">
+    <section className="relative z-10 bg-[#eef0f9] pb-20 pt-24 md:pb-24 md:pt-20">
       <div className="px-8 md:px-12 xl:px-12">
         <div className="mx-auto max-w-[1800px]">
           <div className="flex flex-col items-center text-center">
@@ -115,8 +115,10 @@ export function HorizontalCardCarousel<T>({
         className="
           mt-10 flex snap-x snap-mandatory overflow-x-auto scroll-smooth
           pb-10 pt-10
+
           md:mt-14 md:justify-center md:gap-14 md:px-12 md:py-10
           xl:px-12
+
           [scrollbar-width:none] [-ms-overflow-style:none]
           [&::-webkit-scrollbar]:hidden
         "
@@ -126,15 +128,18 @@ export function HorizontalCardCarousel<T>({
             key={index}
             className="
               flex w-screen min-w-full shrink-0 snap-center justify-center px-8
+
               md:w-auto md:min-w-0 md:px-0
             "
           >
             <div
               className="
                 w-[338px]
+
                 [&>*]:!w-full
                 [&>*]:!min-w-0
                 [&>*]:!max-w-none
+
                 md:w-[380px]
                 md:[&>*]:!w-full
               "

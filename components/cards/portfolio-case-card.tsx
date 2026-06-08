@@ -11,7 +11,7 @@ export function PortfolioCaseCard({ item }: PortfolioCaseCardProps) {
     <article
       className=" embossed-pill-button
         group flex h-[540px] w-[392px] shrink-0 flex-col overflow-hidden
-        rounded-[40px] border border-white/70 px-8 pt-12
+        rounded-[49px] border border-white/70 px-8 pt-12
 
         transition-all duration-300 ease-out
         hover:translate-y-[2px]

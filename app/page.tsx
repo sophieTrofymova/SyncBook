@@ -9,11 +9,11 @@ import { TechStrip } from "@/components/sections/home/tech-strip";
 import { WhyChooseUsSection } from "@/components/sections/home/why-choose-us-section";
 import { VisualizeYourGrowth } from "@/components/sections/home/visualize_your_growth";
 import { TestimonialsSection } from "@/components/sections/home/testimonials";
-import { ContactSection } from "@/components/sections/home/contact-section";
+import { ContactSection } from "@/components/sections/shared/contact-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden text-[#232634]">
+    <main id="home" className="min-h-screen overflow-hidden text-[#232634]">
       <div className="relative mx-auto min-h-screen max-w-[1800px]">
         <HeroSection />
         <TechStrip />

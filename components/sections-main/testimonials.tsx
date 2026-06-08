@@ -29,12 +29,17 @@ function TestimonialArrowButton({
     <button
       type="button"
       aria-label={label}
-      onClick={onClick}
-      className=" embossed-pill-button
+      onClick={(e) => {
+        onClick();
+        e.currentTarget.blur();
+      }}
+      className="
+        embossed-pill-button
         flex h-[78px] w-[78px] items-center justify-center rounded-full
         transition-all duration-300
-        hover:-translate-y-[-2px] hover:scale-[0.98]
-        active:scale-[0.98]
+        lg:hover:translate-y-[2px] lg:hover:scale-[0.98]
+        active:scale-[0.96]
+        focus:outline-none
       "
     >
       <img

@@ -74,6 +74,28 @@ a {
 
 /* Анимация почтового ящика */
 
+@keyframes mailFlyMobile {
+  0% {
+    opacity: 1;
+    transform: translateX(-45px) translateY(85px) rotate(0deg) scale(0.9);
+  }
+
+  28% {
+    opacity: 1;
+    transform: translateX(35px) translateY(145px) rotate(-10deg) scale(0.9);
+  }
+
+  52% {
+    opacity: 1;
+    transform: translateX(45px) translateY(165px) rotate(-22deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(45px) translateY(158px) rotate(-22deg) scale(0.95);
+  }
+}
+
 @keyframes mailFly {
   0% {
     opacity: 1;
@@ -142,6 +164,13 @@ a {
     inset 4px 4px 8px rgba(180,185,200,0.6);
 }
 
+.embossed-pill-button:active {
+  box-shadow:
+    inset -4px -4px 7px rgba(255,255,255,0.95),
+    inset 5px 5px 10px rgba(180,185,200,0.55);
+  transform: scale(0.97);
+}
+
 .embossed-pill:active {
   transform: scale(0.97);
 }
@@ -154,18 +183,29 @@ a {
     -6px 12px 10px rgba(219,219,227,0.6);
 }
 
-/*.embossed-pill-button:hover {
+.embossed-pill-button {
   box-shadow:
-    inset -4px -4px 7px rgba(255,255,255,0.95),
-    inset 5px 5px 10px rgba(180,185,200,0.55);
-}*/
+    -7px -7px 7px rgba(255,255,255,1),
+    6px -12px 12px rgba(255,255,255,0.6),
+    7px 7px 7px rgb(203,203,211),
+    -6px 12px 10px rgba(219,219,227,0.6);
+}
+
+/* Hover только для устройств с настоящей мышкой */
+@media (hover: hover) and (pointer: fine) {
+  .embossed-pill-button:hover {
+    box-shadow:
+      inset -4px -4px 7px rgba(255,255,255,0.95),
+      inset 5px 5px 10px rgba(180,185,200,0.55);
+  }
+}
 
 .embossed-pill-button:active {
   box-shadow:
     inset -4px -4px 7px rgba(255,255,255,0.95),
     inset 5px 5px 10px rgba(180,185,200,0.55);
-  transform: scale(0.97);
 }
+
 @keyframes techStripMove {
   from {
     transform: translateX(0);

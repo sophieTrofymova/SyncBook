@@ -4,6 +4,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer-section";
+import "leaflet/dist/leaflet.css";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
