@@ -1,26 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { embossedPillStyle } from "@/lib/ui-styles";
+import { useLanguage } from "@/lib/language-context";
 
 export function DifferenceSection() {
+  const { t } = useLanguage();
+  const difference = t.aboutPage.difference;
+
   return (
     <section className="relative overflow-hidden px-5 py-16 md:px-12 md:py-28 xl:px-14">
       <div className="mx-auto max-w-[1680px]">
         <div className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:justify-between lg:text-left">
           <div>
             <p className="text-[14px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[24px]">
-              WHY WORK WITH US?
+              {difference.eyebrow}
             </p>
 
             <h2 className="mt-4 text-[28px] font-medium leading-[1.08] tracking-[-0.045em] text-[#282b37] md:mt-5 md:text-[58px]">
-              Why We Are Different?
+              {difference.title}
             </h2>
 
             <p className="mt-8 max-w-[320px] text-[13px] font-normal leading-[1.45] tracking-[-0.025em] text-[#707582] md:mt-12 md:max-w-[650px] md:text-[19px]">
-              Unlike large, rigid consultancies, we operate with the agility
+              {difference.descriptionLine1}
               <span className="hidden md:inline">
                 <br />
               </span>
-              of a startup and the precision of a high-end engineering firm.
+              {difference.descriptionLine2}
             </p>
           </div>
 
@@ -44,7 +50,7 @@ export function DifferenceSection() {
                 md:text-[22px]
               "
             >
-              See all services
+              {difference.buttonText}
             </span>
           </Link>
         </div>
@@ -54,35 +60,23 @@ export function DifferenceSection() {
             <div className="space-y-10 text-[15px] leading-[1.5] tracking-[-0.025em] text-[#707582] md:text-[19px]">
               <p>
                 <strong className="font-semibold text-[#666b76]">
-                  Direct Access:
+                  {difference.directAccessTitle}
                 </strong>{" "}
-                You work directly with the
-                <span className="hidden md:inline">
-                  <br />
-                </span>
-                architects and engineers, not account managers.
+                {difference.directAccessText}
               </p>
 
               <p>
                 <strong className="font-semibold text-[#666b76]">
-                  No Technical Debt:
+                  {difference.noDebtTitle}
                 </strong>{" "}
-                We write clean, documented,
-                <span className="hidden md:inline">
-                  <br />
-                </span>
-                and modular code that stays maintainable for years.
+                {difference.noDebtText}
               </p>
 
               <p>
                 <strong className="font-semibold text-[#666b76]">
-                  Custom-Only:
+                  {difference.customTitle}
                 </strong>{" "}
-                We don’t sell templates. Every
-                <span className="hidden md:inline">
-                  <br />
-                </span>
-                solution is a "bespoke suit" for your business logic.
+                {difference.customText}
               </p>
             </div>
 
@@ -96,48 +90,26 @@ export function DifferenceSection() {
               "
               style={embossedPillStyle}
             >
-              <div>
-                <p className="text-[32px] font-semibold leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[38px]">
-                  40%
-                </p>
+              {difference.stats.map((stat) => (
+                <div key={stat.value}>
+                  <p className="text-[32px] font-semibold leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[38px]">
+                    {stat.value}
+                  </p>
 
-                <p className="mt-4 text-[14px] leading-[1.25] tracking-[-0.025em] text-[#707582] md:mt-5 md:text-[17px]">
-                  Reduction in
-                  <br />
-                  operational overhead
-                </p>
-              </div>
-
-              <div>
-                <p className="text-[32px] font-semibold leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[38px]">
-                  3x
-                </p>
-
-                <p className="mt-4 text-[14px] leading-[1.25] tracking-[-0.025em] text-[#707582] md:mt-5 md:text-[17px]">
-                  Faster Data
-                  <br />
-                  Processing Speeds
-                </p>
-              </div>
-
-              <div>
-                <p className="text-[32px] font-semibold leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[38px]">
-                  100%
-                </p>
-
-                <p className="mt-4 text-[14px] leading-[1.25] tracking-[-0.025em] text-[#707582] md:mt-5 md:text-[17px]">
-                  Data
-                  <br />
-                  Integrity & Accuracy
-                </p>
-              </div>
+                  <p className="mt-4 text-[14px] leading-[1.25] tracking-[-0.025em] text-[#707582] md:mt-5 md:text-[17px]">
+                    {stat.line1}
+                    <br />
+                    {stat.line2}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="flex justify-center lg:justify-end">
             <img
               src="/AboutUs/team3.png"
-              alt="Team reviewing business analytics"
+              alt={difference.imageAlt}
               className="
                 h-[404px] w-full max-w-[500px]
                 rounded-l-[32px] object-cover

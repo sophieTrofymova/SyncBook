@@ -329,6 +329,246 @@ export const translations = {
         ],
       },
     },
+    servicesPage: {
+      hero: {
+        titleLine1: "Solutions Engineered",
+        titleAccent: "for Scale",
+        description:
+          "We transform technical complexity into operational advantage. Explore our core competencies in development, automation, and digital transformation.",
+        cta: "Start exploring",
+      },
+      engineering: {
+        eyebrow: "FROM CHAOS TO CODE",
+        titleLine1: "Enterprise-Grade",
+        titleLine2: "Software Engineering",
+        descriptionLine1:
+          "We create not just applications, but the foundation for your business.",
+        descriptionLine2:
+          "Our solutions are designed with future loads and data security in mind.",
+        imageAlt: "Enterprise software engineering visualization",
+        items: [
+          {
+            title: "Full-Stack Development",
+            text: "Creating high-performance web/mobile platforms for your product",
+          },
+          {
+            title: "API Ecosystems",
+            text: "Development of reliable interfaces for the interaction of your products",
+          },
+          {
+            title: "Cloud-Native Solutions",
+            text: "Optimization under AWS, Azure and Google Cloud for maximum stability",
+          },
+        ],
+      },
+      workflow: {
+        eyebrow: "FROM CHAOS TO CODE",
+        title: "Intelligent Workflow Orchestration",
+        description:
+          "Free your team from routine. We identify inefficient areas of your workflows and replace them with intelligent algorithms.",
+        imageAlt: "Workflow orchestration",
+        items: [
+          {
+            title: "ERP & CRM\nCustomization",
+            text: "Customization and refinement of control systems to suit your unique needs.",
+          },
+          {
+            title: "Data Pipeline\nAutomation",
+            text: "Development of reliable interfaces for the interaction of your products",
+          },
+          {
+            title: "AI & ML\nIntegration",
+            text: "Optimization under AWS, Azure and Google Cloud for maximum stability",
+          },
+        ],
+      },
+      architecture: {
+        eyebrow: "WE CONDUCT DEEP CREATION",
+        title: "Multi-Layered Architecture for Absolute Scalability",
+        actionText: "Explore architecture",
+        items: [
+          {
+            icon: "/Services/icon1.png",
+            title: "Tech Stack\nAudit",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+          {
+            icon: "/Services/icon2.png",
+            title: "Scalability\nPlanning",
+            text: "Developing a roadmap for your product's development for years to come.",
+          },
+          {
+            icon: "/Services/icon3.png",
+            title: "Security &\nCompliance",
+            text: "Checking systems for vulnerabilities and compliance with international standards.",
+          },
+        ],
+      },
+      deliveryFramework: {
+        eyebrow: "WHAT IS THE PROCESS",
+        title: "Our Delivery Framework",
+        description: "Each project goes through a rigorous quality control cycle:",
+        items: [
+          {
+            icon: "/Services/process1.png",
+            title: "Discovery",
+            text: "Diving into business logic\nand process audit",
+            className: "left-[3%] top-[440px]",
+          },
+          {
+            icon: "/Services/process2.png",
+            title: "Design",
+            text: "UX and technical\narchitecture design",
+            className: "left-[30%] top-[530px]",
+          },
+          {
+            icon: "/Services/process3.png",
+            title: "Sprint",
+            text: "Iterative development\nwith weekly demos.",
+            className: "left-[55%] top-[395px]",
+          },
+          {
+            icon: "/Services/process4.png",
+            title: "Launch",
+            text: "Final testing and\nseamless implementation",
+            className: "right-[7%] top-[470px]",
+          },
+        ],
+      },
+      values: {
+        eyebrow: "WHAT WE THINK SIGNIFICANT",
+        title: "Our Values",
+        items: [
+          {
+            number: "01",
+            title: "Integrity by Design",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+          {
+            number: "02",
+            title: "Radical Efficiency",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+          {
+            number: "03",
+            title: "Scalable Thinking",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+        ],
+      },
+    },
+    aboutPage: {
+      hero: {
+        mobileTitleLine1: "“We Bridge the Gap",
+        mobileTitleLine2: "Between Complexity and",
+        mobileTitleLine3: "Efficiency”",
+        desktopTitleLine1: "“We Bridge the Gap Between",
+        desktopTitleLine2: "Complexity and Efficiency”",
+        label: "-About us",
+        descriptionLine1: "We transform technical complexity",
+        descriptionLine2: "into operational advantage.",
+        descriptionLine3: "Explore our core competencies in",
+        descriptionLine4: "development and automation.",
+        cta: "Meet us",
+        imageAlt: "About us hero image",
+      },
+      team: {
+        eyebrow: "FROM CHAOS TO CODE",
+        titleLine1: "Born from a Passion",
+        titleLine2: "for Precision",
+        description1:
+          "Our journey started with a simple observation: most businesses are held back not by a lack of ideas, but by the weight of inefficient processes. We saw brilliant teams spending 40% of their time on manual data entry, fragmented communication, and battling legacy systems that weren't built for the modern pace.",
+        description2:
+          "We founded SyncBook to change that. We didn't want to be just another software shop. We set out to be architects of efficiency. We spent our early days experimenting with modular code and AI-driven logic to find a way to make automation feel seamless, not mechanical.\nToday, we operate as a boutique agency where engineering excellence meets strategic thinking. We don't just 'take orders'—we dive deep into your business DNA to find where technology can create the most significant impact.",
+        image1Alt: "Team working together in an office",
+        image2Alt: "Team planning automation project",
+      },
+      values: {
+        eyebrow: "WHAT WE THINK SIGNIFICANT",
+        title: "Our Values",
+        items: [
+          {
+            number: "01",
+            title: "Integrity by Design",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+          {
+            number: "02",
+            title: "Radical Efficiency",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+          {
+            number: "03",
+            title: "Scalable Thinking",
+            text: "Analysis of your current technologies and recommendations for their optimization.",
+          },
+        ],
+      },
+      philosophy: {
+        eyebrow: "AUTOMATION IS FOR PEOPLE",
+        title: "The Philosophy: Humans vs. Machines",
+        imageAlt: "Automation concept",
+        paragraph1:
+          "There is a common misconception that automation is about replacing humans. We believe the opposite.",
+        highlight: "Automation is about liberating humans.",
+        paragraph2:
+          "By delegating the repetitive, the mundane, and the error-prone tasks to intelligent systems, we allow teams to focus on what they do best: strategy, empathy, and innovation.",
+        paragraph3:
+          "We build the machines, so you can focus on the vision.",
+      },
+      difference: {
+        eyebrow: "WHY WORK WITH US?",
+        title: "Why We Are Different?",
+        descriptionLine1:
+          "Unlike large, rigid consultancies, we operate with the agility",
+        descriptionLine2:
+          "of a startup and the precision of a high-end engineering firm.",
+        buttonText: "See all services",
+
+        directAccessTitle: "Direct Access:",
+        directAccessText:
+          "You work directly with the architects and engineers, not account managers.",
+
+        noDebtTitle: "No Technical Debt:",
+        noDebtText:
+          "We write clean, documented, and modular code that stays maintainable for years.",
+
+        customTitle: "Custom-Only:",
+        customText:
+          'We don’t sell templates. Every solution is a "bespoke suit" for your business logic.',
+
+        stats: [
+          {
+            value: "40%",
+            line1: "Reduction in",
+            line2: "operational overhead",
+          },
+          {
+            value: "3x",
+            line1: "Faster Data",
+            line2: "Processing Speeds",
+          },
+          {
+            value: "100%",
+            line1: "Data",
+            line2: "Integrity & Accuracy",
+          },
+        ],
+
+        imageAlt: "Team reviewing business analytics",
+      },
+      buildTogether: {
+        eyebrow: "THE FUTURE IS AUTOMATED. ARE YOU READY?",
+        title: "Let’s Build Together",
+        descriptionLine1:
+          "Whether you are a growing startup or an established enterprise,",
+        descriptionLine2:
+          "we are ready to help you navigate your digital transformation.",
+        descriptionLine3:
+          "Let’s create something that works as hard as you do.",
+        buttonText: "Meet us & start the process",
+      },
+},
   },
 
   ru: {
@@ -659,6 +899,225 @@ export const translations = {
         ],
       },
     },
+    servicesPage: {
+      hero: {
+        titleLine1: "Решения, созданные",
+        titleAccent: "для масштабирования",
+        description:
+          "Мы превращаем техническую сложность в конкурентное преимущество. Изучите наши ключевые направления в разработке программного обеспечения, автоматизации процессов и цифровой трансформации бизнеса.",
+        cta: "Начать знакомство",
+      },
+      engineering: {
+        eyebrow: "ОТ ХАОСА К СИСТЕМЕ",
+        titleLine1: "Инженерия ПО",
+        titleLine2: "enterprise-уровня",
+        descriptionLine1:
+          "Мы создаём не просто приложения, а основу для роста вашего бизнеса.",
+        descriptionLine2:
+          "Наши решения проектируются с учётом будущих нагрузок, безопасности данных и масштабирования.",
+        imageAlt: "Визуализация enterprise-разработки программного обеспечения",
+        items: [
+          {
+            title: "Full-Stack разработка",
+            text: "Создание высокопроизводительных веб- и мобильных платформ для вашего продукта",
+          },
+          {
+            title: "API-экосистемы",
+            text: "Разработка надёжных интерфейсов для взаимодействия ваших продуктов и сервисов",
+          },
+          {
+            title: "Cloud-Native решения",
+            text: "Оптимизация под AWS, Azure и Google Cloud для максимальной стабильности",
+          },
+        ],
+      },
+      workflow: {
+        eyebrow: "ОТ ХАОСА К СИСТЕМЕ",
+        title: "Интеллектуальная оркестрация процессов",
+        description:
+          "Освободите команду от рутины. Мы находим неэффективные участки рабочих процессов и заменяем их интеллектуальными алгоритмами.",
+        imageAlt: "Оркестрация рабочих процессов",
+        items: [
+          {
+            title: "Настройка ERP\nи CRM",
+            text: "Адаптация и доработка систем управления под уникальные задачи вашего бизнеса.",
+          },
+          {
+            title: "Автоматизация\nData Pipeline",
+            text: "Создание надёжных потоков данных для стабильной работы продуктов и сервисов.",
+          },
+          {
+            title: "Интеграция\nAI и ML",
+            text: "Внедрение AI/ML-решений для автоматизации, аналитики и повышения эффективности.",
+          },
+        ],
+      },
+      architecture: {
+        eyebrow: "МЫ СОЗДАЁМ ПРОДУМАННЫЕ РЕШЕНИЯ",
+        title: "Многоуровневая архитектура для максимальной масштабируемости",
+        actionText: "Изучить архитектуру",
+        items: [
+          {
+            icon: "/Services/icon1.png",
+            title: "Аудит\nтехнологического стека",
+            text: "Анализ текущих технологий и рекомендации по их оптимизации.",
+          },
+          {
+            icon: "/Services/icon2.png",
+            title: "Планирование\nмасштабирования",
+            text: "Разработка дорожной карты развития продукта на годы вперёд.",
+          },
+          {
+            icon: "/Services/icon3.png",
+            title: "Безопасность\nи соответствие стандартам",
+            text: "Проверка систем на уязвимости и соответствие международным требованиям.",
+          },
+        ],
+      },
+      deliveryFramework: {
+        eyebrow: "КАК ПРОХОДИТ ПРОЦЕСС",
+        title: "Наш процесс разработки",
+        description: "Каждый проект проходит строгий цикл контроля качества:",
+        items: [
+          {
+            icon: "/Services/process1.png",
+            title: "Исследование",
+            text: "Погружение в бизнес-логику\nи аудит процессов",
+            className: "left-[3%] top-[440px]",
+          },
+          {
+            icon: "/Services/process2.png",
+            title: "Проектирование",
+            text: "UX-дизайн и техническая\nархитектура решения",
+            className: "left-[30%] top-[530px]",
+          },
+          {
+            icon: "/Services/process3.png",
+            title: "Спринт",
+            text: "Итеративная разработка\nс еженедельными демо",
+            className: "left-[55%] top-[395px]",
+          },
+          {
+            icon: "/Services/process4.png",
+            title: "Запуск",
+            text: "Финальное тестирование\nи бесшовное внедрение",
+            className: "right-[7%] top-[470px]",
+          },
+        ],
+      },
+    },
+    aboutPage: {
+      hero: {
+        mobileTitleLine1: "«Мы соединяем",
+        mobileTitleLine2: "сложность и",
+        mobileTitleLine3: "эффективность»",
+        desktopTitleLine1: "«Мы соединяем сложность",
+        desktopTitleLine2: "и эффективность»",
+        label: "-О нас",
+        descriptionLine1: "Мы превращаем техническую сложность",
+        descriptionLine2: "в операционное преимущество.",
+        descriptionLine3: "Изучите наши ключевые направления",
+        descriptionLine4: "в разработке и автоматизации.",
+        cta: "Познакомиться",
+        imageAlt: "Главное изображение страницы о нас",
+      },
+      team: {
+        eyebrow: "ОТ ХАОСА К СИСТЕМЕ",
+        titleLine1: "Рождены страстью",
+        titleLine2: "к точности",
+        description1:
+          "Наш путь начался с простого наблюдения: большинству компаний мешает расти не отсутствие идей, а неэффективные процессы. Мы видели талантливые команды, которые тратили до 40% времени на ручной ввод данных, разрозненную коммуникацию и работу с устаревшими системами.",
+        description2:
+          "Именно поэтому мы создали SyncBook. Мы не хотели быть просто очередной студией разработки. Наша цель — стать архитекторами эффективности. Мы экспериментировали с модульным кодом и AI-решениями, чтобы сделать автоматизацию естественной и незаметной.\nСегодня мы работаем как бутик-агентство, где инженерное мастерство сочетается со стратегическим мышлением. Мы не просто выполняем задачи — мы глубоко изучаем ваш бизнес, чтобы найти точки максимального влияния технологий.",
+        image1Alt: "Команда работает вместе в офисе",
+        image2Alt: "Команда планирует проект автоматизации",
+      },
+      values: {
+        eyebrow: "ЧТО ДЛЯ НАС ВАЖНО",
+        title: "Наши ценности",
+        items: [
+          {
+            number: "01",
+            title: "Честность в основе",
+            text: "Анализ текущих технологий и рекомендации по их оптимизации.",
+          },
+          {
+            number: "02",
+            title: "Радикальная эффективность",
+            text: "Анализ текущих технологий и рекомендации по их оптимизации.",
+          },
+          {
+            number: "03",
+            title: "Масштабируемое мышление",
+            text: "Анализ текущих технологий и рекомендации по их оптимизации.",
+          },
+        ],
+      },
+      philosophy: {
+        eyebrow: "АВТОМАТИЗАЦИЯ ДЛЯ ЛЮДЕЙ",
+        title: "Философия: люди и машины",
+        imageAlt: "Концепция автоматизации",
+        paragraph1:
+          "Существует распространённое заблуждение, что автоматизация нужна для замены людей. Мы считаем наоборот.",
+        highlight: "Автоматизация нужна для освобождения людей.",
+        paragraph2:
+          "Передавая повторяющиеся, рутинные и подверженные ошибкам задачи интеллектуальным системам, мы даём командам возможность сосредоточиться на стратегии, эмпатии и инновациях.",
+        paragraph3:
+          "Мы создаём машины, чтобы вы могли сосредоточиться на своём видении.",
+      },
+      difference: {
+        eyebrow: "ПОЧЕМУ РАБОТАЮТ С НАМИ?",
+        title: "Чем мы отличаемся?",
+        descriptionLine1:
+          "В отличие от крупных и неповоротливых консалтинговых компаний, мы сочетаем гибкость",
+        descriptionLine2:
+          "стартапа с точностью инженерной команды премиум-класса.",
+        buttonText: "Все услуги",
+
+        directAccessTitle: "Прямой доступ:",
+        directAccessText:
+          "Вы работаете напрямую с архитекторами и инженерами, а не через аккаунт-менеджеров.",
+
+        noDebtTitle: "Без технического долга:",
+        noDebtText:
+          "Мы пишем чистый, документированный и модульный код, который остаётся удобным для поддержки долгие годы.",
+
+        customTitle: "Только индивидуальные решения:",
+        customText:
+          "Мы не продаём шаблоны. Каждое решение создаётся специально под вашу бизнес-логику.",
+
+        stats: [
+          {
+            value: "40%",
+            line1: "Снижение",
+            line2: "операционных затрат",
+          },
+          {
+            value: "3x",
+            line1: "Ускорение",
+            line2: "обработки данных",
+          },
+          {
+            value: "100%",
+            line1: "Целостность",
+            line2: "и точность данных",
+          },
+        ],
+
+        imageAlt: "Команда анализирует бизнес-показатели",
+      },
+      buildTogether: {
+        eyebrow: "БУДУЩЕЕ ЗА АВТОМАТИЗАЦИЕЙ. ГОТОВЫ?",
+        title: "Давайте создавать вместе",
+        descriptionLine1:
+          "Независимо от того, растущий вы стартап или крупная компания,",
+        descriptionLine2:
+          "мы готовы помочь вам пройти путь цифровой трансформации.",
+        descriptionLine3:
+          "Давайте создадим решение, которое будет работать так же усердно, как и вы.",
+        buttonText: "Познакомиться и начать процесс",
+      },
+},
   },
 
   es: {
@@ -988,6 +1447,225 @@ export const translations = {
           "Aplicación móvil para “Occollo”",
         ],
       },
+    },
+    servicesPage: {
+      hero: {
+        titleLine1: "Soluciones diseñadas",
+        titleAccent: "para escalar",
+        description:
+          "Transformamos la complejidad técnica en una ventaja competitiva. Descubre nuestras principales competencias en desarrollo de software, automatización de procesos y transformación digital.",
+        cta: "Comenzar a explorar",
+      },
+      engineering: {
+        eyebrow: "DEL CAOS AL CÓDIGO",
+        titleLine1: "Ingeniería de software",
+        titleLine2: "de nivel empresarial",
+        descriptionLine1:
+          "No creamos solo aplicaciones, sino la base tecnológica para tu negocio.",
+        descriptionLine2:
+          "Nuestras soluciones se diseñan pensando en cargas futuras, seguridad de datos y escalabilidad.",
+        imageAlt: "Visualización de ingeniería de software empresarial",
+        items: [
+          {
+            title: "Desarrollo Full-Stack",
+            text: "Creación de plataformas web y móviles de alto rendimiento para tu producto",
+          },
+          {
+            title: "Ecosistemas API",
+            text: "Desarrollo de interfaces fiables para la interacción entre tus productos y servicios",
+          },
+          {
+            title: "Soluciones Cloud-Native",
+            text: "Optimización para AWS, Azure y Google Cloud con máxima estabilidad",
+          },
+        ],
+      },
+      workflow: {
+        eyebrow: "DEL CAOS AL CÓDIGO",
+        title: "Orquestación inteligente de flujos de trabajo",
+        description:
+          "Libera a tu equipo de la rutina. Identificamos áreas ineficientes en tus procesos y las reemplazamos con algoritmos inteligentes.",
+        imageAlt: "Orquestación de flujos de trabajo",
+        items: [
+          {
+            title: "Personalización\nERP y CRM",
+            text: "Adaptación y mejora de sistemas de gestión según las necesidades únicas de tu negocio.",
+          },
+          {
+            title: "Automatización de\nData Pipelines",
+            text: "Creación de flujos de datos fiables para conectar productos, servicios y operaciones.",
+          },
+          {
+            title: "Integración de\nAI y ML",
+            text: "Implementación de soluciones AI/ML para automatización, análisis y mayor eficiencia.",
+          },
+        ],
+      },
+      architecture: {
+        eyebrow: "CREAMOS SOLUCIONES BIEN PENSADAS",
+        title: "Arquitectura multicapa para una escalabilidad absoluta",
+        actionText: "Explorar arquitectura",
+        items: [
+          {
+            icon: "/Services/icon1.png",
+            title: "Auditoría del\nstack tecnológico",
+            text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+          },
+          {
+            icon: "/Services/icon2.png",
+            title: "Planificación de\nescalabilidad",
+            text: "Desarrollo de una hoja de ruta para el crecimiento de tu producto a largo plazo.",
+          },
+          {
+            icon: "/Services/icon3.png",
+            title: "Seguridad y\ncumplimiento",
+            text: "Evaluación de vulnerabilidades y verificación del cumplimiento de estándares internacionales.",
+          },
+        ],
+      },
+      deliveryFramework: {
+        eyebrow: "CÓMO ES EL PROCESO",
+        title: "Nuestro marco de entrega",
+        description: "Cada proyecto pasa por un ciclo riguroso de control de calidad:",
+        items: [
+          {
+            icon: "/Services/process1.png",
+            title: "Descubrimiento",
+            text: "Análisis de la lógica del negocio\ny auditoría de procesos",
+            className: "left-[3%] top-[440px]",
+          },
+          {
+            icon: "/Services/process2.png",
+            title: "Diseño",
+            text: "Diseño UX y arquitectura\ntécnica de la solución",
+            className: "left-[30%] top-[530px]",
+          },
+          {
+            icon: "/Services/process3.png",
+            title: "Sprint",
+            text: "Desarrollo iterativo\ncon demos semanales",
+            className: "left-[55%] top-[395px]",
+          },
+          {
+            icon: "/Services/process4.png",
+            title: "Lanzamiento",
+            text: "Pruebas finales e\nimplementación fluida",
+            className: "right-[7%] top-[470px]",
+          },
+        ],
+      },
+    },
+    aboutPage: {
+        hero: {
+          mobileTitleLine1: "“Conectamos",
+          mobileTitleLine2: "complejidad y",
+          mobileTitleLine3: "eficiencia”",
+          desktopTitleLine1: "“Conectamos complejidad",
+          desktopTitleLine2: "y eficiencia”",
+          label: "-Sobre nosotros",
+          descriptionLine1: "Transformamos la complejidad técnica",
+          descriptionLine2: "en una ventaja operativa.",
+          descriptionLine3: "Descubre nuestras competencias clave",
+          descriptionLine4: "en desarrollo y automatización.",
+          cta: "Conócenos",
+          imageAlt: "Imagen principal de sobre nosotros",
+        },
+      team: {
+        eyebrow: "DEL CAOS AL CÓDIGO",
+        titleLine1: "Nacidos de una pasión",
+        titleLine2: "por la precisión",
+        description1:
+          "Nuestro camino comenzó con una observación simple: la mayoría de las empresas no están limitadas por la falta de ideas, sino por procesos ineficientes. Vimos equipos brillantes dedicar hasta el 40% de su tiempo a tareas manuales, comunicación fragmentada y sistemas heredados que ya no se adaptan al ritmo actual.",
+        description2:
+          "Fundamos SyncBook para cambiar esa realidad. No queríamos ser otra empresa de software más. Queríamos convertirnos en arquitectos de la eficiencia. Experimentamos con código modular y lógica impulsada por IA para que la automatización se sintiera natural y fluida.\nHoy operamos como una agencia boutique donde la excelencia en ingeniería se combina con el pensamiento estratégico. No solo ejecutamos tareas: analizamos profundamente tu negocio para identificar dónde la tecnología puede generar el mayor impacto.",
+        image1Alt: "Equipo trabajando juntos en una oficina",
+        image2Alt: "Equipo planificando un proyecto de automatización",
+      },
+      values: {
+      eyebrow: "LO QUE CONSIDERAMOS IMPORTANTE",
+      title: "Nuestros valores",
+      items: [
+        {
+          number: "01",
+          title: "Integridad desde el diseño",
+          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+        },
+        {
+          number: "02",
+          title: "Eficiencia radical",
+          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+        },
+        {
+          number: "03",
+          title: "Pensamiento escalable",
+          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+        },
+      ],
+      },
+    philosophy: {
+      eyebrow: "LA AUTOMATIZACIÓN ES PARA LAS PERSONAS",
+      title: "La filosofía: humanos y máquinas",
+      imageAlt: "Concepto de automatización",
+      paragraph1:
+        "Existe la idea errónea de que la automatización consiste en reemplazar a las personas. Nosotros creemos lo contrario.",
+      highlight: "La automatización consiste en liberar a las personas.",
+      paragraph2:
+        "Al delegar las tareas repetitivas, rutinarias y propensas a errores a sistemas inteligentes, permitimos que los equipos se concentren en lo que mejor hacen: estrategia, empatía e innovación.",
+      paragraph3:
+        "Nosotros construimos las máquinas para que tú puedas concentrarte en la visión.",
+    },
+        difference: {
+      eyebrow: "¿POR QUÉ TRABAJAR CON NOSOTROS?",
+      title: "¿Qué nos hace diferentes?",
+      descriptionLine1:
+        "A diferencia de las grandes consultoras tradicionales, trabajamos con la agilidad",
+      descriptionLine2:
+        "de una startup y la precisión de una firma de ingeniería de alto nivel.",
+      buttonText: "Ver todos los servicios",
+
+      directAccessTitle: "Acceso directo:",
+      directAccessText:
+        "Trabajas directamente con arquitectos e ingenieros, no con gestores de cuentas.",
+
+      noDebtTitle: "Sin deuda técnica:",
+      noDebtText:
+        "Escribimos código limpio, documentado y modular que seguirá siendo mantenible durante años.",
+
+      customTitle: "100% personalizado:",
+      customText:
+        "No vendemos plantillas. Cada solución es un traje hecho a medida para tu lógica de negocio.",
+
+      stats: [
+        {
+          value: "40%",
+          line1: "Reducción de",
+          line2: "costes operativos",
+        },
+        {
+          value: "3x",
+          line1: "Mayor velocidad de",
+          line2: "procesamiento de datos",
+        },
+        {
+          value: "100%",
+          line1: "Integridad",
+          line2: "y precisión de datos",
+        },
+      ],
+
+      imageAlt: "Equipo revisando análisis empresariales",
+    },
+    buildTogether: {
+      eyebrow: "EL FUTURO ESTÁ AUTOMATIZADO. ¿ESTÁS LISTO?",
+      title: "Construyamos juntos",
+      descriptionLine1:
+        "Ya seas una startup en crecimiento o una empresa consolidada,",
+      descriptionLine2:
+        "estamos listos para ayudarte en tu transformación digital.",
+      descriptionLine3:
+        "Creemos algo que trabaje tan duro como tú.",
+      buttonText: "Conócenos y comienza el proceso",
+    },
     },
   },
 } as const;

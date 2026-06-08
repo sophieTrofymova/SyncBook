@@ -1,36 +1,33 @@
+"use client";
+
 import { embossedPillStyle } from "@/lib/ui-styles";
 import { HorizontalCardCarousel } from "@/components/ui/horizontal-card-carousel";
+import { useLanguage } from "@/lib/language-context";
 
-const architectureItems = [
-  {
-    icon: "/Services/icon1.png",
-    title: "Tech Stack\nAudit",
-    text: "Analysis of your current technologies and recommendations for their optimization.",
-  },
-  {
-    icon: "/Services/icon2.png",
-    title: "Scalability\nPlanning",
-    text: "Developing a roadmap for your product's development for years to come",
-  },
-  {
-    icon: "/Services/icon3.png",
-    title: "Security &\nCompliance",
-    text: "Checking systems for vulnerabilities and compliance with international standards.",
-  },
-];
+type ArchitectureItem = {
+  icon: string;
+  title: string;
+  text: string;
+};
 
 export function ArchitectureSection() {
+  const { t } = useLanguage();
+  const architecture = t.servicesPage?.architecture;
+
+  if (!architecture) return null;
+
+  const items: ArchitectureItem[] = [...architecture.items];
+
   return (
-    <HorizontalCardCarousel
-      eyebrow="WE CONDUCT DEEP CREATION"
-      title="Multi-Layered Architecture for Absolute Scalability"
-      actionText="Explore architecture"
-      items={architectureItems}
+    <HorizontalCardCarousel<ArchitectureItem>
+      eyebrow={architecture.eyebrow}
+      title={architecture.title}
+      actionText={architecture.actionText}
+      items={items}
       renderItem={(item) => (
         <div
           className="
             flex min-h-[420px] flex-col rounded-[48px] px-14 py-14
-
             max-md:min-h-[300px]
             max-md:rounded-[32px]
             max-md:px-8
@@ -43,7 +40,6 @@ export function ArchitectureSection() {
             alt={item.title}
             className="
               h-[110px] w-[110px] object-contain
-
               max-md:h-[92px]
               max-md:w-[92px]
             "
@@ -53,7 +49,6 @@ export function ArchitectureSection() {
             className="
               mt-16 whitespace-pre-line text-[30px] font-medium
               leading-[1.15] tracking-[-0.04em] text-[#282b37]
-
               max-md:mt-14
               max-md:text-[20px]
             "
@@ -65,7 +60,6 @@ export function ArchitectureSection() {
             className="
               mt-8 max-w-[300px] text-[18px] leading-[1.35]
               tracking-[-0.025em] text-[#707582]
-
               max-md:mt-6
               max-md:max-w-[200px]
               max-md:text-[12px]

@@ -1,34 +1,23 @@
-import { embossedPillStyle } from "@/lib/ui-styles";
+"use client";
 
-const values = [
-  {
-    number: "01",
-    title: "Integrity by Design",
-    text: "Analysis of your current technologies and recommendations for their optimization.",
-  },
-  {
-    number: "02",
-    title: "Radical Efficiency",
-    text: "Analysis of your current technologies and recommendations for their optimization.",
-  },
-  {
-    number: "03",
-    title: "Scalable Thinking",
-    text: "Analysis of your current technologies and recommendations for their optimization.",
-  },
-];
+import { embossedPillStyle } from "@/lib/ui-styles";
+import { useLanguage } from "@/lib/language-context";
 
 export function ValuesSection() {
+  const { t } = useLanguage();
+  const valuesSection = t.aboutPage.values;
+  const values = [...valuesSection.items];
+
   return (
     <section className="relative overflow-hidden px-8 py-28 md:px-12 xl:px-14">
       <div className="mx-auto max-w-[1600px]">
         <div className="text-center">
           <p className="text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
-            WHAT WE THINK SIGNIFICANT
+            {valuesSection.eyebrow}
           </p>
 
           <h2 className="mt-8 text-[52px] font-medium leading-none tracking-[-0.045em] text-[#282b37] md:text-[58px]">
-            Our Values
+            {valuesSection.title}
           </h2>
         </div>
 

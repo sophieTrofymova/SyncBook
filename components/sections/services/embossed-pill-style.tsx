@@ -1,50 +1,39 @@
-import { embossedPillStyle } from "@/lib/ui-styles";
+"use client";
 
-const processItems = [
-  {
-    icon: "/Services/process1.png",
-    title: "Discovery",
-    text: "Diving into business logic\nand process audit",
-    className: "left-[3%] top-[440px]",
-  },
-  {
-    icon: "/Services/process2.png",
-    title: "Design",
-    text: "UX and technical\narchitecture design",
-    className: "left-[30%] top-[530px]",
-  },
-  {
-    icon: "/Services/process3.png",
-    title: "Sprint",
-    text: "Iterative development\nwith weekly demos.",
-    className: "left-[55%] top-[395px]",
-  },
-  {
-    icon: "/Services/process4.png",
-    title: "Launch",
-    text: "Final testing and\nseamless implementation",
-    className: "right-[7%] top-[470px]",
-  },
-];
+import { embossedPillStyle } from "@/lib/ui-styles";
+import { useLanguage } from "@/lib/language-context";
+
+type ProcessItem = {
+  icon: string;
+  title: string;
+  text: string;
+  className: string;
+};
 
 export function DeliveryFrameworkSection() {
+  const { t } = useLanguage();
+  const deliveryFramework = t.servicesPage?.deliveryFramework;
+
+  if (!deliveryFramework) return null;
+
+  const processItems: ProcessItem[] = [...deliveryFramework.items];
+
   return (
     <section className="relative overflow-hidden px-5 py-16 md:min-h-[980px] md:px-12 md:py-28 xl:px-14">
       <div className="relative z-20 text-center">
         <p className="text-[12px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff] md:text-[24px]">
-          WHAT IS THE PROCESS
+          {deliveryFramework.eyebrow}
         </p>
 
         <h2 className="mt-4 text-[25px] font-medium leading-[1.15] tracking-[-0.045em] text-[#282b37] md:mt-6 md:text-[58px]">
-          Our Delivery Framework
+          {deliveryFramework.title}
         </h2>
 
         <p className="mt-5 text-[12px] leading-[1.35] tracking-[-0.025em] text-[#707582] md:mt-8 md:text-[19px]">
-          Each project goes through a rigorous quality control cycle:
+          {deliveryFramework.description}
         </p>
       </div>
 
-      {/* Mobile curve */}
       <svg
         className="absolute right-[120px] top-[220px] z-10 h-[800px] w-[200px] md:hidden"
         viewBox="0 0 220 760"
@@ -59,7 +48,6 @@ export function DeliveryFrameworkSection() {
         />
       </svg>
 
-      {/* Desktop curve */}
       <svg
         className="absolute left-0 top-[260px] z-10 hidden h-[260px] w-full md:block"
         viewBox="0 0 1728 280"
@@ -74,7 +62,6 @@ export function DeliveryFrameworkSection() {
         />
       </svg>
 
-      {/* Mobile list */}
       <div className="relative z-20 mt-16 flex flex-col gap-16 md:hidden">
         {processItems.map((item) => (
           <div key={item.title}>
@@ -100,7 +87,6 @@ export function DeliveryFrameworkSection() {
         ))}
       </div>
 
-      {/* Desktop items */}
       <div className="hidden md:block">
         {processItems.map((item) => (
           <div key={item.title} className={`absolute z-20 ${item.className}`}>
