@@ -1,26 +1,46 @@
-"use client";
+import type { Metadata } from "next";
+import ServicesPageClient from "@/components/pages/services-page-client";
+import { ServicesSchema } from "@/components/seo/services-schema";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
-import { HeroSection }         from "@/components/sections/services/hero-section";
-import { TechStrip }           from "@/components/sections/about/tech-strip";
-import { EngineeringSection }  from "@/components/sections/services/engineering-section";
-import { WorkflowSection }     from "@/components/sections/services/workflow-section";
-import { ArchitectureSection } from "@/components/sections/services/embossed-pill-section";
-import { DeliveryFrameworkSection }     from "@/components/sections/services/embossed-pill-style";
-import { ContactSection }      from "@/components/sections/shared/contact-section";
+export const metadata: Metadata = {
+  title: "Website Development, Software Development & Automation Services",
+  description:
+    "Explore Softaryn services: website development, custom software development, CRM and ERP systems, business process automation, cloud-native solutions and system integration.",
+  keywords: [
+    "website development",
+    "web development services",
+    "custom software development",
+    "business automation services",
+    "CRM & ERP Systems",
+    "ERP development",
+    "system integration",
+    "cloud Infrastructure & Deployment",
+    "AI automation",
+    "software development company Dublin",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Website Development, Software Development & Automation Services | Softaryn",
+    description:
+      "Website development, custom software, AI automation, CRM, ERP, cloud-native platforms and scalable digital architecture.",
+    url: "/services",
+  },
+};
 
-export default function Home() {
+export default function ServicesPage() {
   return (
-    <main className="min-h-screen overflow-hidden text-[#232634]">
-      <div className="relative mx-auto min-h-screen">
-
-        <HeroSection />
-        <TechStrip />
-        <EngineeringSection/>
-        <WorkflowSection/>
-        <ArchitectureSection/>
-        <DeliveryFrameworkSection/>
-        <ContactSection />
-      </div>
-    </main>
+    <>
+      <ServicesSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+        ]}
+      />
+      <ServicesPageClient />
+    </>
   );
 }

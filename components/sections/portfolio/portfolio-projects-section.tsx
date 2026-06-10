@@ -13,19 +13,27 @@ const projects = [
     main: "/Portfolio/project-1-main.png",
     small1: "/Portfolio/project-1-small-1.png",
     small2: "/Portfolio/project-1-small-2.png",
+    mainAlt: "Refa Group automation website main preview",
+    small1Alt: "Refa Group automation website interface preview",
+    small2Alt: "Refa Group responsive website preview",
   },
   {
     main: "/Portfolio/project-2-main.png",
     small1: "/Portfolio/project-2-small-1.png",
     small2: "/Portfolio/project-2-small-2.png",
+    mainAlt: "Kolinsky real estate website main preview",
+    small1Alt: "Kolinsky real estate website interface preview",
+    small2Alt: "Kolinsky responsive website preview",
   },
   {
     main: "/Portfolio/project-3-main.png",
     small1: "/Portfolio/project-3-small-1.png",
     small2: "/Portfolio/project-3-small-2.png",
+    mainAlt: "Miraki beauty salon website main preview",
+    small1Alt: "Miraki beauty salon website interface preview",
+    small2Alt: "Miraki responsive website preview",
   },
 ];
-
 export function PortfolioProjectsSection() {
   const { t } = useLanguage();
 
@@ -62,7 +70,7 @@ export function PortfolioProjectsSection() {
             >
               <img
                 src={project.main}
-                alt=""
+                alt={project.mainAlt}
                 className="
                   h-[190px] w-full rounded-[18px] object-cover
 
@@ -73,12 +81,12 @@ export function PortfolioProjectsSection() {
               <div className="mt-4 grid grid-cols-2 gap-4 md:mt-0 md:flex md:h-[300px] md:w-[180px] md:flex-col md:gap-6">
                 <img
                   src={project.small1}
-                  alt=""
+                  alt={project.small1Alt}
                   className="h-[90px] w-full rounded-[14px] object-cover md:h-[140px] md:w-[180px] md:rounded-[18px]"
                 />
                 <img
                   src={project.small2}
-                  alt=""
+                  alt={project.small2Alt}
                   className="h-[90px] w-full rounded-[14px] object-cover md:h-[140px] md:w-[180px] md:rounded-[18px]"
                 />
               </div>

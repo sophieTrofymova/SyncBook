@@ -111,7 +111,8 @@ export function HeroSection() {
           >
             <img
               src="/AboutUs/Vector.png"
-              alt={t.hero.arrowAlt}
+              alt=""
+              aria-hidden="true"
               className="h-[18px] w-[18px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
             />
           </span>
@@ -176,7 +177,8 @@ export function HeroSection() {
         >
           <img
             src="/AboutUs/Vector.png"
-            alt={t.hero.arrowAlt}
+            alt=""
+            aria-hidden="true"
             className="h-[35px] w-[35px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
           />
         </span>

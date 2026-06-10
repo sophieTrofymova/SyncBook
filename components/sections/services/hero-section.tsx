@@ -38,8 +38,8 @@ export function HeroSection() {
         </p>
 
         <Link
-            href="/#contact"
-            className="
+          href="/#contact"
+          className="
               embossed-pill-button group mt-10 flex w-full max-w-[230px]
               items-center rounded-full p-2
               transition-all duration-300 ease-out
@@ -60,8 +60,8 @@ export function HeroSection() {
             {t.servicesPage.hero.cta}
           </span>
 
-            <span
-              className="
+          <span
+            className="
                 flex h-[52px] w-[52px] items-center justify-center rounded-full
                 transition-all duration-300 ease-out
                 group-hover:translate-y-[2px] group-hover:scale-[0.94]
@@ -69,23 +69,24 @@ export function HeroSection() {
 
                 md:h-[82px] md:w-[82px]
               "
-              style={{
-                background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
-                boxShadow: `
+            style={{
+              background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+              boxShadow: `
                   inset 0 2px 6px rgba(255,255,255,0.22),
                   inset 0 -8px 14px rgba(23,61,178,0.28),
                   0 10px 22px rgba(75,116,255,0.28),
                   0 0 0 8px rgba(75,116,255,0.06)
                 `,
-              }}
-            >
-              <img
-                src="/AboutUs/Vector.png"
-                alt={t.hero.arrowAlt}
-                className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
-              />
-            </span>
-          </Link>
+            }}
+          >
+            <img
+              src="/AboutUs/Vector.png"
+              alt=""
+              aria-hidden="true"
+              className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
+            />
+          </span>
+        </Link>
       </div>
     </section>
   );

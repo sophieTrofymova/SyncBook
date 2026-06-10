@@ -38,7 +38,8 @@ export function HeroSection() {
             <span className="inline-flex translate-y-[-2px]">
               <img
                 src="/Arrow.png"
-                alt={t.hero.arrowAlt}
+                alt=""
+                aria-hidden="true"
                 className="h-[0.72em] w-[0.95em]"
               />
             </span>{" "}
@@ -74,9 +75,9 @@ export function HeroSection() {
             md:mt-16 md:max-w-[420px] md:p-3
           "
         >
-        
-        <span
-          className="
+
+          <span
+            className="
               flex-1 rounded-full px-4 py-3 text-center text-[12px]
               font-medium tracking-[-0.02em] text-[#2a2e3c]
               transition-colors duration-300 ease-out
@@ -84,12 +85,12 @@ export function HeroSection() {
 
               md:px-8 md:py-5 md:text-[21px]
             "
-        >
-          {t.hero.cta}
-        </span>
+          >
+            {t.hero.cta}
+          </span>
 
-        <span
-          className="
+          <span
+            className="
               flex h-[44px] w-[44px] shrink-0 items-center justify-center
               rounded-full transition-all duration-300 ease-out
 
@@ -99,65 +100,66 @@ export function HeroSection() {
 
               md:h-[78px] md:w-[78px]
             "
-          style={{
-            background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
-            boxShadow: `
+            style={{
+              background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+              boxShadow: `
                 inset 0 2px 6px rgba(255,255,255,0.22),
                 inset 0 -8px 14px rgba(23,61,178,0.28),
                 0 10px 22px rgba(75,116,255,0.28),
                 0 0 0 8px rgba(75,116,255,0.06)
               `,
-          }}
-        >
-          <img
-            src="/Vector.png"
-            alt={t.hero.arrowAlt}
-            className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
-          />
-        </span>
-       </Link>
-    </div>
+            }}
+          >
+            <img
+              src="/Vector.png"
+              alt=""
+              aria-hidden="true"
+              className="h-[22px] w-[22px] transition-transform duration-300 ease-out group-hover:scale-[0.9] md:h-[35px] md:w-[35px]"
+            />
+          </span>
+        </Link>
+      </div>
 
-      {/* MOBILE IMAGE BELOW TITLE/BUTTON */ }
-  <div
-    className="
+      {/* MOBILE IMAGE BELOW TITLE/BUTTON */}
+      <div
+        className="
           relative z-10 md:mt-7 w-[720px]
           -translate-x-[23%] scale-[1.02]
 
           md:hidden
         "
-  >
-    <img
-      src="/Hero.png"
-      alt={t.hero.heroAlt}
-      className="
+      >
+        <img
+          src="/Hero.png"
+          alt={t.hero.heroAlt}
+          className="
             h-auto w-full object-contain
 
             [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_82%,transparent_100%)]
             [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_82%,transparent_100%)]
           "
-    />
+        />
 
-    {/* top fade */}
-    <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#eef0f6] via-[#eef0f6]/80 to-transparent" />
+        {/* top fade */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#eef0f6] via-[#eef0f6]/80 to-transparent" />
 
-    {/* bottom fade */}
-    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#eef0f6] via-[#eef0f6]/70 to-transparent" />
-  </div>
+        {/* bottom fade */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#eef0f6] via-[#eef0f6]/70 to-transparent" />
+      </div>
 
-  {/* DESKTOP IMAGE */ }
-  <div
-    className="
+      {/* DESKTOP IMAGE */}
+      <div
+        className="
           hidden
 
           md:absolute md:right-0 md:top-1/2 md:z-10
           md:block md:w-auto md:-translate-y-1/2
         "
-  >
-    <img
-      src="/Hero.png"
-      alt={t.hero.heroAlt}
-      className="
+      >
+        <img
+          src="/Hero.png"
+          alt={t.hero.heroAlt}
+          className="
             md:h-[722px] md:w-full md:max-w-[943px]
 
             md:[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent),linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
@@ -165,8 +167,8 @@ export function HeroSection() {
             md:[mask-composite:intersect]
             md:[-webkit-mask-composite:destination-in]
           "
-    />
-  </div>
+        />
+      </div>
     </section >
   );
 }

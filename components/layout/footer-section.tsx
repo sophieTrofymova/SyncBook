@@ -1,18 +1,25 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
-import { embossedCardStyle } from "@/lib/ui-styles"
+import { embossedCardStyle } from "@/lib/ui-styles";
 
 export function Footer() {
   const { t } = useLanguage();
 
   const [email, setEmail] = useState("");
-  const [touched, setTouched] = useState(false);
   const [success, setSuccess] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [emailError, setEmailError] = useState(false);
+
+  const footerLinkClass = `
+    transition-all duration-200 ease-out
+    text-[#4b5162]
+    hover:text-[#11131a]
+    hover:font-semibold
+  `;
 
   const handleSubscribe = async () => {
     setEmailError(false);
@@ -59,124 +66,75 @@ export function Footer() {
           className="flex items-center justify-center rounded-[36px] py-10"
           style={embossedCardStyle}
         >
-          <img src="/FooterLogo.png" alt={t.header.logoAlt} className="h-12 w-auto" />
+          <img
+            src="/FooterLogo.png"
+            alt={t.header.logoAlt}
+            className="h-12 w-auto"
+          />
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-[1fr_1fr_1.5fr]">
           <div className="grid grid-cols-2 gap-x-16 gap-y-10 md:col-span-2 md:grid-cols-4">
             <div>
-              <p className="text-[16px] font-medium text-[#4B74FF]">{t.footer.usual}</p>
+              <p className="text-[16px] font-medium text-[#4B74FF]">
+                {t.footer.usual}
+              </p>
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
-                <a
-                  href="#"
-                  className="
-                    transition-all duration-200 ease-out
-                    text-[#4b5162]
-                    hover:text-[#11131a]
-                    hover:font-semibold
-                  "
-                >
+                <Link href="/services" className={footerLinkClass}>
                   {t.footer.services}
-                </a>
-                <a
-                  href="#"
-                  className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                >
+                </Link>
+
+                <Link href="/about" className={footerLinkClass}>
                   {t.footer.about}
-                </a>
+                </Link>
               </div>
             </div>
 
             <div>
-              <p className="select-none text-[16px] font-medium text-transparent">.</p>
+              <p className="select-none text-[16px] font-medium text-transparent">
+                .
+              </p>
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
-                <a
-                  href="#"
-                  className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                >
+                <Link href="/portfolio" className={footerLinkClass}>
                   {t.footer.portfolio}
-                </a>
-                <a
-                  href="#"
-                  className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                >
+                </Link>
+
+                <Link href="/contacts" className={footerLinkClass}>
                   {t.footer.contacts}
-                </a>
+                </Link>
               </div>
             </div>
 
             <div>
-              <p className="text-[16px] font-medium text-[#4B74FF]">{t.footer.legal}</p>
+              <p className="text-[16px] font-medium text-[#4B74FF]">
+                {t.footer.legal}
+              </p>
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
-                <a
-                  href="#"
-                  className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                >
+                <Link href="/help" className={footerLinkClass}>
                   {t.footer.help}
-                </a>
-                <a
-                  href="#"
-                  className="
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
-                >
+                </Link>
+
+                <Link href="/faq" className={footerLinkClass}>
                   {t.footer.faq}
-                </a>
+                </Link>
               </div>
             </div>
 
             <div>
-              <p className="select-none text-[16px] font-medium text-transparent">.</p>
+              <p className="select-none text-[16px] font-medium text-transparent">
+                .
+              </p>
 
               <div className="mt-6 flex flex-col gap-3 text-[16px] leading-[1.6] text-[#4b5162]">
-                <a
-                  href="#"
-                  className="
-                    transition-all duration-200 ease-out
-                    text-[#4b5162]
-                    hover:text-[#11131a]
-                    hover:font-semibold
-                  "
-                >
-                </a>
-                <a
-                  href="#"
-                  className="
-                      -mt-3
-                      transition-all duration-200 ease-out
-                      text-[#4b5162]
-                      hover:text-[#11131a]
-                      hover:font-semibold
-                    "
+                <Link
+                  href="/privacy-policy"
+                  className={`${footerLinkClass} -mt-3`}
                 >
                   {t.footer.privacy}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -202,7 +160,6 @@ export function Footer() {
                       setEmail(e.target.value);
                       setSuccess(false);
                     }}
-                    onBlur={() => setTouched(true)}
                     placeholder={t.footer.emailPlaceholder}
                     className="
                       flex-1 bg-transparent pl-5 text-[13px] text-[#4B74FF]
@@ -214,6 +171,7 @@ export function Footer() {
                   <button
                     type="button"
                     onClick={handleSubscribe}
+                    disabled={isSending}
                     className="
                       shrink min-w-0 max-w-[45%]
                       rounded-full bg-[#4B74FF]
@@ -225,6 +183,8 @@ export function Footer() {
                       hover:bg-[#252936]
                       hover:shadow-[0_10px_22px_rgba(37,41,54,0.25)]
                       active:scale-[0.96]
+                      disabled:cursor-not-allowed
+                      disabled:opacity-70
                     "
                   >
                     {isSending ? "Sending..." : t.footer.subscribe}

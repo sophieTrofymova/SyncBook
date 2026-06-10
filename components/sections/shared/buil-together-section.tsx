@@ -114,7 +114,8 @@ export function BuildTogetherSection() {
             >
               <img
                 src="/arrowRight.png"
-                alt={t.hero.arrowAlt}
+                alt=""
+                aria-hidden="true"
                 className="
                   h-[22px] w-[22px]
 

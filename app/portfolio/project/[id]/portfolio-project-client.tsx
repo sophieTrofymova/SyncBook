@@ -38,6 +38,33 @@ const projects = [
   },
 ];
 
+const projectImageAlts = [
+  {
+    aboutImage: "Refa Group automation website project overview",
+    fontImage: "Refa Group website typography and brand style",
+    adaptive1: "Refa Group responsive website mobile layout",
+    adaptive2: "Refa Group responsive website tablet layout",
+    finalPreview: "Refa Group website responsive interface preview",
+    tabletImage: "Refa Group website tablet interface preview",
+  },
+  {
+    aboutImage: "Kolinsky real estate website project overview",
+    fontImage: "Kolinsky real estate website typography and brand style",
+    adaptive1: "Kolinsky real estate website mobile layout",
+    adaptive2: "Kolinsky real estate website tablet layout",
+    finalPreview: "Kolinsky real estate website responsive interface preview",
+    tabletImage: "Kolinsky real estate website tablet interface preview",
+  },
+  {
+    aboutImage: "Miraki beauty salon website project overview",
+    fontImage: "Miraki beauty salon website typography and brand style",
+    adaptive1: "Miraki beauty salon website mobile layout",
+    adaptive2: "Miraki beauty salon website tablet layout",
+    finalPreview: "Miraki beauty salon website responsive interface preview",
+    tabletImage: "Miraki beauty salon website tablet interface preview",
+  },
+];
+
 const otherProjectImages = [
   "/Portfolio/monitor-1.png",
   "/Portfolio/projects/3/kolinsky.png",
@@ -50,6 +77,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
   const project = projects[id] ?? projects[0];
   const details = t.portfolioPage.projectDetails;
   const projectText = details.projects[id] ?? details.projects[0];
+  const imageAlts = projectImageAlts[id] ?? projectImageAlts[0];
 
   return (
     <main className="min-h-screen overflow-hidden text-[#232634]">
@@ -235,7 +263,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
 
           <img
             src={project.aboutImage}
-            alt=""
+            alt={imageAlts.aboutImage}
             className="
             mx-auto mt-24 hidden
             h-[715px] w-full max-w-[1450px]
@@ -508,7 +536,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
 
           <img
             src={project.fontImage}
-            alt=""
+            alt={imageAlts.fontImage}
             className="
               mx-auto mt-24 hidden
               h-[715px] w-full max-w-[1450px]
@@ -532,19 +560,19 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <div className="mx-auto mt-20 grid max-w-[1080px] grid-cols-2 gap-10">
             <img
               src={project.adaptive1}
-              alt=""
+              alt={imageAlts.adaptive1}
               className="h-[520px] w-full rounded-[26px] object-cover"
             />
             <img
               src={project.adaptive2}
-              alt=""
+              alt={imageAlts.adaptive2}
               className="h-[520px] w-full rounded-[26px] object-cover"
             />
           </div>
 
           <img
             src={project.fontImage}
-            alt=""
+            alt={imageAlts.finalPreview}
             className="mx-auto mt-24 h-[650px] w-full max-w-[1220px] rounded-[32px] object-cover"
           />
         </section>
@@ -553,7 +581,7 @@ export function PortfolioProjectClient({ id }: { id: number }) {
         <section className="grid grid-cols-1 items-center gap-20 px-8 py-28 md:px-12 xl:grid-cols-2 xl:px-14">
           <img
             src={project.tabletImage}
-            alt=""
+            alt={imageAlts.tabletImage}
             className="h-[560px] w-full object-contain"
           />
 

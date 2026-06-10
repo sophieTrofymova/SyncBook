@@ -1,20 +1,32 @@
-"use client";
+import type { Metadata } from "next";
+import PortfolioPageClient from "@/components/pages/portfolio-page-client";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
-import { TechStrip } from "@/components/sections/home/tech-strip";
-import { PortfolioHeroSection } from "@/components/sections/portfolio/portfolio-hero-section";
-import { PortfolioProjectsSection } from "@/components/sections/portfolio/portfolio-projects-section";
+export const metadata: Metadata = {
+  title: "Portfolio & Case Studies",
+  description:
+    "Explore Softaryn case studies: dashboards, business platforms, websites, automation systems and custom software products built for real workflows.",
+  alternates: {
+    canonical: "/portfolio",
+  },
+  openGraph: {
+    title: "Portfolio & Case Studies | Softaryn",
+    description:
+      "A collection of custom software, automation and digital product projects built by Softaryn.",
+    url: "/portfolio",
+  },
+};
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen overflow-hidden text-[#232634]">
-      <div className="relative mx-auto min-h-screen max-w-[1800px]">
-
-        <PortfolioHeroSection />
-        <div className="relative left-1/2 z-40 -mt-[8px] w-screen -translate-x-1/2">
-            <TechStrip />
-        </div>  
-        <PortfolioProjectsSection />
-      </div>
-    </main>
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Portfolio", url: "/portfolio" },
+        ]}
+      />
+      <PortfolioPageClient />
+    </>
   );
 }
