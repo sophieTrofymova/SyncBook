@@ -37,60 +37,57 @@ export function PortfolioHeroSection() {
         />
       </div>
 
-      <div className="absolute left-1/2 top-[350px] z-30 flex -translate-x-1/2 items-center gap-5 md:bottom-0 md:left-8 md:top-auto md:translate-x-0 md:items-end md:gap-6 md:left-12 xl:left-14">
-        {cases.map((item, index) => {
-          const isActive = active === index;
+      <div className="absolute left-1/2 top-[350px] z-30 flex -translate-x-1/2 items-end gap-5 md:bottom-0 md:left-8 md:top-auto md:translate-x-0 md:gap-10 md:left-12 xl:left-14">
+      {cases.map((item, index) => {
+        const isActive = active === index;
 
-          return (
+        return (
+          <button
+            key={item.number}
+            type="button"
+            onClick={() => setActive(index)}
+            className={`
+              relative flex flex-col items-center justify-start text-center
+              transition-all duration-300 ease-out
+
+              rounded-t-[44px]
+
+              ${
+                isActive
+                  ? "h-[180px] w-[140px] px-6 pt-10 text-[#4b74ff] md:h-[260px] md:w-[205px] md:px-8 md:pt-14"
+                  : "h-[120px] w-[100px] px-5 pt-9 text-[#282b37] md:h-[185px] md:w-[155px] md:px-6 md:pt-14"
+              }
+            `}
+            style={{
+              background: "#f3f3f7",
+              boxShadow: `
+                -12px -12px 24px rgba(255,255,255,0.95),
+                14px 16px 32px rgba(185,190,205,0.42)
+              `,
+            }}
+          >
             <div
-              key={item.number}
-              onClick={() => setActive(index)}
-              className="relative cursor-pointer"
+              className={`
+                font-semibold leading-none tracking-[-0.04em]
+                ${
+                  isActive
+                    ? "text-[42px] md:text-[56px]"
+                    : "text-[34px] md:text-[42px]"
+                }
+              `}
             >
-              <div className="absolute -inset-4 z-0 md:-inset-8" />
-
-              <button
-                type="button"
-                className={`
-                  relative z-10 flex items-center justify-center rounded-full text-center
-                  transition-[box-shadow,transform] duration-150 ease-out
-
-                  md:rounded-t-[42px]
-
-                  ${
-                    isActive
-                      ? "h-[72px] w-[72px] text-white md:h-[190px] md:w-[170px] md:px-7 md:pb-10 md:pt-10 md:text-[#4b74ff]"
-                      : "h-[72px] w-[72px] text-[#282b37] md:h-[130px] md:w-[130px] md:px-6 md:pb-8 md:pt-10"
-                  }
-                `}
-                style={{
-                  background: isActive ? "#4B74FF" : "#f3f3f7",
-                  boxShadow: `
-                    -10px -10px 20px rgba(255,255,255,0.95),
-                    12px 16px 30px rgba(185,190,205,0.45)
-                  `,
-                }}
-              >
-                <div
-                  className={
-                    isActive
-                      ? "text-[30px] font-semibold leading-none tracking-[-0.04em] md:text-[54px]"
-                      : "text-[30px] font-semibold leading-none tracking-[-0.04em] md:text-[36px]"
-                  }
-                >
-                  {item.number}
-                </div>
-
-                {isActive && (
-                  <p className="mt-5 hidden whitespace-pre-line text-[14px] font-semibold leading-[1.25] tracking-[-0.02em] md:block">
-                    {item.title}
-                  </p>
-                )}
-              </button>
+              {item.number}
             </div>
-          );
-        })}
-      </div>
+
+            {isActive && (
+              <p className="mt-7 hidden whitespace-pre-line text-[15px] font-semibold leading-[1.35] tracking-[-0.03em] md:block">
+                {item.title}
+              </p>
+            )}
+          </button>
+        );
+      })}
+    </div>
     </section>
   );
 }
