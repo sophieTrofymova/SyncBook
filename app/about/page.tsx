@@ -1,26 +1,41 @@
-"use client";
+import type { Metadata } from "next";
+import AboutPageClient from "@/components/pages/about-page-client";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
-import { HeroSection }         from "@/components/sections/about/hero-section";
-import { TechStrip }           from "@/components/sections/about/tech-strip";
-import { BuildTogetherSection }from "@/components/sections/shared/buil-together-section";
-import { ValuesSection }       from "@/components/sections/about/our-values";
-import { AboutStorySection }   from "@/components/sections/about/team";
-import { PhilosophySection }   from "@/components/sections/about/philosophy";
-import { DifferenceSection }   from "@/components/sections/about/difference-section";
+export const metadata: Metadata = {
+  title: "About Softaryn",
+  description:
+    "Learn about Softaryn, a website development, software engineering and business automation team helping companies build scalable digital products and efficient workflows.",
+  keywords: [
+    "about softaryn",
+    "software development company",
+    "website development company",
+    "business automation company",
+    "custom software development",
+    "software engineers",
+    "Dublin software company",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Softaryn | Website Development & Software Engineering Team",
+    description:
+      "Softaryn helps companies transform complex business processes through website development, custom software engineering and automation solutions.",
+    url: "/about",
+  },
+};
 
-export default function Home() {
+export default function AboutPage() {
   return (
-    <main className="min-h-screen overflow-hidden text-[#232634]">
-      <div className="relative min-h-screen">
-        <HeroSection />
-        <TechStrip />
-        <AboutStorySection/>
-        <ValuesSection/>
-        <PhilosophySection/>
-        <DifferenceSection/>
-        <BuildTogetherSection/>
-      </div>
-    </main>
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ]}
+      />
+      <AboutPageClient />
+    </>
   );
 }
-

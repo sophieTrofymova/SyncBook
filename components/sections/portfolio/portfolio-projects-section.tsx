@@ -15,6 +15,9 @@ const projects = [
     small1: "/Portfolio/project-1-small-1.png",
     small2: "/Portfolio/project-1-small-2.png",
     filterIndexes: [0, 2],
+    mainAlt: "Refa Group automation website main preview",
+    small1Alt: "Refa Group automation website interface preview",
+    small2Alt: "Refa Group responsive website preview",
   },
   {
     main: "/Portfolio/project-2-main.png",
@@ -29,7 +32,6 @@ const projects = [
     filterIndexes: [1, 2],
   },
 ];
-
 export function PortfolioProjectsSection() {
   const { t } = useLanguage();
 

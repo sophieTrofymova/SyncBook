@@ -24,7 +24,8 @@ export function HeroSection() {
           <span className="inline-flex translate-y-[-3px]">
             <img
               src="/Arrow.png"
-              alt={t.hero.arrowAlt}
+              alt=""
+              aria-hidden="true"
               className="h-[0.66em] w-[0.86em]"
             />
           </span>{" "}
@@ -37,7 +38,7 @@ export function HeroSection() {
           {t.hero.description}
         </p>
 
-       <button
+        <button
           type="button"
           className=" embossed-pill-button
             group mt-16 flex w-full max-w-[420px] items-center rounded-full p-3
@@ -77,7 +78,8 @@ export function HeroSection() {
           >
             <img
               src="/Vector.png"
-              alt={t.hero.arrowAlt}
+              alt=""
+              aria-hidden="true"
               className="
                 h-[35px] w-[35px]
                 transition-transform duration-300 ease-out

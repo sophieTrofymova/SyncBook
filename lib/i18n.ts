@@ -10,7 +10,7 @@ export const translations = {
     },
 
     header: {
-      logoAlt: "Logo",
+      logoAlt: "Softaryn logo",
       language: "Language",
     },
 
@@ -28,8 +28,8 @@ export const translations = {
       description:
         "We design and implement customized automation systems that free your team from routine tasks and accelerate growth. We combine fast delivery with strong engineering foundations.",
       cta: "Start automation",
-      heroAlt: "Hero",
-      arrowAlt: "Arrow",
+      heroAlt: "Custom web development and business automation platform interface",
+      arrowAlt: "",
     },
 
     architecture: {
@@ -47,7 +47,7 @@ export const translations = {
     contact: {
       eyebrow: "LET’S CREATE TOGETHER MIRACLES",
       title: "Have a project in mind?",
-      mailboxAlt: "Mailbox",
+      mailboxAlt: "Contact form mailbox illustration",
       nameLabel: "User name",
       namePlaceholder: "Your name",
       emailLabel: "Email",
@@ -119,7 +119,7 @@ export const translations = {
       title: "Visualize your growth",
       description:
         "Our solutions give you complete control over your data and operations in real time.",
-      imageAlt: "Visualize your growth dashboard illustration",
+      imageAlt: "Business analytics dashboard for tracking growth and operations",
     },
 
     whyChooseUs: {
@@ -182,25 +182,25 @@ export const translations = {
           title: "Custom Software Development",
           description:
             "We create software that suits your business, not the other way around. From CRM to complex ERP systems.",
-          alt: "Custom software development",
+          alt: "Custom web application and software development illustration",
         },
         {
           title: "Fast workflow Automation",
           description:
             "We identify bottlenecks in your processes and implement AI solutions that save up to 40% of your employees' time.",
-          alt: "Workflow automation",
+          alt: "Business workflow automation illustration",
         },
         {
           title: "Digital Transformation",
           description:
             "We transition your business to digital smoothly, updating legacy systems to modern standards.",
-          alt: "Digital transformation",
+          alt: "Digital transformation and legacy system modernization illustration",
         },
         {
           title: "System Integration",
           description:
             "We connect your tools, databases, and services into one seamless digital ecosystem.",
-          alt: "System integration",
+          alt: "System integration between business tools and databases",
         },
       ],
 
@@ -257,7 +257,7 @@ export const translations = {
         "We create software that suits your business, not the other way around. From CRM to complex ERP systems.",
       seeMore: "See more",
       showMore: "Show more",
-      settingsAlt: "Settings",
+      settingsAlt: "",
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["web design", "real estate", "landing page"],
       projects: [
@@ -267,7 +267,7 @@ export const translations = {
       ],
 
       projectDetails: {
-        backAlt: "Back",
+        backAlt: "Back to portfolio",
         visitWebsite: "Visit\nWebsite",
         heroDescription:
           "We don’t collect projects; we collect success stories. Each case below is the result of an in-depth audit, engineering design, and automation that freed up people’s time for more important tasks.",
@@ -345,7 +345,7 @@ export const translations = {
           "We create not just applications, but the foundation for your business.",
         descriptionLine2:
           "Our solutions are designed with future loads and data security in mind.",
-        imageAlt: "Enterprise software engineering visualization",
+        imageAlt: "Enterprise web development and software engineering visualization",
         items: [
           {
             title: "Full-Stack Development",
@@ -366,7 +366,7 @@ export const translations = {
         title: "Intelligent Workflow Orchestration",
         description:
           "Free your team from routine. We identify inefficient areas of your workflows and replace them with intelligent algorithms.",
-        imageAlt: "Workflow orchestration",
+        imageAlt: "Intelligent workflow automation and orchestration visualization",
         items: [
           {
             title: "ERP & CRM\nCustomization",
@@ -470,7 +470,7 @@ export const translations = {
         descriptionLine3: "Explore our core competencies in",
         descriptionLine4: "development and automation.",
         cta: "Meet us",
-        imageAlt: "About us hero image",
+        imageAlt: "Softaryn team and software automation concept",
       },
       team: {
         eyebrow: "FROM CHAOS TO CODE",
@@ -507,7 +507,7 @@ export const translations = {
       philosophy: {
         eyebrow: "AUTOMATION IS FOR PEOPLE",
         title: "The Philosophy: Humans vs. Machines",
-        imageAlt: "Automation concept",
+        imageAlt: "Human-centered business automation concept",
         paragraph1:
           "There is a common misconception that automation is about replacing humans. We believe the opposite.",
         highlight: "Automation is about liberating humans.",
@@ -580,7 +580,7 @@ export const translations = {
     },
 
     header: {
-      logoAlt: "Логотип",
+      logoAlt: "Логотип Softaryn",
       language: "Язык",
     },
 
@@ -598,8 +598,8 @@ export const translations = {
       description:
         "Мы проектируем и внедряем индивидуальные системы автоматизации, которые освобождают вашу команду от рутинных задач и помогают бизнесу расти быстрее. Быстрая реализация сочетается у нас с сильной инженерной базой.",
       cta: "Запустить автоматизацию",
-      heroAlt: "Главное изображение",
-      arrowAlt: "Стрелка",
+      heroAlt: "Интерфейс платформы для веб-разработки и автоматизации бизнеса",
+      arrowAlt: "",
     },
 
     architecture: {
@@ -617,7 +617,7 @@ export const translations = {
     contact: {
       eyebrow: "ДАВАЙТЕ СОЗДАДИМ НЕЧТО БОЛЬШЕЕ ВМЕСТЕ",
       title: "Есть идея для проекта?",
-      mailboxAlt: "Почтовый ящик",
+      mailboxAlt: "Иллюстрация почтового ящика рядом с контактной формой",
       nameLabel: "Имя",
       namePlaceholder: "Ваше имя",
       emailLabel: "Email",
@@ -689,7 +689,7 @@ export const translations = {
       title: "Визуализируйте рост вашего бизнеса",
       description:
         "Наши решения дают вам полный контроль над данными и операционными процессами в режиме реального времени.",
-      imageAlt: "Иллюстрация панели аналитики роста",
+      imageAlt: "Панель бизнес-аналитики для отслеживания роста и операций",
     },
 
     whyChooseUs: {
@@ -752,25 +752,25 @@ export const translations = {
           title: "Индивидуальная разработка ПО",
           description:
             "Мы создаем программные решения, которые подстраиваются под ваш бизнес, а не наоборот. От CRM до сложных ERP-систем.",
-          alt: "Индивидуальная разработка программного обеспечения",
+          alt: "Иллюстрация индивидуальной веб-разработки и разработки ПО",
         },
         {
           title: "Интеллектуальная автоматизация процессов",
           description:
             "Мы находим узкие места в рабочих процессах и внедряем AI-решения, которые экономят до 40% времени сотрудников.",
-          alt: "Автоматизация бизнес-процессов",
+          alt: "Иллюстрация автоматизации бизнес-процессов",
         },
         {
           title: "Цифровая трансформация",
           description:
             "Мы помогаем бизнесу перейти в цифровую среду без лишней сложности, обновляя устаревшие системы до современных стандартов.",
-          alt: "Цифровая трансформация",
+          alt: "Иллюстрация цифровой трансформации и модернизации устаревших систем",
         },
         {
           title: "Интеграция систем",
           description:
             "Мы объединяем ваши сервисы, базы данных и инструменты в единую цифровую экосистему.",
-          alt: "Интеграция систем",
+          alt: "Интеграция бизнес-инструментов, сервисов и баз данных",
         },
       ],
 
@@ -827,7 +827,7 @@ export const translations = {
         "Мы создаём программные решения под задачи бизнеса: от CRM-систем до сложных ERP-платформ.",
       seeMore: "Подробнее",
       showMore: "Показать ещё",
-      settingsAlt: "Настройки",
+      settingsAlt: "",
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["веб-дизайн", "недвижимость", "лендинг"],
       projects: [
@@ -837,7 +837,7 @@ export const translations = {
       ],
 
       projectDetails: {
-        backAlt: "Назад",
+        backAlt: "Вернуться к портфолио",
         visitWebsite: "Открыть\nсайт",
         heroDescription:
           "Мы не просто собираем проекты — мы создаём истории роста. Каждый кейс ниже — это результат глубокого анализа, продуманной архитектуры и автоматизации, которая освобождает команде время для действительно важных задач.",
@@ -915,7 +915,7 @@ export const translations = {
           "Мы создаём не просто приложения, а основу для роста вашего бизнеса.",
         descriptionLine2:
           "Наши решения проектируются с учётом будущих нагрузок, безопасности данных и масштабирования.",
-        imageAlt: "Визуализация enterprise-разработки программного обеспечения",
+        imageAlt: "Визуализация enterprise-веб-разработки и инженерии программного обеспечения",
         items: [
           {
             title: "Full-Stack разработка",
@@ -936,7 +936,7 @@ export const translations = {
         title: "Интеллектуальная оркестрация процессов",
         description:
           "Освободите команду от рутины. Мы находим неэффективные участки рабочих процессов и заменяем их интеллектуальными алгоритмами.",
-        imageAlt: "Оркестрация рабочих процессов",
+        imageAlt: "Визуализация интеллектуальной автоматизации и оркестрации процессов",
         items: [
           {
             title: "Настройка ERP\nи CRM",
@@ -1019,7 +1019,7 @@ export const translations = {
         descriptionLine3: "Изучите наши ключевые направления",
         descriptionLine4: "в разработке и автоматизации.",
         cta: "Познакомиться",
-        imageAlt: "Главное изображение страницы о нас",
+        imageAlt: "Команда Softaryn и концепция автоматизации бизнеса",
       },
       team: {
         eyebrow: "ОТ ХАОСА К СИСТЕМЕ",
@@ -1056,7 +1056,7 @@ export const translations = {
       philosophy: {
         eyebrow: "АВТОМАТИЗАЦИЯ ДЛЯ ЛЮДЕЙ",
         title: "Философия: люди и машины",
-        imageAlt: "Концепция автоматизации",
+        imageAlt: "Концепция человекоориентированной автоматизации бизнеса",
         paragraph1:
           "Существует распространённое заблуждение, что автоматизация нужна для замены людей. Мы считаем наоборот.",
         highlight: "Автоматизация нужна для освобождения людей.",
@@ -1129,7 +1129,7 @@ export const translations = {
     },
 
     header: {
-      logoAlt: "Logotipo",
+      logoAlt: "Logotipo de Softaryn",
       language: "Idioma",
     },
 
@@ -1147,8 +1147,8 @@ export const translations = {
       description:
         "Diseñamos e implementamos sistemas de automatización a medida que liberan a tu equipo de tareas repetitivas y aceleran el crecimiento del negocio. Combinamos rapidez de ejecución con una sólida base de ingeniería.",
       cta: "Iniciar automatización",
-      heroAlt: "Imagen principal",
-      arrowAlt: "Flecha",
+      heroAlt: "Interfaz de plataforma para desarrollo web y automatización empresarial",
+      arrowAlt: "",
     },
 
     architecture: {
@@ -1166,7 +1166,7 @@ export const translations = {
     contact: {
       eyebrow: "CREEMOS ALGO EXTRAORDINARIO JUNTOS",
       title: "¿Tienes un proyecto en mente?",
-      mailboxAlt: "Buzón",
+      mailboxAlt: "Ilustración de buzón junto al formulario de contacto",
       nameLabel: "Nombre",
       namePlaceholder: "Tu nombre",
       emailLabel: "Correo electrónico",
@@ -1238,7 +1238,7 @@ export const translations = {
       title: "Visualiza el crecimiento de tu negocio",
       description:
         "Nuestras soluciones te brindan control total sobre tus datos y operaciones en tiempo real.",
-      imageAlt: "Ilustración del panel de crecimiento",
+      imageAlt: "Panel de análisis empresarial para seguir el crecimiento y las operaciones",
     },
 
     whyChooseUs: {
@@ -1301,25 +1301,25 @@ export const translations = {
           title: "Desarrollo de software a medida",
           description:
             "Creamos soluciones de software que se adaptan a tu negocio, no al revés. Desde CRM hasta sistemas ERP complejos.",
-          alt: "Desarrollo de software a medida",
+          alt: "Ilustración de desarrollo web y software a medida",
         },
         {
           title: "Automatización inteligente de procesos",
           description:
             "Identificamos los cuellos de botella en tus procesos e implementamos soluciones de IA que ahorran hasta un 40% del tiempo de tu equipo.",
-          alt: "Automatización de procesos",
+          alt: "Ilustración de automatización de procesos empresariales",
         },
         {
           title: "Transformación digital",
           description:
             "Ayudamos a que tu negocio evolucione hacia lo digital de forma fluida, modernizando sistemas heredados según estándares actuales.",
-          alt: "Transformación digital",
+          alt: "Ilustración de transformación digital y modernización de sistemas heredados",
         },
         {
           title: "Integración de sistemas",
           description:
             "Conectamos tus herramientas, bases de datos y servicios en un ecosistema digital unificado.",
-          alt: "Integración de sistemas",
+          alt: "Integración de herramientas empresariales, servicios y bases de datos",
         },
       ],
 
@@ -1376,7 +1376,7 @@ export const translations = {
         "Creamos soluciones de software adaptadas a las necesidades del negocio: desde CRM hasta plataformas ERP complejas.",
       seeMore: "Ver más",
       showMore: "Mostrar más",
-      settingsAlt: "Configuración",
+      settingsAlt: "",
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["diseño web", "bienes raíces", "landing page"],
       projects: [
@@ -1386,7 +1386,7 @@ export const translations = {
       ],
 
       projectDetails: {
-        backAlt: "Volver",
+        backAlt: "Volver al portafolio",
         visitWebsite: "Visitar\nsitio",
         heroDescription:
           "No acumulamos proyectos; construimos historias de crecimiento. Cada caso es el resultado de un análisis profundo, una arquitectura bien pensada y automatización que libera tiempo del equipo para tareas realmente importantes.",
@@ -1464,7 +1464,7 @@ export const translations = {
           "No creamos solo aplicaciones, sino la base tecnológica para tu negocio.",
         descriptionLine2:
           "Nuestras soluciones se diseñan pensando en cargas futuras, seguridad de datos y escalabilidad.",
-        imageAlt: "Visualización de ingeniería de software empresarial",
+        imageAlt: "Visualización de desarrollo web empresarial e ingeniería de software",
         items: [
           {
             title: "Desarrollo Full-Stack",
@@ -1485,7 +1485,7 @@ export const translations = {
         title: "Orquestación inteligente de flujos de trabajo",
         description:
           "Libera a tu equipo de la rutina. Identificamos áreas ineficientes en tus procesos y las reemplazamos con algoritmos inteligentes.",
-        imageAlt: "Orquestación de flujos de trabajo",
+        imageAlt: "Visualización de automatización inteligente y orquestación de flujos de trabajo",
         items: [
           {
             title: "Personalización\nERP y CRM",
@@ -1568,7 +1568,7 @@ export const translations = {
           descriptionLine3: "Descubre nuestras competencias clave",
           descriptionLine4: "en desarrollo y automatización.",
           cta: "Conócenos",
-          imageAlt: "Imagen principal de sobre nosotros",
+          imageAlt: "Equipo de Softaryn y concepto de automatización empresarial",
         },
       team: {
         eyebrow: "DEL CAOS AL CÓDIGO",
@@ -1605,7 +1605,7 @@ export const translations = {
     philosophy: {
       eyebrow: "LA AUTOMATIZACIÓN ES PARA LAS PERSONAS",
       title: "La filosofía: humanos y máquinas",
-      imageAlt: "Concepto de automatización",
+      imageAlt: "Concepto de automatización empresarial centrada en las personas",
       paragraph1:
         "Existe la idea errónea de que la automatización consiste en reemplazar a las personas. Nosotros creemos lo contrario.",
       highlight: "La automatización consiste en liberar a las personas.",
