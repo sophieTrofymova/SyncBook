@@ -11,25 +11,28 @@ import Link from "next/link";
 
 const projects = [
   {
-    main: "/Portfolio/project-1-main.png",
-    small1: "/Portfolio/project-1-small-1.png",
-    small2: "/Portfolio/project-1-small-2.png",
-    filterIndexes: [0, 2],
-    mainAlt: "Refa Group automation website main preview",
-    small1Alt: "Refa Group automation website interface preview",
-    small2Alt: "Refa Group responsive website preview",
-  },
-  {
-    main: "/Portfolio/project-2-main.png",
-    small1: "/Portfolio/project-2-small-1.png",
-    small2: "/Portfolio/project-2-small-2.png",
-    filterIndexes: [0, 1],
-  },
-  {
+    textIndex: 0, // Miraki card text
+    projectId: 2, // Miraki full page
     main: "/Portfolio/project-3-main.png",
     small1: "/Portfolio/project-3-small-1.png",
     small2: "/Portfolio/project-3-small-2.png",
     filterIndexes: [1, 2],
+  },
+  {
+    textIndex: 2, // Refa card text
+    projectId: 0, // Refa coming soon page
+    main: "/Portfolio/project-1-main.png",
+    small1: "/Portfolio/project-1-small-1.png",
+    small2: "/Portfolio/project-1-small-2.png",
+    filterIndexes: [0, 2],
+  },
+  {
+    textIndex: 1, // Kolinsky card text
+    projectId: 1, // Kolinsky coming soon page
+    main: "/Portfolio/project-2-main.png",
+    small1: "/Portfolio/project-2-small-1.png",
+    small2: "/Portfolio/project-2-small-2.png",
+    filterIndexes: [0, 1],
   },
 ];
 export function PortfolioProjectsSection() {
@@ -53,7 +56,10 @@ export function PortfolioProjectsSection() {
     );
   }, [activeFilter, t.portfolioPage.hashtags]);
 
-  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const visibleProjects =
+  activeFilter === "all"
+    ? filteredProjects
+    : filteredProjects.slice(0, visibleCount);
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
@@ -108,11 +114,11 @@ export function PortfolioProjectsSection() {
 
         <div className="space-y-10">
           {visibleProjects.map((project, index) => {
-            const originalIndex = projects.indexOf(project);
-
+           const textIndex = project.textIndex;
+           const projectId = project.projectId;
             return (
               <article
-                key={originalIndex}
+                key={textIndex}
                 className="
                   rounded-[28px] p-5
                   transition-transform duration-300 hover:translate-y-[3px]
@@ -150,16 +156,19 @@ export function PortfolioProjectsSection() {
                 <div className="relative mt-12 md:mt-0 md:h-[300px] md:pl-14">
                   <div className="text-center md:grid md:grid-cols-[280px_340px] md:gap-x-12 md:text-left">
                     <h3 className="text-[15px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#282b37] md:text-[26px] md:font-medium">
-                      {t.portfolioPage.projects[originalIndex].title}
+                      {t.portfolioPage.projects[textIndex].title}
                     </h3>
 
                     <p className="mx-auto mt-7 max-w-[230px] text-[11px] leading-[1.45] text-[#707582] md:mx-0 md:mt-0 md:max-w-none md:text-[16px]">
-                      {t.portfolioPage.projectDescription}
+                      {t.portfolioPage.projects[textIndex].description ??
+                              t.portfolioPage.projectDescription}
                     </p>
                   </div>
 
                   <div className="mx-auto mt-8 flex max-w-[230px] flex-wrap justify-center gap-2 md:mx-0 md:max-w-none md:justify-start md:gap-3">
-                    {t.portfolioPage.tags.map((tag: string) => (
+                    {(
+                      t.portfolioPage.projects[textIndex].tags ?? t.portfolioPage.tags
+                    ).map((tag: string) => (
                       <span
                         key={tag}
                         className="rounded-full border border-[#4b74ff]/50 px-4 py-1.5 text-[10px] text-[#282b37] md:px-4 md:py-2 md:text-[13px]"
@@ -170,11 +179,11 @@ export function PortfolioProjectsSection() {
                   </div>
 
                   <div className="mt-8 grid gap-y-2 text-[11px] text-[#707582] md:absolute md:bottom-[14px] md:left-14 md:mt-0 md:grid-cols-2 md:gap-x-14 md:gap-y-4 md:text-[15px]">
-                    {t.portfolioPage.hashtags.map((tag: string) => (
+                    {(
+                      t.portfolioPage.projects[textIndex].hashtags ?? t.portfolioPage.hashtags
+                    ).map((tag: string) => (
                       <span key={tag}>
-                        <b className="mr-2 text-[18px] text-[#4b74ff] md:text-[24px]">
-                          #
-                        </b>
+                        <b className="mr-2 text-[18px] text-[#4b74ff] md:text-[24px]">#</b>
                         {tag}
                       </span>
                     ))}
@@ -182,7 +191,7 @@ export function PortfolioProjectsSection() {
 
                   <div className="mt-6 flex justify-end md:absolute md:bottom-[18px] md:right-0 md:mt-0">
                     <Link
-                      href={`/portfolio/project/${originalIndex}`}
+                      href={`/portfolio/project/${projectId}`}
                       className="group flex w-[132px] items-center rounded-full p-1.5 transition-all duration-300 hover:scale-[0.98] active:scale-[0.95] md:w-[165px]"
                       style={{ background: "#f8f9fc", ...embossedPillStyle }}
                       onMouseEnter={(e) => {
