@@ -261,7 +261,7 @@ export const translations = {
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["web design", "real estate", "landing page"],
       projects: [
-        { title: "Refa group website automation" },
+        { title: "Miraki Website Case Beauty Salon" },
         { title: "Website and panel for “Kolinsky”" },
         { title: "Refa group website automation" },
       ],
@@ -309,19 +309,27 @@ export const translations = {
 
         projects: [
           {
-            accent: "Refa Group",
-            title: "Case -\nAutomation",
+           title: "Refa group website automation",
+            description:
+              "A business website automation project designed to improve lead flow, content structure, and operational efficiency.",
+            tags: ["Node", "Next.js", "Automation", "Cloudflare"],
+            hashtags: ["automation", "business", "landing page"],
           },
           {
-            accent: "Kolinsky Website",
-            title: "Case -\nReal Estate",
+            title: "Website and panel for “Kolinsky”",
+            description:
+              "A real estate website and admin panel built to present properties clearly and simplify content management.",
+            tags: ["Next.js", "Dashboard", "CMS", "Real Estate"],
+            hashtags: ["web design", "real estate", "admin panel"],
           },
           {
-            accent: "Miraki Website",
-            title: "Case -\nBeauty Salon",
+             title: "Miraki Website Case Beauty Salon",
+            description:
+              "A refined beauty salon website focused on visual identity, service presentation, and smooth client experience.",
+            tags: ["Next.js", "UI/UX", "Responsive", "Branding"],
+            hashtags: ["web design", "beauty salon", "landing page"],
           },
         ],
-
         otherProjects: [
           'Dashboard for “Rozenfeld Agency”',
           'Website and panel for “Kolinsky”',

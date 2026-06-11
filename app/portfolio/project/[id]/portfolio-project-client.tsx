@@ -78,7 +78,47 @@ export function PortfolioProjectClient({ id }: { id: number }) {
   const details = t.portfolioPage.projectDetails;
   const projectText = details.projects[id] ?? details.projects[0];
   const imageAlts = projectImageAlts[id] ?? projectImageAlts[0];
+  const isComingSoon = id === 0 || id === 1;
 
+if (isComingSoon) {
+  return (
+    <main className="min-h-screen overflow-hidden text-[#232634]">
+      <div className="mx-auto flex min-h-screen max-w-[1800px] flex-col items-center justify-center px-8 text-center md:px-12 xl:px-14">
+        <Link
+          href="/portfolio"
+          className="mb-12 text-[18px] font-medium text-[#4b74ff] transition-colors hover:text-[#282b37]"
+        >
+          ← Back to Portfolio
+        </Link>
+
+        <p className="text-[18px] uppercase tracking-[0.12em] text-[#4b74ff] md:text-[24px]">
+          Case Study Coming Soon
+        </p>
+
+        <h1 className="mt-8 max-w-[900px] text-[42px] font-medium leading-[1.1] tracking-[-0.045em] text-[#282b37] md:text-[72px]">
+          {projectText.title}
+        </h1>
+
+        <p className="mt-8 max-w-[700px] text-[16px] leading-[1.6] text-[#707582] md:text-[20px]">
+          This project is currently being documented.
+          We are preparing a complete case study with project goals,
+          development process, design decisions, and final results.
+        </p>
+
+        <div className="mt-14 rounded-[40px] bg-[#f2f3f8] px-10 py-8 text-[#4b74ff]">
+          Full project details will be available soon.
+        </div>
+
+        <Link
+          href="/contacts"
+          className="mt-12 rounded-full border border-[#4b74ff] px-12 py-5 text-[16px] font-medium text-[#4b74ff] transition-all duration-300 hover:bg-[#4b74ff] hover:text-white"
+        >
+          Start a Similar Project
+        </Link>
+      </div>
+    </main>
+  );
+}
   return (
     <main className="min-h-screen overflow-hidden text-[#232634]">
       <div className="relative mx-auto min-h-screen max-w-[1800px] px-2 pt-2">
@@ -309,147 +349,84 @@ export function PortfolioProjectClient({ id }: { id: number }) {
           <div
             className="
               mx-auto mt-16
-              flex max-w-[420px]
-              flex-col gap-4
 
               md:mt-24
               md:grid
-              md:max-w-fit
+              md:max-w-[931px]
               md:grid-cols-[317px_317px_247px]
               md:gap-6
             "
           >
-            {/* TOP ROW */}
-            <div className="flex gap-4 md:contents">
-              {[
-                ["#234D31", "#EB005B", "text-white"],
-                ["#C6C6C6", "#C6C6C6", "text-[#35543D]"],
-              ].map(([bg, text, color]) => (
-                <div
-                  key={text}
-                  className="
-                    flex-1 rounded-[20px] p-[10px]
-
-                    md:rounded-[28px]
-                    md:p-[18px]
-                  "
-                  style={{
-                    background: "#f2f3f8",
-                    ...embossedCardStyle,
-                  }}
-                >
-                  <div
-                    className="
-                      flex h-[120px]
-                      items-end rounded-[14px]
-                      px-3 pb-3
-
-                      md:h-[322px]
-                      md:rounded-[20px]
-                      md:px-8 md:pb-8
-                    "
-                    style={{ backgroundColor: bg }}
-                  >
-                    <span
-                      className={`
-                        text-[11px]
-                        font-normal tracking-[-0.06em]
-                        ${color}
-
-                        md:text-[26px]
-                        md:tracking-[-0.08em]
-                      `}
-                    >
-                      {text}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* WHITE CARD */}
+            {/* TOP LEFT */}
             <div
-              className="
-                rounded-[20px] p-[10px]
-
-                md:col-span-2
-                md:rounded-[28px]
-                md:p-[18px]
-              "
+              className="rounded-[28px] p-[18px]"
               style={{
                 background: "#f2f3f8",
                 ...embossedCardStyle,
               }}
             >
               <div
-                className="
-                  flex h-[150px]
-                  items-end rounded-[14px]
-                  bg-[#F8F8F8]
-                  px-3 pb-3
-
-                  md:h-[226px]
-                  md:rounded-[20px]
-                  md:px-8 md:pb-8
-                "
+                className="flex h-[322px] items-end rounded-[20px] px-8 pb-8"
+                style={{ backgroundColor: "#234D31" }}
               >
-                <span
-                  className="
-                    text-[11px]
-                    font-normal tracking-[-0.06em]
-                    text-[#35543D]
-
-                    md:text-[26px]
-                    md:tracking-[-0.08em]
-                  "
-                >
+                <span className="text-[26px] tracking-[-0.08em] text-white">
                   #EB005B
                 </span>
               </div>
             </div>
 
-            {/* GREEN CARD */}
+            {/* TOP CENTER */}
             <div
-              className="
-                rounded-[20px] p-[10px]
-
-                md:row-span-2
-                md:rounded-[28px]
-                md:p-[18px]
-              "
+              className="rounded-[28px] p-[18px]"
               style={{
                 background: "#f2f3f8",
                 ...embossedCardStyle,
               }}
             >
               <div
-                className="
-                  flex h-[135px]
-                  items-end rounded-[14px]
-                  bg-[#338A68]
-                  px-3 pb-3
-
-                  md:h-full
-                  md:min-h-[670px]
-                  md:rounded-[20px]
-                  md:px-8 md:pb-8
-                "
+                className="flex h-[322px] items-end rounded-[20px] px-8 pb-8"
+                style={{ backgroundColor: "#C6C6C6" }}
               >
-                <span
-                  className="
-                    text-[11px]
-                    font-normal tracking-[-0.06em]
-                    text-white
+                <span className="text-[26px] tracking-[-0.08em] text-[#35543D]">
+                  #C6C6C6
+                </span>
+              </div>
+            </div>
 
-                    md:text-[26px]
-                    md:tracking-[-0.08em]
-                  "
-                >
+            {/* RIGHT TALL CARD */}
+            <div
+              className="row-span-2 rounded-[28px] p-[18px]"
+              style={{
+                background: "#f2f3f8",
+                ...embossedCardStyle,
+              }}
+            >
+              <div
+                className="flex h-full min-h-[572px] items-end rounded-[20px] px-8 pb-8"
+                style={{ backgroundColor: "#338A68" }}
+              >
+                <span className="text-[26px] tracking-[-0.08em] text-white">
                   #1B2858
                 </span>
               </div>
             </div>
+
+            {/* BOTTOM CARD */}
+            <div
+              className="col-span-2 rounded-[28px] p-[18px]"
+              style={{
+                background: "#f2f3f8",
+                ...embossedCardStyle,
+              }}
+            >
+              <div className="flex h-[226px] items-end rounded-[20px] bg-[#F8F8F8] px-8 pb-8">
+                <span className="text-[26px] tracking-[-0.08em] text-[#35543D]">
+                  #EB005B
+                </span>
+              </div>
+            </div>
           </div>
+
         </section>
 
         {/* TYPOGRAPHY */}
