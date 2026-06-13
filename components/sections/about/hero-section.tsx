@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/language-context";
 import Link from "next/link";
 
 export function HeroSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const hero = t.aboutPage.hero;
 
   return (
@@ -135,54 +135,103 @@ export function HeroSection() {
           {hero.descriptionLine4}
         </p>
       </div>
-
       {/* Desktop button */}
-      <button
-        type="button"
-        className="
-          embossed-pill-button group absolute bottom-[86px] right-8 z-20
-          hidden w-full max-w-[300px] items-center rounded-full p-3
-          transition-all duration-300 ease-out
-          hover:scale-[0.985] active:scale-[0.97]
-          md:flex md:right-12 xl:right-14
-        "
-      >
-        <span
+      {language === "ru" ? (
+        <Link
+          href="#team"
           className="
-            flex-1 rounded-full px-8 py-5 text-center text-[25px]
-            font-medium tracking-[-0.03em] text-[#2a2e3c]
-            transition-colors duration-300 ease-out
-            group-hover:text-[#11131a]
-          "
-        >
-          {hero.cta}
-        </span>
-
-        <span
-          className="
-            flex h-[78px] w-[78px] items-center justify-center rounded-full
+            embossed-pill-button group absolute bottom-[86px] right-8 z-20
+            hidden w-full max-w-[380px] items-center rounded-full p-3
             transition-all duration-300 ease-out
-            group-hover:translate-y-[2px] group-hover:scale-[0.94]
-            group-active:scale-[0.9]
+            hover:scale-[0.985] active:scale-[0.97]
+            md:flex md:right-12 xl:right-14
           "
-          style={{
-            background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
-            boxShadow: `
-              inset 0 2px 6px rgba(255,255,255,0.22),
-              inset 0 -8px 14px rgba(23,61,178,0.28),
-              0 10px 22px rgba(75,116,255,0.28),
-              0 0 0 8px rgba(75,116,255,0.06)
-            `,
-          }}
         >
-          <img
-            src="/AboutUs/Vector.png"
-            alt=""
-            aria-hidden="true"
-            className="h-[35px] w-[35px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
-          />
-        </span>
-      </button>
+          <span
+            className="
+              min-w-0 flex-1 rounded-full px-6 py-5 text-center
+              text-[22px] font-medium tracking-[-0.03em] text-[#2a2e3c]
+              transition-colors duration-300 ease-out
+              group-hover:text-[#11131a]
+              lg:text-[25px]
+            "
+          >
+            {hero.cta}
+          </span>
+
+          <span
+            className="
+              flex h-[78px] w-[78px] shrink-0 items-center justify-center rounded-full
+              transition-all duration-300 ease-out
+              group-hover:translate-y-[2px] group-hover:scale-[0.94]
+              group-active:scale-[0.9]
+            "
+            style={{
+              background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+              boxShadow: `
+                inset 0 2px 6px rgba(255,255,255,0.22),
+                inset 0 -8px 14px rgba(23,61,178,0.28),
+                0 10px 22px rgba(75,116,255,0.28),
+                0 0 0 8px rgba(75,116,255,0.06)
+              `,
+            }}
+          >
+            <img
+              src="/AboutUs/Vector.png"
+              alt=""
+              aria-hidden="true"
+              className="h-[35px] w-[35px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
+            />
+          </span>
+        </Link>
+      ) : (
+        <Link
+          href="#team"
+          className="
+            embossed-pill-button group absolute bottom-[86px] right-8 z-20
+            hidden w-full max-w-[300px] items-center rounded-full p-3
+            transition-all duration-300 ease-out
+            hover:scale-[0.985] active:scale-[0.97]
+            md:flex md:right-12 xl:right-14
+          "
+        >
+          <span
+            className="
+              flex-1 rounded-full px-8 py-5 text-center text-[25px]
+              font-medium tracking-[-0.03em] text-[#2a2e3c]
+              transition-colors duration-300 ease-out
+              group-hover:text-[#11131a]
+            "
+          >
+            {hero.cta}
+          </span>
+
+          <span
+            className="
+              flex h-[78px] w-[78px] items-center justify-center rounded-full
+              transition-all duration-300 ease-out
+              group-hover:translate-y-[2px] group-hover:scale-[0.94]
+              group-active:scale-[0.9]
+            "
+            style={{
+              background: "linear-gradient(180deg, #5A82FF 0%, #4B74FF 100%)",
+              boxShadow: `
+                inset 0 2px 6px rgba(255,255,255,0.22),
+                inset 0 -8px 14px rgba(23,61,178,0.28),
+                0 10px 22px rgba(75,116,255,0.28),
+                0 0 0 8px rgba(75,116,255,0.06)
+              `,
+            }}
+          >
+            <img
+              src="/AboutUs/Vector.png"
+              alt=""
+              aria-hidden="true"
+              className="h-[35px] w-[35px] transition-transform duration-300 ease-out group-hover:scale-[0.9]"
+            />
+          </span>
+        </Link>
+      )}
     </section>
   );
 }

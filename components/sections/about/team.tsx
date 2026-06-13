@@ -7,7 +7,7 @@ export function AboutStorySection() {
   const team = t.aboutPage.team;
   
   return (
-    <section className="relative mx-auto max-w-[1800px] overflow-hidden px-8 py-24 md:px-12 xl:px-14">
+    <section id="team" className="relative mx-auto max-w-[1800px] overflow-hidden px-8 py-24 md:px-12 xl:px-14">
       <div className="grid min-h-[900px] grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-x-28">
         <div className="max-w-[650px]">
           <p className="mb-5 text-[24px] font-normal uppercase leading-none tracking-[-0.04em] text-[#4b74ff]">
