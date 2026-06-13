@@ -26,18 +26,18 @@ export function PhilosophySection() {
           }}
         />
 
-        <div className="relative z-10 grid grid-cols-1 items-center lg:grid-cols-2">
+        <div className="relative z-10 grid grid-cols-1 items-center lg:grid-cols-2 lg:pt-12">
           {/* LEFT */}
           <div>
             <p className="text-[20px] uppercase tracking-[-0.03em] text-white/70">
               AUTOMATION IS FOR PEOPLE
             </p>
 
-            <h2 className="mt-8 text-[46px] font-medium leading-[1.12] tracking-[-0.04em] text-white md:text-[56px]">
+            <h2 className="mt-8 text-[52px] font-medium leading-[1.08] tracking-[-0.045em] text-white xl:text-[56px] lg:whitespace-nowrap">
               {philosophy.title}
             </h2>
 
-            <div className="mt-16">
+            <div className="mt-24">
               <img
                 src="/AboutUs/philosophy.png"
                 alt={philosophy.imageAlt}
@@ -49,22 +49,38 @@ export function PhilosophySection() {
             </div>
           </div>
 
-          <div className="max-w-[520px] text-[18px] leading-[1.4] tracking-[-0.02em] text-white/80 md:text-[19px]">
-            <p>{philosophy.paragraph1}</p>
+          <div
+            className="
+              max-w-[360px]
+              text-[17px]
+              leading-[1.42]
+              tracking-[-0.03em]
+              text-white/65
 
-            <p className="mt-6 font-semibold text-white">
-              {philosophy.highlight}
-            </p>
+              lg:ml-20
+              xl:ml-28
+              2xl:ml-36
 
-            <p className="mt-6">
-              {philosophy.paragraph2}
-            </p>
+              lg:mt-28
+              xl:mt-32
+            "
+          >
+          <p>
+            {philosophy.paragraph1}
+          </p>
 
-            <p className="mt-6">
-              {philosophy.paragraph3}
-            </p>
-          </div>
+          <p className="mt-10 font-semibold leading-[1.35] text-white">
+            {philosophy.highlight}
+          </p>
 
+          <p className="mt-10">
+            {philosophy.paragraph2}
+          </p>
+
+          <p className="mt-10">
+            {philosophy.paragraph3}
+          </p>
+        </div>
           <div className="z-0 mt-10 ml-5 lg:-ml-15 lg:col-span-1 lg:-mt-120">
             <img
               src="/AboutUs/philosophy.png"
