@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Check } from "lucide-react";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { useLanguage } from "@/lib/language-context";
 import { embossedCardStyle } from "@/lib/ui-styles";
 
@@ -211,11 +212,70 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 h-px w-full bg-[#e3e6ee]" />
+        <div className="flex mt-16 h-px w-full bg-[#e3e6ee]" />
 
-        <div className="mt-6 text-center text-[14px] text-[#8b90a3]">
-          {t.footer.copyright}
+        <div className="mt-8 flex items-center justify-between">
+          
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/softarynsoftware/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Softaryn Instagram"
+              className="
+                flex h-10 w-10 items-center justify-center rounded-full
+                bg-[#f1f2f6] text-[#2a2e3c]
+                transition-all duration-300
+                hover:bg-[#4B74FF] hover:text-white
+                active:scale-95
+              "
+            >
+              <FaInstagram className="h-6 w-5" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61590561891239"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Softaryn Facebook"
+              className="
+                flex h-10 w-10 items-center justify-center rounded-full
+                bg-[#f1f2f6] text-[#2a2e3c]
+                transition-all duration-300
+                hover:bg-[#4B74FF] hover:text-white
+                active:scale-95
+              "
+            >
+              <FaFacebookF className="h-6 w-5" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/softaryn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Softaryn LinkedIn"
+              className="
+                flex h-10 w-10 items-center justify-center rounded-full
+                bg-[#f1f2f6] text-[#2a2e3c]
+                transition-all duration-300
+                hover:bg-[#4B74FF] hover:text-white
+                active:scale-95
+              "
+            >
+              <FaLinkedinIn className="h-6 w-5" />
+            </a>
+          </div>
+
+          <div className="flex mt-6 text-center text-[14px] text-[#8b90a3]">
+            {t.footer.copyright}
+          </div>
+
+          <div className="w-[170px]" />
         </div>
+
+        
+          
+          
       </div>
     </footer>
   );
