@@ -20,6 +20,7 @@ export function ArchitectureSection() {
 
   return (
     <HorizontalCardCarousel<ArchitectureItem>
+       headerAlign="center"
       eyebrow={architecture.eyebrow}
       title={architecture.title}
       actionText={architecture.actionText}
