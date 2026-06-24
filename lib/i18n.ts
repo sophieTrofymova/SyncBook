@@ -309,7 +309,7 @@ export const translations = {
 
         projects: [
           {
-           title: "Refa group website automation",
+            title: "Refa group website automation",
             description:
               "A business website automation project designed to improve lead flow, content structure, and operational efficiency.",
             tags: ["Node", "Next.js", "Automation", "Cloudflare"],
@@ -323,7 +323,7 @@ export const translations = {
             hashtags: ["web design", "real estate", "admin panel"],
           },
           {
-             title: "Miraki Website Case Beauty Salon",
+            title: "Miraki Website Case Beauty Salon",
             description:
               "A refined beauty salon website focused on visual identity, service presentation, and smooth client experience.",
             tags: ["Next.js", "UI/UX", "Responsive", "Branding"],
@@ -576,7 +576,7 @@ export const translations = {
           "Let’s create something that works as hard as you do.",
         buttonText: "Meet us & start the process",
       },
-},
+    },
   },
 
   ru: {
@@ -1125,7 +1125,7 @@ export const translations = {
           "Давайте создадим решение, которое будет работать так же усердно, как и вы.",
         buttonText: "Познакомиться и начать процесс",
       },
-},
+    },
   },
 
   es: {
@@ -1564,20 +1564,20 @@ export const translations = {
       },
     },
     aboutPage: {
-        hero: {
-          mobileTitleLine1: "“Conectamos",
-          mobileTitleLine2: "complejidad y",
-          mobileTitleLine3: "eficiencia”",
-          desktopTitleLine1: "“Conectamos complejidad",
-          desktopTitleLine2: "y eficiencia”",
-          label: "-Sobre nosotros",
-          descriptionLine1: "Transformamos la complejidad técnica",
-          descriptionLine2: "en una ventaja operativa.",
-          descriptionLine3: "Descubre nuestras competencias clave",
-          descriptionLine4: "en desarrollo y automatización.",
-          cta: "Conócenos",
-          imageAlt: "Equipo de Softaryn y concepto de automatización empresarial",
-        },
+      hero: {
+        mobileTitleLine1: "“Conectamos",
+        mobileTitleLine2: "complejidad y",
+        mobileTitleLine3: "eficiencia”",
+        desktopTitleLine1: "“Conectamos complejidad",
+        desktopTitleLine2: "y eficiencia”",
+        label: "-Sobre nosotros",
+        descriptionLine1: "Transformamos la complejidad técnica",
+        descriptionLine2: "en una ventaja operativa.",
+        descriptionLine3: "Descubre nuestras competencias clave",
+        descriptionLine4: "en desarrollo y automatización.",
+        cta: "Conócenos",
+        imageAlt: "Equipo de Softaryn y concepto de automatización empresarial",
+      },
       team: {
         eyebrow: "DEL CAOS AL CÓDIGO",
         titleLine1: "Nacidos de una pasión",
@@ -1590,90 +1590,90 @@ export const translations = {
         image2Alt: "Equipo planificando un proyecto de automatización",
       },
       values: {
-      eyebrow: "LO QUE CONSIDERAMOS IMPORTANTE",
-      title: "Nuestros valores",
-      items: [
-        {
-          number: "01",
-          title: "Integridad desde el diseño",
-          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
-        },
-        {
-          number: "02",
-          title: "Eficiencia radical",
-          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
-        },
-        {
-          number: "03",
-          title: "Pensamiento escalable",
-          text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
-        },
-      ],
+        eyebrow: "LO QUE CONSIDERAMOS IMPORTANTE",
+        title: "Nuestros valores",
+        items: [
+          {
+            number: "01",
+            title: "Integridad desde el diseño",
+            text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+          },
+          {
+            number: "02",
+            title: "Eficiencia radical",
+            text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+          },
+          {
+            number: "03",
+            title: "Pensamiento escalable",
+            text: "Análisis de las tecnologías actuales y recomendaciones para su optimización.",
+          },
+        ],
       },
-    philosophy: {
-      eyebrow: "LA AUTOMATIZACIÓN ES PARA LAS PERSONAS",
-      title: "La filosofía: humanos y máquinas",
-      imageAlt: "Concepto de automatización empresarial centrada en las personas",
-      paragraph1:
-        "Existe la idea errónea de que la automatización consiste en reemplazar a las personas. Nosotros creemos lo contrario.",
-      highlight: "La automatización consiste en liberar a las personas.",
-      paragraph2:
-        "Al delegar las tareas repetitivas, rutinarias y propensas a errores a sistemas inteligentes, permitimos que los equipos se concentren en lo que mejor hacen: estrategia, empatía e innovación.",
-      paragraph3:
-        "Nosotros construimos las máquinas para que tú puedas concentrarte en la visión.",
-    },
-        difference: {
-      eyebrow: "¿POR QUÉ TRABAJAR CON NOSOTROS?",
-      title: "¿Qué nos hace diferentes?",
-      descriptionLine1:
-        "A diferencia de las grandes consultoras tradicionales, trabajamos con la agilidad",
-      descriptionLine2:
-        "de una startup y la precisión de una firma de ingeniería de alto nivel.",
-      buttonText: "Ver todos los servicios",
+      philosophy: {
+        eyebrow: "LA AUTOMATIZACIÓN ES PARA LAS PERSONAS",
+        title: "La filosofía: humanos y máquinas",
+        imageAlt: "Concepto de automatización empresarial centrada en las personas",
+        paragraph1:
+          "Existe la idea errónea de que la automatización consiste en reemplazar a las personas. Nosotros creemos lo contrario.",
+        highlight: "La automatización consiste en liberar a las personas.",
+        paragraph2:
+          "Al delegar las tareas repetitivas, rutinarias y propensas a errores a sistemas inteligentes, permitimos que los equipos se concentren en lo que mejor hacen: estrategia, empatía e innovación.",
+        paragraph3:
+          "Nosotros construimos las máquinas para que tú puedas concentrarte en la visión.",
+      },
+      difference: {
+        eyebrow: "¿POR QUÉ TRABAJAR CON NOSOTROS?",
+        title: "¿Qué nos hace diferentes?",
+        descriptionLine1:
+          "A diferencia de las grandes consultoras tradicionales, trabajamos con la agilidad",
+        descriptionLine2:
+          "de una startup y la precisión de una firma de ingeniería de alto nivel.",
+        buttonText: "Ver todos los servicios",
 
-      directAccessTitle: "Acceso directo:",
-      directAccessText:
-        "Trabajas directamente con arquitectos e ingenieros, no con gestores de cuentas.",
+        directAccessTitle: "Acceso directo:",
+        directAccessText:
+          "Trabajas directamente con arquitectos e ingenieros, no con gestores de cuentas.",
 
-      noDebtTitle: "Sin deuda técnica:",
-      noDebtText:
-        "Escribimos código limpio, documentado y modular que seguirá siendo mantenible durante años.",
+        noDebtTitle: "Sin deuda técnica:",
+        noDebtText:
+          "Escribimos código limpio, documentado y modular que seguirá siendo mantenible durante años.",
 
-      customTitle: "100% personalizado:",
-      customText:
-        "No vendemos plantillas. Cada solución es un traje hecho a medida para tu lógica de negocio.",
+        customTitle: "100% personalizado:",
+        customText:
+          "No vendemos plantillas. Cada solución es un traje hecho a medida para tu lógica de negocio.",
 
-      stats: [
-        {
-          value: "40%",
-          line1: "Reducción de",
-          line2: "costes operativos",
-        },
-        {
-          value: "3x",
-          line1: "Mayor velocidad de",
-          line2: "procesamiento de datos",
-        },
-        {
-          value: "100%",
-          line1: "Integridad",
-          line2: "y precisión de datos",
-        },
-      ],
+        stats: [
+          {
+            value: "40%",
+            line1: "Reducción de",
+            line2: "costes operativos",
+          },
+          {
+            value: "3x",
+            line1: "Mayor velocidad de",
+            line2: "procesamiento de datos",
+          },
+          {
+            value: "100%",
+            line1: "Integridad",
+            line2: "y precisión de datos",
+          },
+        ],
 
-      imageAlt: "Equipo revisando análisis empresariales",
-    },
-    buildTogether: {
-      eyebrow: "EL FUTURO ESTÁ AUTOMATIZADO. ¿ESTÁS LISTO?",
-      title: "Construyamos juntos",
-      descriptionLine1:
-        "Ya seas una startup en crecimiento o una empresa consolidada,",
-      descriptionLine2:
-        "estamos listos para ayudarte en tu transformación digital.",
-      descriptionLine3:
-        "Creemos algo que trabaje tan duro como tú.",
-      buttonText: "Conócenos y comienza el proceso",
-    },
+        imageAlt: "Equipo revisando análisis empresariales",
+      },
+      buildTogether: {
+        eyebrow: "EL FUTURO ESTÁ AUTOMATIZADO. ¿ESTÁS LISTO?",
+        title: "Construyamos juntos",
+        descriptionLine1:
+          "Ya seas una startup en crecimiento o una empresa consolidada,",
+        descriptionLine2:
+          "estamos listos para ayudarte en tu transformación digital.",
+        descriptionLine3:
+          "Creemos algo que trabaje tan duro como tú.",
+        buttonText: "Conócenos y comienza el proceso",
+      },
     },
   },
 } as const;
