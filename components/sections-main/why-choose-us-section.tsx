@@ -3,7 +3,7 @@ import { blueBlockStyle, embossedCardStyleBlue } from "@/lib/ui-styles";
 import { getHomeData } from "@/data/home";
 import { useLanguage } from "@/lib/language-context";
 import Image from "next/image";
-
+import Link from "next/link";
 export function WhyChooseUsSection() {
   const { t } = useLanguage();
   const { steps } = getHomeData(t);
@@ -26,11 +26,8 @@ export function WhyChooseUsSection() {
               </h2>
             </div>
 
-            <button
-                onClick={() => {
-                window.location.href = "/contact";
-              }}
-              className="
+            <Link href="/#contact"
+                className="
                 group flex items-center gap-0 rounded-full
                 bg-white/92 py-2 pl-9 pr-2
                 text-[16px] font-medium text-[#2a2e3c]
@@ -69,8 +66,8 @@ export function WhyChooseUsSection() {
                     height={24}
                     className="block group-hover:hidden"
                   />
-                </span>                
-          </button>
+                </span>
+          </Link>
           
           </div>
 

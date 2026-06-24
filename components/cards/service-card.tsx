@@ -18,8 +18,8 @@ export function ServiceCard({ item }: ServiceCardProps) {
         rounded-[32px] border border-white/70
         px-7 pb-7 pt-7
 
-        md:h-[550px] md:w-[452px]
-        md:rounded-[34px] md:px-8 md:pb-8 md:pt-7
+        md:h-[464px] md:w-[373px]
+        md:rounded-[34px] md:px-9 md:pb-9 md:pt-9
       "
       style={embossedCardStyle}
     >
@@ -33,20 +33,21 @@ export function ServiceCard({ item }: ServiceCardProps) {
             group-hover:translate-y-[-2px]
             group-hover:scale-[1.02]
 
-            md:h-[186px] md:w-[170px]
+            md:h-[112px] md:w-[112px]
           "
         />
       </div>
 
       <h3
-      className="
-        mt-8 max-w-[280px]
-        text-[22px] font-medium leading-[1.12]
-        tracking-[-0.045em] text-[#2c3140]
-        break-words hyphens-auto
+        className="
+          mt-8 max-w-[280px]
+          text-[22px] font-medium leading-[1.12]
+          tracking-[-0.045em] text-[#2c3140]
 
-          md:mt-7 md:max-w-[360px]
-          md:text-[38px] md:leading-[1.08]
+          md:mt-[82px]
+          md:max-w-[320px]
+          md:text-[30px]
+          md:leading-[1.08]
         "
       >
         {item.title}
@@ -57,10 +58,11 @@ export function ServiceCard({ item }: ServiceCardProps) {
           mt-6 max-w-[280px]
           text-[13px] leading-[1.5]
           tracking-[-0.015em] text-[#7f8595]
-          break-words hyphens-auto
 
-          md:mt-8 md:max-w-[385px]
-          md:text-[23px] md:leading-[1.55]
+          md:mt-7
+          md:max-w-[330px]
+          md:text-[15px]
+          md:leading-[1.45]
         "
       >
         {item.description}

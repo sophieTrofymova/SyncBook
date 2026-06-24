@@ -34,8 +34,43 @@ const projects = [
     small2Alt: "Miraki responsive website preview",
   },
 ];
+type ProjectText = {
+  title: string;
+  description?: string;
+  tags?: readonly string[];
+  hashtags?: readonly string[];
+};
 export function PortfolioProjectsSection() {
   const { t } = useLanguage();
+
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [visibleCount, setVisibleCount] = useState(2);
+
+  const filters = useMemo(() => {
+    return ["all", ...t.portfolioPage.hashtags];
+  }, [t.portfolioPage.hashtags]);
+  
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "all") return projects;
+
+    return projects.filter((project) =>
+      project.filterIndexes.some(
+        (index) => t.portfolioPage.hashtags[index] === activeFilter
+      )
+    );
+  }, [activeFilter, t.portfolioPage.hashtags]);
+
+  const visibleProjects =
+  activeFilter === "all"
+    ? filteredProjects
+    : filteredProjects.slice(0, visibleCount);
+
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+    setVisibleCount(2);
+    setFiltersOpen(false);
+  };
 
   return (
     <section className="px-5 py-16 md:px-10 md:py-24">
@@ -56,23 +91,14 @@ export function PortfolioProjectsSection() {
         </div>
 
         <div className="space-y-10">
-          {projects.map((project, index) => (
-            <article
-              key={index}
-              className="
-                rounded-[28px] p-5
-                transition-transform duration-300 hover:translate-y-[3px]
+          {visibleProjects.map((project) => {
+            const textIndex = project.textIndex;
+            const projectId = project.projectId;
+            const projectText = t.portfolioPage.projects[textIndex] as ProjectText;
 
-                md:grid md:min-h-[360px]
-                md:grid-cols-[400px_180px_1fr]
-                md:items-start md:gap-x-10
-                md:rounded-[40px] md:p-8
-              "
-              style={{ background: "#f8f9fc", ...embossedCardStyle }}
-            >
-              <img
-                src={project.main}
-                alt={project.mainAlt}
+            return (
+              <article
+                key={textIndex}
                 className="
                   h-[190px] w-full rounded-[18px] object-cover
 
@@ -93,16 +119,53 @@ export function PortfolioProjectsSection() {
                 />
               </div>
 
-              <div className="relative mt-12 md:mt-0 md:h-[300px] md:pl-14">
-                <div className="text-center md:grid md:grid-cols-[280px_340px] md:gap-x-12 md:text-left">
-                  <h3 className="text-[15px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#282b37] md:text-[26px] md:font-medium">
-                    {t.portfolioPage.projects[index].title}
-                  </h3>
-
-                  <p className="mx-auto mt-7 max-w-[230px] text-[11px] leading-[1.45] text-[#707582] md:mx-0 md:mt-0 md:max-w-none md:text-[16px]">
-                    {t.portfolioPage.projectDescription}
-                  </p>
+                <div className="mt-4 grid grid-cols-2 gap-4 md:mt-0 md:flex md:h-[300px] md:w-[180px] md:flex-col md:gap-6">
+                  <img
+                    src={project.small1}
+                    alt=""
+                    className="h-[90px] w-full rounded-[14px] object-cover md:h-[140px] md:w-[180px] md:rounded-[18px]"
+                  />
+                  <img
+                    src={project.small2}
+                    alt=""
+                    className="h-[90px] w-full rounded-[14px] object-cover md:h-[140px] md:w-[180px] md:rounded-[18px]"
+                  />
                 </div>
+
+                <div className="relative mt-12 md:mt-0 md:h-[300px] md:pl-14">
+                  <div className="text-center md:grid md:grid-cols-[280px_340px] md:gap-x-12 md:text-left">
+                    <h3 className="text-[15px] font-semibold leading-[1.25] tracking-[-0.03em] text-[#282b37] md:text-[26px] md:font-medium">
+                      {projectText.title}
+                    </h3>
+
+                    <p className="mx-auto mt-7 max-w-[230px] text-[11px] leading-[1.45] text-[#707582] md:mx-0 md:mt-0 md:max-w-none md:text-[16px]">
+                      {projectText.description ?? t.portfolioPage.projectDescription}
+                    </p>
+                  </div>
+
+                  <div className="mx-auto mt-8 flex max-w-[230px] flex-wrap justify-center gap-2 md:mx-0 md:max-w-none md:justify-start md:gap-3">
+                    {(
+                      projectText.tags ?? t.portfolioPage.tags
+                    ).map((tag: string) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-[#4b74ff]/50 px-4 py-1.5 text-[10px] text-[#282b37] md:px-4 md:py-2 md:text-[13px]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 grid gap-y-2 text-[11px] text-[#707582] md:absolute md:bottom-[14px] md:left-14 md:mt-0 md:grid-cols-2 md:gap-x-14 md:gap-y-4 md:text-[15px]">
+                    {(
+                      projectText.hashtags ?? t.portfolioPage.hashtags
+                    ).map((tag: string) => (
+                      <span key={tag}>
+                        <b className="mr-2 text-[18px] text-[#4b74ff] md:text-[24px]">#</b>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
                 <div className="mx-auto mt-8 flex max-w-[230px] flex-wrap justify-center gap-2 md:mx-0 md:max-w-none md:justify-start md:gap-3">
                   {t.portfolioPage.tags.map((tag: string) => (
