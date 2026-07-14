@@ -4,18 +4,22 @@ import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 const projectMeta = [
   {
-    title: "Refa Group Automation Case Study",
+    name: "Rosenda",
+    title: "Rosenda Website Design & Development Case Study",
     description:
-      "Explore how Softaryn built a business automation solution for Refa Group, focused on scalable architecture, operational efficiency and improved user experience.",
+      "Explore how Softaryn designed and developed a modern responsive website for Rosenda, with a distinctive visual identity, clear content structure and a polished experience across desktop and mobile devices.",
     keywords: [
-      "business automation case study",
-      "automation software development",
-      "custom software development",
-      "workflow automation",
+      "Rosenda website",
+      "responsive website development",
+      "custom website design",
+      "business website development",
+      "website development case study",
       "Softaryn portfolio",
     ],
+    image: "/Portfolio/Rosenda/rosenda-main.png",
   },
   {
+    name: "Kolinsky",
     title: "Kolinsky Real Estate Website & Admin Panel Case Study",
     description:
       "Discover how Softaryn created a real estate website and admin panel for Kolinsky, focused on property management workflows, usability and digital growth.",
@@ -26,8 +30,10 @@ const projectMeta = [
       "website development case study",
       "Softaryn portfolio",
     ],
+    image: "/Portfolio/project-2-main.png",
   },
   {
+    name: "Miraki",
     title: "Miraki Beauty Salon Website Case Study",
     description:
       "See how Softaryn designed and developed a modern beauty salon website with responsive layouts, strong visual identity and improved client experience.",
@@ -38,11 +44,28 @@ const projectMeta = [
       "website development case study",
       "Softaryn portfolio",
     ],
+    image: "/Portfolio/project-3-main.png",
   },
-];
+] as const;
+
+function getProjectIndex(id: string) {
+  const index = Number(id);
+
+  if (
+    !Number.isInteger(index) ||
+    index < 0 ||
+    index >= projectMeta.length
+  ) {
+    return 0;
+  }
+
+  return index;
+}
 
 export function generateStaticParams() {
-  return [{ id: "0" }, { id: "1" }, { id: "2" }];
+  return projectMeta.map((_, index) => ({
+    id: String(index),
+  }));
 }
 
 export async function generateMetadata({
@@ -51,21 +74,36 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const index = Number(id ?? 0);
-  const meta = projectMeta[index] ?? projectMeta[0];
+  const index = getProjectIndex(id);
+  const meta = projectMeta[index];
 
   return {
     title: meta.title,
     description: meta.description,
-    keywords: meta.keywords,
+    keywords: [...meta.keywords],
+
     alternates: {
       canonical: `/portfolio/project/${index}`,
     },
+
     openGraph: {
       type: "article",
       title: `${meta.title} | Softaryn`,
       description: meta.description,
       url: `/portfolio/project/${index}`,
+      images: [
+        {
+          url: meta.image,
+          alt: `${meta.name} project by Softaryn`,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${meta.title} | Softaryn`,
+      description: meta.description,
+      images: [meta.image],
     },
   };
 }
@@ -76,17 +114,29 @@ export default async function PortfolioProjectPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const index = getProjectIndex(id);
+  const project = projectMeta[index];
 
   return (
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "/" },
-          { name: "Portfolio", url: "/portfolio" },
-          { name: projectMeta[Number(id ?? 0)]?.title || "Project", url: `/portfolio/project/${id}` },
+          {
+            name: "Home",
+            url: "/",
+          },
+          {
+            name: "Portfolio",
+            url: "/portfolio",
+          },
+          {
+            name: project.name,
+            url: `/portfolio/project/${index}`,
+          },
         ]}
       />
-      <PortfolioProjectClient id={Number(id ?? 0)} />
+
+      <PortfolioProjectClient id={index} />
     </>
   );
 }

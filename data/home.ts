@@ -2,11 +2,10 @@ import { translations, type Language } from "@/lib/i18n";
 
 type TranslationSchema = (typeof translations)[Language];
 
-// t - это объект перевода, один из языков объекта translation
+// t — объект перевода выбранного языка
 
 export function getHomeData(t: TranslationSchema) {
   return {
-    
     navItems: [
       t.nav.services,
       t.nav.about,
@@ -86,23 +85,27 @@ export function getHomeData(t: TranslationSchema) {
     cases: [
       {
         title: t.homeData.cases[0].title,
-        image: "/Monitor.png",
+        image: "/Portfolio/Rosenda/rosenda-tablet.png",
         alt: t.homeData.cases[0].alt,
+        href: "/portfolio/project/0",
       },
       {
         title: t.homeData.cases[1].title,
         image: "/MacBook.png",
         alt: t.homeData.cases[1].alt,
+        href: "/portfolio/project/1",
       },
       {
         title: t.homeData.cases[2].title,
         image: "/Bird.png",
         alt: t.homeData.cases[2].alt,
+        href: "/portfolio",
       },
       {
         title: t.homeData.cases[3].title,
-        image: "/iPad.png",
+        image: "/Portfolio/projects/3/miraki-tablet.png",
         alt: t.homeData.cases[3].alt,
+        href: "/portfolio/project/2",
       },
     ],
 
