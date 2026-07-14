@@ -206,20 +206,20 @@ export const translations = {
 
       cases: [
         {
-          title: 'Dashboard for "Rozenfeld Agency"',
-          alt: 'Dashboard for "Rozenfeld Agency"',
+          title: 'Website for "Rosenda"',
+          alt: "Rosenda responsive website preview",
         },
         {
           title: 'Website and panel for "Kolinsky"',
-          alt: 'Website and panel for "Kolinsky"',
+          alt: "Kolinsky real estate website preview",
         },
         {
           title: 'Mobile App for "Occollo"',
-          alt: 'Mobile App for "Occollo"',
+          alt: "Occollo mobile application preview",
         },
         {
-          title: 'Website for "Okeilo"',
-          alt: 'Website for "Okeilo"',
+          title: 'Website for "Miraki"',
+          alt: "Miraki beauty salon website preview",
         },
       ],
     },
@@ -261,11 +261,10 @@ export const translations = {
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["web design", "real estate", "landing page"],
       projects: [
-        { title: "Miraki Website Case Beauty Salon" },
+        { title: "Rosenda website" },
         { title: "Website and panel for “Kolinsky”" },
-        { title: "Refa group website automation" },
+        { title: "Miraki beauty salon website" },
       ],
-
       projectDetails: {
         backAlt: "Back to portfolio",
         visitWebsite: "Visit\nWebsite",
@@ -309,27 +308,19 @@ export const translations = {
 
         projects: [
           {
-            title: "Refa group website automation",
-            description:
-              "A business website automation project designed to improve lead flow, content structure, and operational efficiency.",
-            tags: ["Node", "Next.js", "Automation", "Cloudflare"],
-            hashtags: ["automation", "business", "landing page"],
+            accent: "Rosenda",
+            title: "Case -\nWebsite",
           },
           {
-            title: "Website and panel for “Kolinsky”",
-            description:
-              "A real estate website and admin panel built to present properties clearly and simplify content management.",
-            tags: ["Next.js", "Dashboard", "CMS", "Real Estate"],
-            hashtags: ["web design", "real estate", "admin panel"],
+            accent: "Kolinsky Website",
+            title: "Case -\nReal Estate",
           },
           {
-            title: "Miraki Website Case Beauty Salon",
-            description:
-              "A refined beauty salon website focused on visual identity, service presentation, and smooth client experience.",
-            tags: ["Next.js", "UI/UX", "Responsive", "Branding"],
-            hashtags: ["web design", "beauty salon", "landing page"],
+            accent: "Miraki Website",
+            title: "Case -\nBeauty Salon",
           },
         ],
+
         otherProjects: [
           'Dashboard for “Rozenfeld Agency”',
           'Website and panel for “Kolinsky”',
@@ -784,20 +775,20 @@ export const translations = {
 
       cases: [
         {
-          title: 'Дашборд для "Rozenfeld Agency"',
-          alt: 'Дашборд для "Rozenfeld Agency"',
+          title: 'Сайт для "Rosenda"',
+          alt: "Адаптивный сайт Rosenda",
         },
         {
           title: 'Сайт и панель управления для "Kolinsky"',
-          alt: 'Сайт и панель управления для "Kolinsky"',
+          alt: "Сайт недвижимости Kolinsky",
         },
         {
           title: 'Мобильное приложение для "Occollo"',
-          alt: 'Мобильное приложение для "Occollo"',
+          alt: "Мобильное приложение Occollo",
         },
         {
-          title: 'Сайт для "Okeilo"',
-          alt: 'Сайт для "Okeilo"',
+          title: 'Сайт для "Miraki"',
+          alt: "Сайт салона красоты Miraki",
         },
       ],
     },
@@ -839,9 +830,9 @@ export const translations = {
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["веб-дизайн", "недвижимость", "лендинг"],
       projects: [
-        { title: "Автоматизация сайта Refa Group" },
+        { title: "Сайт для Rosenda" },
         { title: "Сайт и панель управления для “Kolinsky”" },
-        { title: "Автоматизация сайта Refa Group" },
+        { title: "Сайт салона красоты Miraki" },
       ],
 
       projectDetails: {
@@ -887,16 +878,16 @@ export const translations = {
 
         projects: [
           {
-            accent: "Miraki Website",
-            title: "Кейс —\nсалон красоты",
+            accent: "Rosenda",
+            title: "Кейс —\nвеб-сайт",
           },
           {
             accent: "Kolinsky Website",
             title: "Кейс —\nнедвижимость",
           },
           {
-            accent: "Refa Group",
-            title: "Кейс —\nавтоматизация",
+            accent: "Miraki Website",
+            title: "Кейс —\nсалон красоты",
           },
         ],
 
@@ -1333,20 +1324,20 @@ export const translations = {
 
       cases: [
         {
-          title: 'Panel de control para "Rozenfeld Agency"',
-          alt: 'Panel de control para "Rozenfeld Agency"',
+          title: 'Sitio web para "Rosenda"',
+          alt: "Vista previa responsive del sitio Rosenda",
         },
         {
           title: 'Sitio web y panel para "Kolinsky"',
-          alt: 'Sitio web y panel para "Kolinsky"',
+          alt: "Vista previa del sitio inmobiliario Kolinsky",
         },
         {
           title: 'Aplicación móvil para "Occollo"',
-          alt: 'Aplicación móvil para "Occollo"',
+          alt: "Vista previa de la aplicación móvil Occollo",
         },
         {
-          title: 'Sitio web para "Okeilo"',
-          alt: 'Sitio web para "Okeilo"',
+          title: 'Sitio web para "Miraki"',
+          alt: "Vista previa del sitio web de belleza Miraki",
         },
       ],
     },
@@ -1388,11 +1379,10 @@ export const translations = {
       tags: ["Node", "Next.js", "Cloudflare", "Docker", "PostgreSQL", "BankID"],
       hashtags: ["diseño web", "bienes raíces", "landing page"],
       projects: [
-        { title: "Automatización del sitio Refa Group" },
+        { title: "Sitio web para Rosenda" },
         { title: "Sitio web y panel para “Kolinsky”" },
-        { title: "Automatización del sitio Refa Group" },
+        { title: "Sitio web para el salón Miraki" },
       ],
-
       projectDetails: {
         backAlt: "Volver al portafolio",
         visitWebsite: "Visitar\nsitio",
@@ -1436,19 +1426,18 @@ export const translations = {
 
         projects: [
           {
-            accent: "Miraki Website",
-            title: "Caso —\nSalón de belleza",
+            accent: "Rosenda",
+            title: "Caso —\nSitio web",
           },
           {
             accent: "Kolinsky Website",
             title: "Caso —\nBienes raíces",
           },
           {
-            accent: "Refa Group",
-            title: "Caso —\nAutomatización",
+            accent: "Miraki Website",
+            title: "Caso —\nSalón de belleza",
           },
         ],
-
         otherProjects: [
           "Dashboard para “Rozenfeld Agency”",
           "Sitio web y panel para “Kolinsky”",
